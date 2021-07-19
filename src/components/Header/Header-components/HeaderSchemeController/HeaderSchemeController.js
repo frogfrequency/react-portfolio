@@ -5,28 +5,15 @@ import { useState } from 'react';
 
 
 
-const HeaderSchemeController = ({colorScheme, onClickFunc,gearButtonColor,skipButtonColor,handleSkipHover,handleSkipUnhover, handleGearHover,handleGearUnhover}) => {
+const HeaderSchemeController = ({colorScheme, onClickFunc}) => {
     
-    // //// start of state ,,,,,,,,,,,,,,,,,,,,,,
-    // const [skipButtonColor, toggleSkipColor] = useState(colorScheme.color4)
+    const [skipIsHovered, changeSkipIsHovered] = useState(false);
+    const handleSkipHover = () => {changeSkipIsHovered(true)}
+    const handleSkipUnhover = () => {changeSkipIsHovered(false)}
 
-
-    // const handleSkipHover = () => {
-    //     toggleSkipColor(colorScheme.color3);
-    // }
-    // const handleSkipUnhover = () => {
-    //     toggleSkipColor(colorScheme.color4);
-    // }
-
-    // const [gearButtonColor, toggleGearColor] = useState(colorScheme.color4)
-        
-    // const handleGearHover = () => {
-    //     toggleGearColor(colorScheme.color3);
-    // }
-    // const handleGearUnhover = () => {
-    //     toggleGearColor(colorScheme.color4);
-    // }
-    // //// end of state ''''''''''''''''''''''''''''
+    const [gearIsHovered, changeGearIsHovered] = useState(false);
+    const handleGearHover = () => {changeGearIsHovered(true)}
+    const handleGearUnhover = () => {changeGearIsHovered(false)}
 
     return (
 
@@ -36,24 +23,60 @@ const HeaderSchemeController = ({colorScheme, onClickFunc,gearButtonColor,skipBu
             // onClick={onClickFunc}
         >
                 colorschemes
+
+            { skipIsHovered ? (
+                    <BsSkipEndFill
+                    onMouseEnter={handleSkipHover}
+                    onMouseLeave={handleSkipUnhover}
+                    style={{ marginTop:'3px', marginLeft: '2px', color: colorScheme.color3}}
+                    onClick={() => {
+                        onClickFunc();
+                    }}
+                    size={'1.3em'}
+                    />
+            ) : (
                 <BsSkipEndFill
                     onMouseEnter={handleSkipHover}
                     onMouseLeave={handleSkipUnhover}
-                    style={{ marginTop:'3px', marginLeft: '2px', color: skipButtonColor}}
+                    style={{ marginTop:'3px', marginLeft: '2px', color: colorScheme.color4}}
                     onClick={() => {
                         onClickFunc();
                       }}
                     size={'1.3em'}
                 />
-                <BsFillGearFill
+            )
+            }
+
+          
+            { gearIsHovered ? (
+
+                    <BsFillGearFill
                     onMouseEnter={handleGearHover}
                     onMouseLeave={handleGearUnhover}
-                    style={{ marginTop:'3px', marginLeft: '2px', color: gearButtonColor}}
+                    style={{ marginTop:'3px', marginLeft: '2px', color: colorScheme.color3}}
+                    onClick={() => {
+                        onClickFunc();
+                      }}
+                    size={'0.9em'}
+                    />
+
+            ) : (
+
+                    <BsFillGearFill
+                    onMouseEnter={handleGearHover}
+                    onMouseLeave={handleGearUnhover}
+                    style={{ marginTop:'3px', marginLeft: '2px', color: colorScheme.color4}}
                     onClick={() => {
                         onClickFunc();
                       }}
                     size={'0.9em'}
                 />
+
+              
+                
+            )
+            }
+
         </div>
         
     )
