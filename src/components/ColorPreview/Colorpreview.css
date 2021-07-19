@@ -1,0 +1,9 @@
+.color-preview {;
+    display: flex;
+}
+
+
+.color-box {
+    height: 40px;
+    width: 60px;
+}
