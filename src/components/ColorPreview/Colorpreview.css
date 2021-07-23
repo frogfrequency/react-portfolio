@@ -1,9 +1,11 @@
-.color-preview {;
-    display: flex;
-}
 
 
 .color-box {
-    height: 40px;
-    width: 60px;
+    height: 23px;
+    width: 37px;
+    font-size: 18px;
+    font-family:fantasy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

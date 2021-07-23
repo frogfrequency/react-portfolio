@@ -1,9 +1,11 @@
-import Button from '../Button/Button';
+
 import './Header.css';
 import HeaderSchemeController from './Header-components/HeaderSchemeController/HeaderSchemeController';
+import ColorPreview from '../ColorPreview/ColorPreview';
+import HeaderMainMenuButton from './Header-components/HeaderMainMenuButton/HeaderMainMenuButton';
 
 
-const Header = ({text, colorScheme, updateColorScheme,gearButtonColor,skipButtonColor,handleSkipHover,handleSkipUnhover,handleGearHover,handleGearUnhover}) => {
+const Header = ({colorScheme, updateColorScheme, selectColorPage, handleSelectorVisibility}) => {
 
     return (
         <div
@@ -11,15 +13,15 @@ const Header = ({text, colorScheme, updateColorScheme,gearButtonColor,skipButton
             style={{
                 backgroundColor: colorScheme.color1, color: colorScheme.color2}}
         >
-
-            <HeaderSchemeController colorScheme={colorScheme}
-            onClickFunc={updateColorScheme}
-            gearButtonColor={gearButtonColor}
-            skipButtonColor={skipButtonColor}
-            handleSkipHover={handleSkipHover}
-            handleSkipUnhover={handleSkipUnhover}
-            handleGearHover={handleGearHover}
-            handleGearUnhover={handleGearUnhover}
+            <ColorPreview colorScheme={colorScheme} className="header-element"/>
+            <HeaderMainMenuButton
+                colorScheme={colorScheme}
+                handleSelectorVisibility={handleSelectorVisibility}
+            />
+            <HeaderSchemeController
+                colorScheme={colorScheme}
+                onClickFunc={updateColorScheme}
+                selectColorPage={selectColorPage}
             />
 
             

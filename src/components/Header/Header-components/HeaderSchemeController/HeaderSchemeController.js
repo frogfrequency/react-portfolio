@@ -1,11 +1,12 @@
 import { BsSkipEndFill } from "react-icons/bs";
 import { BsFillGearFill } from "react-icons/bs";
 import './HeaderSchemeController.css';
+import "../../Header.css"
 import { useState } from 'react';
 
 
 
-const HeaderSchemeController = ({colorScheme, onClickFunc}) => {
+const HeaderSchemeController = ({colorScheme, onClickFunc, selectColorPage}) => {
     
     const [skipIsHovered, changeSkipIsHovered] = useState(false);
     const handleSkipHover = () => {changeSkipIsHovered(true)}
@@ -18,11 +19,11 @@ const HeaderSchemeController = ({colorScheme, onClickFunc}) => {
     return (
 
         <div
-            className='color-scheme-controller'
+            className='header-element'
             style={{ backgroundColor: colorScheme.color1, color: colorScheme.color4 }}
             // onClick={onClickFunc}
         >
-                colorschemes
+                color schemes
 
             { skipIsHovered ? (
                     <BsSkipEndFill
@@ -55,7 +56,7 @@ const HeaderSchemeController = ({colorScheme, onClickFunc}) => {
                     onMouseLeave={handleGearUnhover}
                     style={{ marginTop:'3px', marginLeft: '2px', color: colorScheme.color3}}
                     onClick={() => {
-                        onClickFunc();
+                        selectColorPage('ColorSchemePage')
                       }}
                     size={'0.9em'}
                     />
@@ -67,7 +68,7 @@ const HeaderSchemeController = ({colorScheme, onClickFunc}) => {
                     onMouseLeave={handleGearUnhover}
                     style={{ marginTop:'3px', marginLeft: '2px', color: colorScheme.color4}}
                     onClick={() => {
-                        onClickFunc();
+                        selectColorPage('ColorSchemePage')
                       }}
                     size={'0.9em'}
                 />

@@ -1,0 +1,20 @@
+.page-selector {
+    height: 28px;
+    width:max-content;
+    position: absolute;
+    border-bottom: solid;
+    border-width: 2px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 78px;
+    display: flex;
+}
+
+.selector-element {
+    margin-left: 12px;
+    margin-right: 12px;
+}
