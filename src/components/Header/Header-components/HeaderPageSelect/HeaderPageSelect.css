@@ -1,20 +1,39 @@
 .page-selector {
-    height: 28px;
+    /* height: 28px; */
     width:max-content;
     position: absolute;
     border-bottom: solid;
+    border-top: solid;
     border-width: 2px;
     text-align: center;
     left: 0;
     right: 0;
     margin: auto;
+
+    padding-top: 8px;
+    padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    top: 78px;
+    top: 64px; 
     display: flex;
 }
 
 .selector-element {
     margin-left: 12px;
     margin-right: 12px;
+}
+
+
+.empty-box {
+    width:max-content;
+    position: absolute;
+    border-width: 2px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 33px;
+    width: 130px;
+    top: 31px; 
+    display: flex;
 }

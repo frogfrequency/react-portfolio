@@ -36,7 +36,7 @@ function App() {
     }
 
     const [pageSelectorVisibility, setPageSelectorVisibility] = useState(
-        false
+        [false, false]
     )
 
     const handleSelectorVisibility = (visibility) => {
@@ -51,11 +51,12 @@ function App() {
         <div
             className="App"
             style={{ backgroundColor: colorScheme.color1, color: colorScheme.color4 }}
-        >
+        > 
+            
             <HeaderPageSelect
                 colorScheme={colorScheme}
                 onSelect={handlePageSelect}
-                visibility={pageSelectorVisibility}
+                selectorVisibility={pageSelectorVisibility}
                 handleSelectorVisibility={handleSelectorVisibility}
             />
 
@@ -63,27 +64,33 @@ function App() {
                 colorScheme={colorScheme}
                 updateColorScheme={updateColorScheme}
                 selectColorPage={handlePageSelect}
+                selectorVisibility={pageSelectorVisibility}
                 handleSelectorVisibility={handleSelectorVisibility}
             />
             
             <AboutPage
                 activePage={activePage}
-                setActivePage={setActivePage}
                 colorScheme={colorScheme}
+                title={'about'}
+                subHeader={'useful information about this website'}
+                
             />
 
             <ProjectsPage
                 activePage={activePage}
-                setActivePage={setActivePage}
                 colorScheme={colorScheme}
+                title={'projects'}
+                subHeader={'a collection of some of my coding projects'}
+
             />
 
             <ColorSchemePage
                 activePage={activePage}
-                setActivePage={setActivePage}
                 colorScheme={colorScheme}
+                title={'color control'}
+                subHeader={`don't like the default color schemes? create your own here!`}
             />
-
+                
         </div>
     );
 }

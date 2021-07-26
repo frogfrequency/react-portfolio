@@ -5,8 +5,8 @@ import ColorPreview from '../ColorPreview/ColorPreview';
 import HeaderMainMenuButton from './Header-components/HeaderMainMenuButton/HeaderMainMenuButton';
 
 
-const Header = ({colorScheme, updateColorScheme, selectColorPage, handleSelectorVisibility}) => {
-
+const Header = ({colorScheme, updateColorScheme, selectColorPage, selectorVisibility, handleSelectorVisibility}) => {
+    
     return (
         <div
             className='header'
@@ -16,6 +16,7 @@ const Header = ({colorScheme, updateColorScheme, selectColorPage, handleSelector
             <ColorPreview colorScheme={colorScheme} className="header-element"/>
             <HeaderMainMenuButton
                 colorScheme={colorScheme}
+                selectorVisibility={selectorVisibility}
                 handleSelectorVisibility={handleSelectorVisibility}
             />
             <HeaderSchemeController
