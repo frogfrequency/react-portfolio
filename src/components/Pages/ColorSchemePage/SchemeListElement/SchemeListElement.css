@@ -1,0 +1,24 @@
+.page-color-box {
+    height: 23px;
+    width: 37px;
+    font-size: 18px;
+    font-family:fantasy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-box-container {
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+    width: min-content;
+    margin: 20px;
+    align-items: center;
+}
+
+
+.color-container-symbol {
+    margin-left: 5px;
+    margin-right:5px;
+}

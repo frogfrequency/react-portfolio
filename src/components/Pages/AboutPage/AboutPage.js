@@ -1,12 +1,18 @@
 import "../../Pages/Page.css"
+import "./AboutPage.css"
+import PageTitle from "../PageTitle"
 
-const AboutPage = ({ activePage }) => {
+
+const AboutPage = ({activePage, colorScheme, title, subHeader}) => {
     return (
-        <div className='page'>
+        <div className='page text'>
             {activePage === 'AboutPage' ? (
                 <>
-                    hi there i am the about AboutPage
-                    <br></br>
+                    <PageTitle
+                            colorScheme={colorScheme}
+                            title={title}
+                            subHeader={subHeader}
+                        />
                     <br></br>
                     <br></br>
                     Officia consectetur incididunt ullamco culpa esse deserunt dolor qui veniam ullamco esse consequat. Exercitation consectetur ad velit nostrud deserunt exercitation magna consectetur sit mollit ullamco. Est qui occaecat officia elit aute non excepteur ad adipisicing velit quis ad. Nostrud fugiat reprehenderit velit nostrud esse laboris.

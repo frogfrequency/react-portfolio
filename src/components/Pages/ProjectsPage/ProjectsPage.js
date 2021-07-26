@@ -3,24 +3,23 @@ import PageTitle from "../PageTitle";
 
 
 const ProjectsPage = ({activePage, colorScheme, title, subHeader}) => {
-
-
-    
     return (
         <div className='page'>
             { activePage === 'ProjectsPage' ? (
                     <>
                         <PageTitle
-
+                            colorScheme={colorScheme}
+                            title={title}
+                            subHeader={subHeader}
                         />
-                        hi there i am the about ProjectsPage
+                        
                         <br></br>
                         <br></br><br></br>
-                        Project           
+                        project        
                         <br></br>            
-                        Project           
+                        project        
                         <br></br>            
-                        Project    
+                        project
                     </>
                 ) : (
                         null

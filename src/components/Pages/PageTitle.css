@@ -1,0 +1,21 @@
+.main-title {
+    font-size: 30px;
+    border-bottom: solid;
+    width: max-content;
+    border-width: 2px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 4px;
+    margin: auto;
+}
+
+.sub-header {
+    font-style: italic;
+    font-weight:lighter;
+    font-size: 14px;
+    margin: auto;
+    width: max-content;
+    margin-top: 12px;
+    text-shadow: 0 0 24px rgb(0, 0, 0);
+    margin-bottom: 40px;
+}

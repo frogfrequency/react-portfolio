@@ -1,4 +1,4 @@
-export const colorSchemes = [
+export let colorSchemes = [
     {
         schemeId: 0,
         color1: 'rgb(41, 59, 95)',
@@ -28,3 +28,12 @@ export const colorSchemes = [
         color4: 'rgb(193, 210, 255)'
     }
 ]
+
+
+export function giveNextSchemeId(object, currentId) {
+    let i=0;
+    while (object[i].schemeId != currentId) {
+        i=(i+1)%object.length
+    }
+    return object[(i+1)%object.length].schemeId
+}

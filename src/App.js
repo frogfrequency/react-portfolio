@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Header from './components/Header/Header';
 
 import { colorSchemes } from "./color-schemes.js"
+import { giveNextSchemeId } from './color-schemes.js';
 import AboutPage from './components/Pages/AboutPage/AboutPage';
 import ProjectsPage from './components/Pages/ProjectsPage/ProjectsPage';
 import ColorSchemePage from './components/Pages/ColorSchemePage/ColorSchemePage';
@@ -17,18 +18,22 @@ import HeaderPageSelect from './components/Header/Header-components/HeaderPageSe
 
 function App() {
 
-    const [colorScheme, setColorScheme] = useState(
+    const [colorScheme, setNextColorScheme] = useState(
         colorSchemes[0]
     )
-    const updateColorScheme = () => {
-        let newId = (colorScheme.schemeId + 1) % colorSchemes.length; // increasing the current schemeId by one
-        setColorScheme(colorSchemes[newId]); // setting colorScheme(state) to next scheme
+    const nextColorScheme = () => {
+        let nextId = giveNextSchemeId(colorSchemes, colorScheme.schemeId)
+        setNextColorScheme(colorSchemes[nextId]);
+    }
+
+    const setColorScheme = (id) => {
+        setNextColorScheme(colorSchemes[id])
     }
 
 
 
     const [activePage, setActivePage] = useState(
-        'ProjectsPage'
+        'ColorSchemePage'
     )
 
     const handlePageSelect = (whatPage) => {
@@ -62,7 +67,7 @@ function App() {
 
             <Header
                 colorScheme={colorScheme}
-                updateColorScheme={updateColorScheme}
+                nextColorScheme={nextColorScheme}
                 selectColorPage={handlePageSelect}
                 selectorVisibility={pageSelectorVisibility}
                 handleSelectorVisibility={handleSelectorVisibility}
@@ -89,6 +94,7 @@ function App() {
                 colorScheme={colorScheme}
                 title={'color control'}
                 subHeader={`don't like the default color schemes? create your own here!`}
+                setColorScheme={setColorScheme}
             />
                 
         </div>
