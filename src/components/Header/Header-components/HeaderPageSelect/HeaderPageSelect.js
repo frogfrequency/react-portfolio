@@ -76,7 +76,7 @@ const HeaderPageSelect = ({ colorScheme, onSelect, selectorVisibility, handleSel
                     {elementsAreHovered.ProjectsPage ? (
                         <>
                             <div
-                                className='selector-element'
+                                className='selector-element pointer'
                                 onClick={() => onSelect('ProjectsPage')}
                                 onMouseEnter={() => handleElementMouseEnter('ProjectsPage')}
                                 onMouseLeave={() => handleElementMouseLeave()}
@@ -103,7 +103,7 @@ const HeaderPageSelect = ({ colorScheme, onSelect, selectorVisibility, handleSel
                     {elementsAreHovered.ColorSchemePage ? (
                         <>
                             <div
-                                className='selector-element'
+                                className='selector-element pointer'
                                 onClick={() => onSelect('ColorSchemePage')}
                                 onMouseEnter={() => handleElementMouseEnter('ColorSchemePage')}
                                 onMouseLeave={() => handleElementMouseLeave()}
@@ -131,7 +131,7 @@ const HeaderPageSelect = ({ colorScheme, onSelect, selectorVisibility, handleSel
                     {elementsAreHovered.AboutPage ? (
                         <>
                             <div
-                                className='selector-element'
+                                className='selector-element pointer'
                                 onClick={() => onSelect('AboutPage')}
                                 onMouseEnter={() => handleElementMouseEnter('AboutPage')}
                                 onMouseLeave={() => handleElementMouseLeave()}

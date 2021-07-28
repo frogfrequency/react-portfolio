@@ -27,7 +27,7 @@ const HeaderMainMenuBotton = ({ colorScheme, selectorVisibility, handleSelectorV
         <>
             {menuButtonIsHovered ? (
                     <div
-                        className="header-element"
+                        className="header-element pointer"
                         style={{ backgroundColor: colorScheme.color1, color: colorScheme.color3 }}
                         onMouseEnter={() => handleMenuButtonHover()}
                         onMouseLeave={() => handleMenuButtonUnhover()}

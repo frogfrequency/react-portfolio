@@ -5,8 +5,7 @@ import { useState } from 'react';
 
 import Header from './components/Header/Header';
 
-import { colorSchemes } from "./color-schemes.js"
-import { giveNextSchemeId } from './color-schemes.js';
+import { colorSchemes, giveNextSchemeId } from "./color-schemes.js"
 import AboutPage from './components/Pages/AboutPage/AboutPage';
 import ProjectsPage from './components/Pages/ProjectsPage/ProjectsPage';
 import ColorSchemePage from './components/Pages/ColorSchemePage/ColorSchemePage';
@@ -18,24 +17,46 @@ import HeaderPageSelect from './components/Header/Header-components/HeaderPageSe
 
 function App() {
 
+    // ACTIVE SCHEME
+
     const [colorScheme, defineActiveColorScheme] = useState(
         colorSchemes[0]
     )
+    const nextColorScheme = () => {
+        let nextId = giveNextSchemeId(theColorSchemes, colorScheme.schemeId);
+        let requestedScheme = theColorSchemes.filter(scheme => scheme.schemeId === nextId)[0];
+        defineActiveColorScheme(requestedScheme);
+    } 
+
+    const setColorScheme = (id) => {
+        console.log(`setColorScheme called with: ${id}`)
+        
+        let requestedScheme = theColorSchemes.filter(scheme => scheme.schemeId === id)[0];
+        let requestedSchemeId = requestedScheme.schemeId;
+        console.log(requestedSchemeId);
+        defineActiveColorScheme(requestedScheme);
+    }
+
+
+    // COLORSCHEMES
 
     const [theColorSchemes, defineTheColorSchemes] = useState(
         colorSchemes
     )
 
-    const nextColorScheme = () => {
-        let nextId = giveNextSchemeId(colorSchemes, colorScheme.schemeId)
-        defineActiveColorScheme(colorSchemes[nextId]);
+    const handleDefineTheColorSchemes = (newColorSchemes) => {
+        console.log('aaaand handleDefineTheColorSchemes is calle as well with:')
+        console.log(newColorSchemes);
+        defineTheColorSchemes(newColorSchemes);
     }
 
-    const setColorScheme = (id) => {
-        defineActiveColorScheme(colorSchemes[id]);
+    const deleteColorScheme = (id) => {
+        let newColorSchemes = theColorSchemes.filter(scheme => scheme.schemeId !== id);
+        defineTheColorSchemes(newColorSchemes);
     }
 
 
+    // ACTIVEPAGE SELECT
 
     const [activePage, setActivePage] = useState(
         'ColorSchemePage'
@@ -44,6 +65,9 @@ function App() {
     const handlePageSelect = (whatPage) => {
         setActivePage(whatPage);
     }
+
+
+    // SELECTOR MENU VISIBILITY
 
     const [pageSelectorVisibility, setPageSelectorVisibility] = useState(
         [false, false]
@@ -54,7 +78,7 @@ function App() {
     }
 
 
-    // --------- end of state ---------
+    // --------- END OF STATE ---------
 
     return (
         
@@ -101,6 +125,9 @@ function App() {
                 subHeader={`don't like the default color schemes? create your own here!`}
                 setColorScheme={setColorScheme}
                 nextColorScheme={nextColorScheme}
+                theColorSchemes={theColorSchemes}
+                deleteColorScheme={deleteColorScheme}
+                handleDefineTheColorSchemes={handleDefineTheColorSchemes}
             />
                 
         </div>

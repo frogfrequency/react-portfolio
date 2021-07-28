@@ -2,8 +2,11 @@ import ColorPreview from "../../ColorPreview/ColorPreview"
 import PageTitle from "../PageTitle"
 import { colorSchemes } from "../../../color-schemes.js"
 import SchemeListElement from "./SchemeListElement/SchemeListElement"
+import SchemeListContainer from "./SchemeListContainer/SchemeListContainer"
+import CustommizationPanel from "./CustomizationPanel/CustomizationPanel"
+import "./ColorSchemePage.css"
 
-const ColorSchemePage = ({activePage, colorScheme, title, subHeader, setColorScheme, nextColorScheme}) => {
+const ColorSchemePage = ({activePage, colorScheme, title, subHeader, setColorScheme, nextColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes}) => {
     
 
 
@@ -12,29 +15,21 @@ const ColorSchemePage = ({activePage, colorScheme, title, subHeader, setColorSch
             {activePage === 'ColorSchemePage' ? (
                 <>
                    <PageTitle
-                            colorScheme={colorScheme}
-                            title={title}
-                            subHeader={subHeader}
+                        colorScheme={colorScheme}
+                        title={title}
+                        subHeader={subHeader}
                     />
-                    
-                    <div>here are the schemes:</div>
-
-                    {colorSchemes.map((scheme) => (
-                        <>
-                        {/* <ColorPreview colorScheme={colorSchemes[scheme.schemeId]}></ColorPreview> */}
-                        <SchemeListElement
-                            // insert key prop here to avoid warning message?
-                            thisColorScheme={colorSchemes[scheme.schemeId]}
-                            colorScheme={colorScheme}
-                            setColorScheme={setColorScheme}
-                            nextColorScheme={nextColorScheme}
-                        ></SchemeListElement>
-                        </>
-                    ))}
-
-                          
-
-
+                    <div id="color-control">
+                    <SchemeListContainer
+                        colorScheme={colorScheme}
+                        setColorScheme={setColorScheme}
+                        nextColorScheme={nextColorScheme}
+                        theColorSchemes={theColorSchemes}
+                        deleteColorScheme={deleteColorScheme}
+                        handleDefineTheColorSchemes={handleDefineTheColorSchemes}
+                    />
+                    <CustommizationPanel/>
+                    </div>
                 </>
             ) : (
                 null

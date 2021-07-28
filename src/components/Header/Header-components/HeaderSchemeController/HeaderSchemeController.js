@@ -27,13 +27,14 @@ const HeaderSchemeController = ({colorScheme, onClickFunc, selectColorPage}) => 
 
             { skipIsHovered ? (
                     <BsSkipEndFill
-                    onMouseEnter={handleSkipHover}
-                    onMouseLeave={handleSkipUnhover}
-                    style={{ marginTop:'3px', marginLeft: '2px', color: colorScheme.color3}}
-                    onClick={() => {
-                        onClickFunc();
-                    }}
-                    size={'1.3em'}
+                        className='pointer'
+                        onMouseEnter={handleSkipHover}
+                        onMouseLeave={handleSkipUnhover}
+                        style={{ marginTop:'3px', marginLeft: '2px', color: colorScheme.color3}}
+                        onClick={() => {
+                            onClickFunc();
+                        }}
+                        size={'1.3em'}
                     />
             ) : (
                 <BsSkipEndFill
@@ -52,13 +53,14 @@ const HeaderSchemeController = ({colorScheme, onClickFunc, selectColorPage}) => 
             { gearIsHovered ? (
 
                     <BsFillGearFill
-                    onMouseEnter={handleGearHover}
-                    onMouseLeave={handleGearUnhover}
-                    style={{ marginTop:'3px', marginLeft: '2px', color: colorScheme.color3}}
-                    onClick={() => {
-                        selectColorPage('ColorSchemePage')
-                      }}
-                    size={'0.9em'}
+                        className='pointer'
+                        onMouseEnter={handleGearHover}
+                        onMouseLeave={handleGearUnhover}
+                        style={{ marginTop:'3px', marginLeft: '2px', color: colorScheme.color3}}
+                        onClick={() => {
+                            selectColorPage('ColorSchemePage')
+                        }}
+                        size={'0.9em'}
                     />
 
             ) : (

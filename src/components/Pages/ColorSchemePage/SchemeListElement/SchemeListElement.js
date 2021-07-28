@@ -3,11 +3,11 @@ import "./SchemeListElement.css"
 import { BsFillGearFill } from "react-icons/bs";
 import { FaCircle, FaRegCircle } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import { colorSchemes, giveNextSchemeId, defineNewColorSchemes } from "../../../../color-schemes"
+import { giveNextSchemeId} from "../../../../color-schemes"
 
 let color
 
-const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextColorScheme }) => {
+const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextColorScheme, theColorSchemes, deleteColorScheme }) => {
 
     const [hoverStatuses, updateHoverStatuses] = useState({ inactive: false, gear: false, bin: false });
 
@@ -26,10 +26,7 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextC
         console.log(`handleBinClick fires with: ${id}`)
         console.log(`the current scheme id is: ${colorScheme.schemeId}`)
         if (id !== colorScheme.schemeId) {
-            let newColorSchemes = colorSchemes.filter(scheme => scheme.schemeId != id);
-            defineNewColorSchemes(newColorSchemes);
-            let currentSchemeId = colorScheme.schemeId;
-            setColorScheme(0);
+            deleteColorScheme(id);
         }
         else {
             alert("Sry you cannot delete a scheme that is currently active");
@@ -61,7 +58,7 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextC
                 <>
                 {hoverStatuses.inactive ? (
                     <FaRegCircle
-                        className='color-container-symbol'
+                        className='color-container-symbol pointer'
                         style={{ color: colorScheme.color3 }}
                         onMouseEnter={() => handleMouseEnter('inactive')}
                         onMouseLeave={() => handleMouseLeave('inactive')}
@@ -73,7 +70,7 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextC
                         style={{ color: colorScheme.color4 }}
                         onMouseEnter={() => handleMouseEnter('inactive')}
                         onMouseLeave={() => handleMouseLeave('inactive')}
-                        onClick={() => handleOnClick}
+                        onClick={() => setColorScheme(thisColorScheme.schemeId)}
                     />
                 )
                 }
@@ -84,7 +81,7 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextC
 
             {hoverStatuses.gear ? (
                 <BsFillGearFill
-                    className='color-container-symbol'
+                    className='color-container-symbol pointer'
                     style={{ color: colorScheme.color3 }}
                     onMouseEnter={() => handleMouseEnter('gear')}
                     onMouseLeave={() => handleMouseLeave('gear')}
@@ -103,7 +100,7 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextC
 
             {hoverStatuses.bin ? (
                 <MdDelete
-                    className='color-container-symbol'
+                    className='color-container-symbol pointer'
                     style={{ color: colorScheme.color3 }}
                     onMouseEnter={() => handleMouseEnter('bin')}
                     onMouseLeave={() => handleMouseLeave('bin')}
