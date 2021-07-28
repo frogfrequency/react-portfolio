@@ -18,16 +18,21 @@ import HeaderPageSelect from './components/Header/Header-components/HeaderPageSe
 
 function App() {
 
-    const [colorScheme, setNextColorScheme] = useState(
+    const [colorScheme, defineActiveColorScheme] = useState(
         colorSchemes[0]
     )
+
+    const [theColorSchemes, defineTheColorSchemes] = useState(
+        colorSchemes
+    )
+
     const nextColorScheme = () => {
         let nextId = giveNextSchemeId(colorSchemes, colorScheme.schemeId)
-        setNextColorScheme(colorSchemes[nextId]);
+        defineActiveColorScheme(colorSchemes[nextId]);
     }
 
     const setColorScheme = (id) => {
-        setNextColorScheme(colorSchemes[id])
+        defineActiveColorScheme(colorSchemes[id]);
     }
 
 
@@ -95,6 +100,7 @@ function App() {
                 title={'color control'}
                 subHeader={`don't like the default color schemes? create your own here!`}
                 setColorScheme={setColorScheme}
+                nextColorScheme={nextColorScheme}
             />
                 
         </div>

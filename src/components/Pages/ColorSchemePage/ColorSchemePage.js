@@ -3,7 +3,7 @@ import PageTitle from "../PageTitle"
 import { colorSchemes } from "../../../color-schemes.js"
 import SchemeListElement from "./SchemeListElement/SchemeListElement"
 
-const ColorSchemePage = ({activePage, colorScheme, title, subHeader, setColorScheme}) => {
+const ColorSchemePage = ({activePage, colorScheme, title, subHeader, setColorScheme, nextColorScheme}) => {
     
 
 
@@ -27,6 +27,7 @@ const ColorSchemePage = ({activePage, colorScheme, title, subHeader, setColorSch
                             thisColorScheme={colorSchemes[scheme.schemeId]}
                             colorScheme={colorScheme}
                             setColorScheme={setColorScheme}
+                            nextColorScheme={nextColorScheme}
                         ></SchemeListElement>
                         </>
                     ))}

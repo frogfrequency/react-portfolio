@@ -37,3 +37,7 @@ export function giveNextSchemeId(object, currentId) {
     }
     return object[(i+1)%object.length].schemeId
 }
+
+export function defineNewColorSchemes(newSchemes) {
+    colorSchemes = newSchemes;
+}

@@ -3,11 +3,11 @@ import "./SchemeListElement.css"
 import { BsFillGearFill } from "react-icons/bs";
 import { FaCircle, FaRegCircle } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import { colorSchemes } from "../../../../color-schemes"
+import { colorSchemes, giveNextSchemeId, defineNewColorSchemes } from "../../../../color-schemes"
 
 let color
 
-const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme }) => {
+const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextColorScheme }) => {
 
     const [hoverStatuses, updateHoverStatuses] = useState({ inactive: false, gear: false, bin: false });
 
@@ -26,9 +26,10 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme }) => 
         console.log(`handleBinClick fires with: ${id}`)
         console.log(`the current scheme id is: ${colorScheme.schemeId}`)
         if (id !== colorScheme.schemeId) {
-            // colorSchemes = colorSchemes.filter(scheme => scheme.schemeId != id);
-            // this does not work.. it seems that the external variable cannot be overwritten?
-            // setColorScheme(colorScheme.schemeId) // maybe required to force an update
+            let newColorSchemes = colorSchemes.filter(scheme => scheme.schemeId != id);
+            defineNewColorSchemes(newColorSchemes);
+            let currentSchemeId = colorScheme.schemeId;
+            setColorScheme(0);
         }
         else {
             alert("Sry you cannot delete a scheme that is currently active");
