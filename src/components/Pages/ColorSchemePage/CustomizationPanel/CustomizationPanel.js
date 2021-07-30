@@ -4,14 +4,14 @@ import "../../../ColorPreview/ColorPreview.css"
 import { SketchPicker } from 'react-color';
 import { RiSave3Fill } from "react-icons/ri";
 import { FaUndo } from "react-icons/fa";
-
+import { MdClose } from "react-icons/md";
 import { useState } from "react";
 import ColorPreview from '../../../ColorPreview/ColorPreview';
 import CustomizationPanelElement from "./CustomizationPanelElement/CustomizationPanelElement";
 
-const CustomizationPanel = ({ activeCustomizationId, thisColorScheme, colorScheme, handleDefineTheColorSchemes, theColorSchemes, setColorScheme, nextColorScheme, saveAndSetNewColorScheme }) => {
+const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorScheme, setActiveCustomizationId}) => {
 
-    const [hoverStatuses, setHoverStatuses] = useState([false, false]);
+    const [hoverStatuses, setHoverStatuses] = useState([false, false, false]);
 
     const handleMouseEnter = (idx) => {
         let newHoverStatuses = [...hoverStatuses];
@@ -44,19 +44,6 @@ const CustomizationPanel = ({ activeCustomizationId, thisColorScheme, colorSchem
     }
 
 
-    // const saveAndSetNewColorScheme = (newColorScheme) => {
-    //     console.log(theColorSchemes)
-    //     let newTheColorSchemes = [...theColorSchemes];
-    //     newTheColorSchemes = newTheColorSchemes.filter(scheme => scheme.schemeId !== newColorScheme.schemeId);
-    //     newTheColorSchemes.push(newColorScheme);
-    //     newTheColorSchemes.sort(function(a, b) {
-    //         return a.schemeId - b.schemeId;
-    //     });
-    //     handleDefineTheColorSchemes(newTheColorSchemes);
-    // }
-
-
-
     const resetNewColorScheme = () => {
         setNewColorScheme(oldColorScheme);
     }
@@ -72,6 +59,8 @@ const CustomizationPanel = ({ activeCustomizationId, thisColorScheme, colorSchem
                 return 'text styling color'
             case 4:
                 return 'text color'
+            default:
+                return 'error in giveColorName'
 
         }
     }
@@ -81,6 +70,36 @@ const CustomizationPanel = ({ activeCustomizationId, thisColorScheme, colorSchem
             id='customization-panel'
             style={{ backgroundColor: colorScheme.color2, borderColor: colorScheme.color1 }}
         >
+
+
+                {hoverStatuses[2] ? (
+                    <MdClose
+                    size='1.3em'
+                    id='closeX'
+                    style={{color: colorScheme.color3}}
+                    onClick={() => setActiveCustomizationId(null)}
+                    onMouseEnter={() => handleMouseEnter(2)}
+                    onMouseLeave={() => handleMouseLeave(2)}
+                />
+                ) : (
+                    <MdClose
+                    size='1.3em'
+                    id='closeX'
+                    style={{color: colorScheme.color4}}
+                    onClick={() => setActiveCustomizationId(null)}
+                    onMouseEnter={() => handleMouseEnter(2)}
+                    onMouseLeave={() => handleMouseLeave(2)}
+                />
+                )}
+
+                
+
+
+
+
+
+
+            
             <div id='customization-panel-header' style={{ borderColor: colorScheme.color3 }}>
                 <div>adjust colors for: </div>
 

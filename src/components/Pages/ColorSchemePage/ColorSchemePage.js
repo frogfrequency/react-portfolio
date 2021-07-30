@@ -2,7 +2,7 @@ import PageTitle from "../PageTitle"
 import SchemeListContainer from "./SchemeListContainer/SchemeListContainer"
 import "./ColorSchemePage.css"
 
-const ColorSchemePage = ({activePage, colorScheme, title, subHeader, setColorScheme, nextColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes, saveAndSetNewColorScheme}) => {
+const ColorSchemePage = ({activePage, colorScheme, title, subHeader, setColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes, saveAndSetNewColorScheme}) => {
     
 
 
@@ -22,7 +22,6 @@ const ColorSchemePage = ({activePage, colorScheme, title, subHeader, setColorSch
                         theColorSchemes={theColorSchemes}
                         deleteColorScheme={deleteColorScheme}
                         handleDefineTheColorSchemes={handleDefineTheColorSchemes}
-                        nextColorScheme={nextColorScheme}
                         saveAndSetNewColorScheme={saveAndSetNewColorScheme}
                     />
                     

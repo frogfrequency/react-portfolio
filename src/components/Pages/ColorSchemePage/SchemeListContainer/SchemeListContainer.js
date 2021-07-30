@@ -6,7 +6,7 @@ import "../ColorSchemePage.css"
 import { useState } from 'react';
 import { generateNewId } from "../../../../utility"
 
-const SchemeListContainer = ({colorScheme, setColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes, nextColorScheme, saveAndSetNewColorScheme}) => {
+const SchemeListContainer = ({colorScheme, setColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes, saveAndSetNewColorScheme}) => {
     
     const [addButtonHoverStatus, setAddButtonHoverStatus] = useState(
         false
@@ -18,7 +18,7 @@ const SchemeListContainer = ({colorScheme, setColorScheme, theColorSchemes, dele
         setAddButtonHoverStatus(false);
     }
     
-    const [activeCustomizationId, setActiveCustomizationId] = useState(null); // change this to null
+    const [activeCustomizationId, setActiveCustomizationId] = useState(null);
 
 
 
@@ -54,9 +54,6 @@ const SchemeListContainer = ({colorScheme, setColorScheme, theColorSchemes, dele
                                 deleteColorScheme={deleteColorScheme}
                                 activeCustomizationId={activeCustomizationId}
                                 setActiveCustomizationId={setActiveCustomizationId}
-                                handleDefineTheColorSchemes={handleDefineTheColorSchemes}
-                                theColorSchemes={theColorSchemes}
-                                nextColorScheme={nextColorScheme}
                                 saveAndSetNewColorScheme={saveAndSetNewColorScheme}
                             ></SchemeListElement>
                         

@@ -133,7 +133,6 @@ function App() {
                 title={'color control'}
                 subHeader={`don't like the default color schemes? create your own here!`}
                 setColorScheme={setColorScheme}
-                nextColorScheme={nextColorScheme}
                 theColorSchemes={theColorSchemes}
                 deleteColorScheme={deleteColorScheme}
                 handleDefineTheColorSchemes={handleDefineTheColorSchemes}
