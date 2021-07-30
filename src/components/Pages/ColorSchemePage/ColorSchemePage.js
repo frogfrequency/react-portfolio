@@ -1,12 +1,8 @@
-import ColorPreview from "../../ColorPreview/ColorPreview"
 import PageTitle from "../PageTitle"
-import { colorSchemes } from "../../../color-schemes.js"
-import SchemeListElement from "./SchemeListElement/SchemeListElement"
 import SchemeListContainer from "./SchemeListContainer/SchemeListContainer"
-import CustommizationPanel from "./CustomizationPanel/CustomizationPanel"
 import "./ColorSchemePage.css"
 
-const ColorSchemePage = ({activePage, colorScheme, title, subHeader, setColorScheme, nextColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes}) => {
+const ColorSchemePage = ({activePage, colorScheme, title, subHeader, setColorScheme, nextColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes, saveAndSetNewColorScheme}) => {
     
 
 
@@ -23,12 +19,13 @@ const ColorSchemePage = ({activePage, colorScheme, title, subHeader, setColorSch
                     <SchemeListContainer
                         colorScheme={colorScheme}
                         setColorScheme={setColorScheme}
-                        nextColorScheme={nextColorScheme}
                         theColorSchemes={theColorSchemes}
                         deleteColorScheme={deleteColorScheme}
                         handleDefineTheColorSchemes={handleDefineTheColorSchemes}
+                        nextColorScheme={nextColorScheme}
+                        saveAndSetNewColorScheme={saveAndSetNewColorScheme}
                     />
-                    <CustommizationPanel/>
+                    
                     </div>
                 </>
             ) : (

@@ -6,7 +6,7 @@ import "../ColorSchemePage.css"
 import { useState } from 'react';
 import { generateNewId } from "../../../../utility"
 
-const SchemeListContainer = ({thisColorScheme, colorScheme, setColorScheme, nextColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes}) => {
+const SchemeListContainer = ({colorScheme, setColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes, nextColorScheme, saveAndSetNewColorScheme}) => {
     
     const [addButtonHoverStatus, setAddButtonHoverStatus] = useState(
         false
@@ -18,6 +18,9 @@ const SchemeListContainer = ({thisColorScheme, colorScheme, setColorScheme, next
         setAddButtonHoverStatus(false);
     }
     
+    const [activeCustomizationId, setActiveCustomizationId] = useState(null); // change this to null
+
+
 
     const addColorScheme = () => {
         console.log('addColorScheme called');
@@ -38,20 +41,25 @@ const SchemeListContainer = ({thisColorScheme, colorScheme, setColorScheme, next
     
     
     return (
-        <div className='color-control-element'>
+        <div>
 
 
             {theColorSchemes.map((scheme) => (
-                        <>
+                        
                             <SchemeListElement
+                                key={scheme.schemeId}
                                 thisColorScheme={scheme}
                                 colorScheme={colorScheme}
                                 setColorScheme={setColorScheme}
-                                nextColorScheme={nextColorScheme}
-                                theColorSchemes={theColorSchemes}
                                 deleteColorScheme={deleteColorScheme}
+                                activeCustomizationId={activeCustomizationId}
+                                setActiveCustomizationId={setActiveCustomizationId}
+                                handleDefineTheColorSchemes={handleDefineTheColorSchemes}
+                                theColorSchemes={theColorSchemes}
+                                nextColorScheme={nextColorScheme}
+                                saveAndSetNewColorScheme={saveAndSetNewColorScheme}
                             ></SchemeListElement>
-                        </>
+                        
                     ))}
 
             {addButtonHoverStatus ? (

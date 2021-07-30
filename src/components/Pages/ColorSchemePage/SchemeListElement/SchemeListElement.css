@@ -15,6 +15,9 @@
     width: min-content;
     margin: 20px;
     align-items: center;
+    height: 24px;
+    position: relative;
+    
 }
 
 

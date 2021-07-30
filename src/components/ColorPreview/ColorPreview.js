@@ -1,4 +1,4 @@
-import "./Colorpreview.css"
+import "./ColorPreview.css"
 import"../Header/Header.css"
 
 const ColorPreview = ({colorScheme}) => {

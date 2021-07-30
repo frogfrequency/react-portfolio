@@ -17,11 +17,16 @@ import HeaderPageSelect from './components/Header/Header-components/HeaderPageSe
 
 function App() {
 
+    
     // ACTIVE SCHEME
 
     const [colorScheme, defineActiveColorScheme] = useState(
         colorSchemes[0]
     )
+
+    document.body.style.backgroundColor = colorScheme.color1;
+
+
     const nextColorScheme = () => {
         let nextId = giveNextSchemeId(theColorSchemes, colorScheme.schemeId);
         let requestedScheme = theColorSchemes.filter(scheme => scheme.schemeId === nextId)[0];
@@ -29,30 +34,34 @@ function App() {
     } 
 
     const setColorScheme = (id) => {
-        console.log(`setColorScheme called with: ${id}`)
-        
         let requestedScheme = theColorSchemes.filter(scheme => scheme.schemeId === id)[0];
-        let requestedSchemeId = requestedScheme.schemeId;
-        console.log(requestedSchemeId);
         defineActiveColorScheme(requestedScheme);
     }
 
 
+
     // COLORSCHEMES
 
-    const [theColorSchemes, defineTheColorSchemes] = useState(
-        colorSchemes
-    )
+    const [theColorSchemes, defineTheColorSchemes] = useState(colorSchemes)
 
     const handleDefineTheColorSchemes = (newColorSchemes) => {
-        console.log('aaaand handleDefineTheColorSchemes is calle as well with:')
-        console.log(newColorSchemes);
         defineTheColorSchemes(newColorSchemes);
     }
 
     const deleteColorScheme = (id) => {
         let newColorSchemes = theColorSchemes.filter(scheme => scheme.schemeId !== id);
         defineTheColorSchemes(newColorSchemes);
+    }
+
+    const saveAndSetNewColorScheme = (newColorScheme) => {
+        let newTheColorSchemes = [...theColorSchemes];
+        newTheColorSchemes = newTheColorSchemes.filter(scheme => scheme.schemeId !== newColorScheme.schemeId);
+        newTheColorSchemes.push(newColorScheme);
+        newTheColorSchemes.sort(function(a, b) {
+            return a.schemeId - b.schemeId;
+        });
+        handleDefineTheColorSchemes(newTheColorSchemes);
+        if (colorScheme.schemeId === newColorScheme.schemeId) {defineActiveColorScheme(newColorScheme)};
     }
 
 
@@ -128,6 +137,7 @@ function App() {
                 theColorSchemes={theColorSchemes}
                 deleteColorScheme={deleteColorScheme}
                 handleDefineTheColorSchemes={handleDefineTheColorSchemes}
+                saveAndSetNewColorScheme={saveAndSetNewColorScheme}
             />
                 
         </div>

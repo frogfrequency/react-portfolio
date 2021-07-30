@@ -1,19 +1,9 @@
 #color-control {
-    background-color: rgb(158, 113, 113);
+    /* background-color: rgba(42, 59, 209, 0.603); */
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-
-.color-control-element {
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-
-
-
-
 
 
 .addSchemeButton {
@@ -30,4 +20,52 @@
 #addSchemePlusSign {
     margin-top: 1px;
     margin-left: 4px;
+}
+
+
+#customization-panel {
+    position: absolute;
+    left: 120%;
+    top: -26px;
+    display: flex;
+    flex-direction: column;
+    border-width: 10px;
+    border-left: solid;
+    width: 300px;
+    padding: 20px;
+    margin: auto;
+    border: solid;
+    border-radius: 20px;
+}
+
+
+#customization-panel-header {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: solid;
+    border-width: 2px;
+}
+
+
+#customization-panel-content {
+    /* background: black; */
+}
+
+.customization-panel-content-element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.customization-panel-action-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }

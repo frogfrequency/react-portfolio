@@ -1,9 +1,7 @@
 import "./PageTitle.css"
 
 const PageTitle = ({colorScheme, title, subHeader}) => {
-    let shadowSizeString = '-5px 5px 20px '
-    let shadowColor = 'rgba(0, 0, 0, 0.75)';
-    let textShadowString = shadowSizeString + shadowColor
+    
     return (
         <div>
             <h3

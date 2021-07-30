@@ -32,7 +32,7 @@ export let colorSchemes = [
 
 export function giveNextSchemeId(object, currentId) {
     let i=0;
-    while (object[i].schemeId != currentId) {
+    while (object[i].schemeId !== currentId) { // != changed to !==
         i=(i+1)%object.length
     }
     return object[(i+1)%object.length].schemeId

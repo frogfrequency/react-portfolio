@@ -3,11 +3,13 @@ import "./SchemeListElement.css"
 import { BsFillGearFill } from "react-icons/bs";
 import { FaCircle, FaRegCircle } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import { giveNextSchemeId} from "../../../../color-schemes"
+import "../CustomizationPanel/CustomizationPanel.css"
+import CustomizationPanel from "../CustomizationPanel/CustomizationPanel";
+// import { CustomizationPanel } from "../CustomizationPanel/CustomizationPanel"
 
-let color
 
-const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextColorScheme, theColorSchemes, deleteColorScheme }) => {
+
+const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, deleteColorScheme, activeCustomizationId, setActiveCustomizationId, handleDefineTheColorSchemes, theColorSchemes, nextColorScheme, saveAndSetNewColorScheme }) => {
 
     const [hoverStatuses, updateHoverStatuses] = useState({ inactive: false, gear: false, bin: false });
 
@@ -23,8 +25,6 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextC
     }
 
     const handleBinClick = (id) => {
-        console.log(`handleBinClick fires with: ${id}`)
-        console.log(`the current scheme id is: ${colorScheme.schemeId}`)
         if (id !== colorScheme.schemeId) {
             deleteColorScheme(id);
         }
@@ -33,11 +33,16 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextC
         }
     }
 
+    const handleInactiveClick = (id) => {
+        handleMouseLeave('inactive');
+        setColorScheme(id)
+    }
 
+    const handleGearClick = (id) => {
+        setActiveCustomizationId(id);
+    }
 
-    const handleOnClick = () => { }; // boilerplate here
-
-
+    // ------------- END OF STATE ------------
 
     return (
         <div className='page-box-container'>
@@ -52,7 +57,6 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextC
                 <FaCircle
                     className='color-container-symbol'
                     style={{ color: colorScheme.color4 }}
-                    onClick={() => handleOnClick}
                 />
             ) : (
                 <>
@@ -62,7 +66,7 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextC
                         style={{ color: colorScheme.color3 }}
                         onMouseEnter={() => handleMouseEnter('inactive')}
                         onMouseLeave={() => handleMouseLeave('inactive')}
-                        onClick={() => setColorScheme(thisColorScheme.schemeId)}
+                        onClick={() => handleInactiveClick(thisColorScheme.schemeId)}
                     />
                 ) : (
                     <FaRegCircle
@@ -70,7 +74,7 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextC
                         style={{ color: colorScheme.color4 }}
                         onMouseEnter={() => handleMouseEnter('inactive')}
                         onMouseLeave={() => handleMouseLeave('inactive')}
-                        onClick={() => setColorScheme(thisColorScheme.schemeId)}
+                        onClick={() => handleInactiveClick(thisColorScheme.schemeId)}
                     />
                 )
                 }
@@ -85,7 +89,7 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextC
                     style={{ color: colorScheme.color3 }}
                     onMouseEnter={() => handleMouseEnter('gear')}
                     onMouseLeave={() => handleMouseLeave('gear')}
-                    onClick={() => handleOnClick}
+                    onClick={() => handleGearClick(thisColorScheme.schemeId)}
                 />
             ): (
                 <BsFillGearFill
@@ -93,7 +97,7 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextC
                     style={{ color: colorScheme.color4 }}
                     onMouseEnter={() => handleMouseEnter('gear')}
                     onMouseLeave={() => handleMouseLeave('gear')}
-                    onClick={() => handleOnClick}
+                    // onClick={() => handleGearClick} // this is theoretically not needed since it cant be clicked without being hovered
                 />
             )
             }
@@ -118,13 +122,23 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, nextC
                 />
             )
             }
-
-
-
-
+        {activeCustomizationId === thisColorScheme.schemeId ? (
             
-           
-
+            <CustomizationPanel
+                activeCustomizationId={activeCustomizationId}
+                thisColorScheme={thisColorScheme}
+                colorScheme={colorScheme}
+                handleDefineTheColorSchemes={handleDefineTheColorSchemes}
+                theColorSchemes={theColorSchemes}
+                setColorScheme={setColorScheme}
+                nextColorScheme={nextColorScheme}
+                saveAndSetNewColorScheme={saveAndSetNewColorScheme}
+            />
+        ) : (
+            null
+        )
+        }
+        
 
         </div>
     )
