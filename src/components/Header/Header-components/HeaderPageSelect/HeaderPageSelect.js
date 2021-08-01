@@ -1,7 +1,8 @@
 import "./HeaderPageSelect.css"
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
-const HeaderPageSelect = ({ colorScheme, onSelect, selectorVisibility, handleSelectorVisibility }) => {
+const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisibility }) => {
 
     const defaultHoverStatuses = { ProjectsPage: false, ColorSchemePage: false, AboutPage: false };
 
@@ -40,27 +41,27 @@ const HeaderPageSelect = ({ colorScheme, onSelect, selectorVisibility, handleSel
         <>
             {selectorVisibility.includes(true) ? (
                 <>
-                <div
-                    className="empty-box"
-                    onMouseEnter={() => handleMenuMouseEnter()}
-                    onMouseLeave={() => handleMenuMouseLeave()}
-                    style={{left: '192px'}}
-                ></div>
-                <div
-                    className="empty-box"
-                    onMouseEnter={() => handleMenuMouseEnter()}
-                    onMouseLeave={() => handleMenuMouseLeave()}
-                    style={{right: '192px'}}
-                ></div>
+                    <div
+                        className="empty-box"
+                        onMouseEnter={() => handleMenuMouseEnter()}
+                        onMouseLeave={() => handleMenuMouseLeave()}
+                        style={{ left: '192px' }}
+                    ></div>
+                    <div
+                        className="empty-box"
+                        onMouseEnter={() => handleMenuMouseEnter()}
+                        onMouseLeave={() => handleMenuMouseLeave()}
+                        style={{ right: '192px' }}
+                    ></div>
 
-                <div
-                    className="empty-box"
-                    onMouseEnter={() => handleMenuMouseEnter()}
-                    onMouseLeave={() => handleMenuMouseLeave()}
-                    style={{top: '46px', height:'50px'}}
-                ></div>
+                    <div
+                        className="empty-box"
+                        onMouseEnter={() => handleMenuMouseEnter()}
+                        onMouseLeave={() => handleMenuMouseLeave()}
+                        style={{ top: '46px', height: '50px' }}
+                    ></div>
                 </>
-                
+
             ) :
                 null
             }
@@ -73,55 +74,44 @@ const HeaderPageSelect = ({ colorScheme, onSelect, selectorVisibility, handleSel
                     onMouseEnter={() => handleMenuMouseEnter()}
                     onMouseLeave={() => handleMenuMouseLeave()}
                 >
-                    {elementsAreHovered.ProjectsPage ? (
-                        <>
-                            <div
-                                className='selector-element pointer'
-                                onClick={() => onSelect('ProjectsPage')}
-                                onMouseEnter={() => handleElementMouseEnter('ProjectsPage')}
-                                onMouseLeave={() => handleElementMouseLeave()}
-                                style={{ color: colorScheme.color3 }}
-                            >
-                                projects
-                            </div>
-                        </>
-                    ) : (
-                        <>
-                            <div
-                                className='selector-element'
-                                onClick={() => onSelect('ProjectsPage')}
-                                onMouseEnter={() => handleElementMouseEnter('ProjectsPage')}
-                                onMouseLeave={() => handleElementMouseLeave()}
-                                style={{ color: colorScheme.color4 }}
-                            >
-                                projects
-                            </div>
-                        </>
-                    )
-                    }
+                    <div
+                        className={elementsAreHovered.ProjectsPage ? 'selector-element pointer' : 'selector-element'}
+                        onMouseEnter={() => handleElementMouseEnter('ProjectsPage')}
+                        onMouseLeave={() => handleElementMouseLeave()}
+                    >
+                        <Link
+                            style={
+                                {
+                                    textDecoration: 'none',
+                                    color: elementsAreHovered.ProjectsPage ? colorScheme.color3 : colorScheme.color4
+                                }
+                            }
+                            to="/"
+                        >
+                            projects
+                        </Link>
+                    </div>
 
                     {elementsAreHovered.ColorSchemePage ? (
                         <>
                             <div
                                 className='selector-element pointer'
-                                onClick={() => onSelect('ColorSchemePage')}
                                 onMouseEnter={() => handleElementMouseEnter('ColorSchemePage')}
                                 onMouseLeave={() => handleElementMouseLeave()}
                                 style={{ color: colorScheme.color3 }}
                             >
-                                color control
+                                <Link style={{textDecoration: 'none'}} to="/color-control">color control</Link>
                             </div>
                         </>
                     ) : (
                         <>
                             <div
                                 className='selector-element'
-                                onClick={() => onSelect('ColorSchemePage')}
                                 onMouseEnter={() => handleElementMouseEnter('ColorSchemePage')}
                                 onMouseLeave={() => handleElementMouseLeave()}
                                 style={{ color: colorScheme.color4 }}
                             >
-                                color control
+                                <Link style={{textDecoration: 'none'}} to="/color-control">color control</Link>
                             </div>
                         </>
                     )
@@ -132,24 +122,22 @@ const HeaderPageSelect = ({ colorScheme, onSelect, selectorVisibility, handleSel
                         <>
                             <div
                                 className='selector-element pointer'
-                                onClick={() => onSelect('AboutPage')}
                                 onMouseEnter={() => handleElementMouseEnter('AboutPage')}
                                 onMouseLeave={() => handleElementMouseLeave()}
                                 style={{ color: colorScheme.color3 }}
                             >
-                                about
+                                <Link style={{textDecoration: 'none'}} to="/about">about</Link>
                             </div>
                         </>
                     ) : (
                         <>
                             <div
                                 className='selector-element'
-                                onClick={() => onSelect('AboutPage')}
                                 onMouseEnter={() => handleElementMouseEnter('AboutPage')}
                                 onMouseLeave={() => handleElementMouseLeave()}
                                 style={{ color: colorScheme.color4 }}
                             >
-                                about
+                                <Link style={{textDecoration: 'none'}} to="/about">about</Link>
                             </div>
                         </>
                     )

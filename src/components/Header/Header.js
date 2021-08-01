@@ -5,7 +5,7 @@ import ColorPreview from '../ColorPreview/ColorPreview';
 import HeaderMainMenuButton from './Header-components/HeaderMainMenuButton/HeaderMainMenuButton';
 
 
-const Header = ({colorScheme, nextColorScheme, selectColorPage, selectorVisibility, handleSelectorVisibility}) => {
+const Header = ({colorScheme, nextColorScheme, selectorVisibility, handleSelectorVisibility}) => {
     
     return (
         <div
@@ -22,7 +22,6 @@ const Header = ({colorScheme, nextColorScheme, selectColorPage, selectorVisibili
             <HeaderSchemeController
                 colorScheme={colorScheme}
                 onClickFunc={nextColorScheme}
-                selectColorPage={selectColorPage}
             />
 
             

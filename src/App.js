@@ -10,6 +10,12 @@ import AboutPage from './components/Pages/AboutPage/AboutPage';
 import ProjectsPage from './components/Pages/ProjectsPage/ProjectsPage';
 import ColorSchemePage from './components/Pages/ColorSchemePage/ColorSchemePage';
 import HeaderPageSelect from './components/Header/Header-components/HeaderPageSelect/HeaderPageSelect';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
+
 
 
 
@@ -17,7 +23,7 @@ import HeaderPageSelect from './components/Header/Header-components/HeaderPageSe
 
 function App() {
 
-    
+
     // ACTIVE SCHEME
 
     const [colorScheme, defineActiveColorScheme] = useState(
@@ -31,7 +37,7 @@ function App() {
         let nextId = giveNextSchemeId(theColorSchemes, colorScheme.schemeId);
         let requestedScheme = theColorSchemes.filter(scheme => scheme.schemeId === nextId)[0];
         defineActiveColorScheme(requestedScheme);
-    } 
+    }
 
     const setColorScheme = (id) => {
         let requestedScheme = theColorSchemes.filter(scheme => scheme.schemeId === id)[0];
@@ -57,23 +63,23 @@ function App() {
         let newTheColorSchemes = [...theColorSchemes];
         newTheColorSchemes = newTheColorSchemes.filter(scheme => scheme.schemeId !== newColorScheme.schemeId);
         newTheColorSchemes.push(newColorScheme);
-        newTheColorSchemes.sort(function(a, b) {
+        newTheColorSchemes.sort(function (a, b) {
             return a.schemeId - b.schemeId;
         });
         handleDefineTheColorSchemes(newTheColorSchemes);
-        if (colorScheme.schemeId === newColorScheme.schemeId) {defineActiveColorScheme(newColorScheme)};
+        if (colorScheme.schemeId === newColorScheme.schemeId) { defineActiveColorScheme(newColorScheme) };
     }
 
 
     // ACTIVEPAGE SELECT
 
-    const [activePage, setActivePage] = useState(
-        'ColorSchemePage'
-    )
+    // const [activePage, setActivePage] = useState(
+    //     'ProjectsPage'
+    // )
 
-    const handlePageSelect = (whatPage) => {
-        setActivePage(whatPage);
-    }
+    // const handlePageSelect = (whatPage) => {
+    //     setActivePage(whatPage);
+    // }
 
 
     // SELECTOR MENU VISIBILITY
@@ -90,56 +96,88 @@ function App() {
     // --------- END OF STATE ---------
 
     return (
-        
-        <div
-            className="App"
-            style={{ backgroundColor: colorScheme.color1, color: colorScheme.color4 }}
-        > 
-            
-            <HeaderPageSelect
-                colorScheme={colorScheme}
-                onSelect={handlePageSelect}
-                selectorVisibility={pageSelectorVisibility}
-                handleSelectorVisibility={handleSelectorVisibility}
-            />
+        <Router>
+            <div
+                className="App"
+                style={{ backgroundColor: colorScheme.color1, color: colorScheme.color4 }}
+            >
 
-            <Header
-                colorScheme={colorScheme}
-                nextColorScheme={nextColorScheme}
-                selectColorPage={handlePageSelect}
-                selectorVisibility={pageSelectorVisibility}
-                handleSelectorVisibility={handleSelectorVisibility}
-            />
-            
-            <AboutPage
-                activePage={activePage}
-                colorScheme={colorScheme}
-                title={'about'}
-                subHeader={'useful information about this website'}
-                
-            />
+                <HeaderPageSelect
+                    colorScheme={colorScheme}
+                    selectorVisibility={pageSelectorVisibility}
+                    handleSelectorVisibility={handleSelectorVisibility}
+                />
 
-            <ProjectsPage
-                activePage={activePage}
-                colorScheme={colorScheme}
-                title={'projects'}
-                subHeader={'a collection of some of my coding projects'}
+                <Header
+                    colorScheme={colorScheme}
+                    nextColorScheme={nextColorScheme}
+                    selectorVisibility={pageSelectorVisibility}
+                    handleSelectorVisibility={handleSelectorVisibility}
+                />
 
-            />
+                {/* <AboutPage
+                    activePage={activePage}
+                    colorScheme={colorScheme}
+                    title={'about'}
+                    subHeader={'useful information about this website'}
 
-            <ColorSchemePage
-                activePage={activePage}
-                colorScheme={colorScheme}
-                title={'color control'}
-                subHeader={`don't like the default color schemes? create your own here!`}
-                setColorScheme={setColorScheme}
-                theColorSchemes={theColorSchemes}
-                deleteColorScheme={deleteColorScheme}
-                handleDefineTheColorSchemes={handleDefineTheColorSchemes}
-                saveAndSetNewColorScheme={saveAndSetNewColorScheme}
-            />
-                
-        </div>
+                /> */}
+
+                {/* <ProjectsPage
+                    activePage={activePage}
+                    colorScheme={colorScheme}
+                    title={'projects'}
+                    subHeader={'a collection of some of my coding projects'}
+
+                /> */}
+
+                {/* <ColorSchemePage
+                    activePage={activePage}
+                    colorScheme={colorScheme}
+                    title={'color control'}
+                    subHeader={`don't like the default color schemes? create your own here!`}
+                    setColorScheme={setColorScheme}
+                    theColorSchemes={theColorSchemes}
+                    deleteColorScheme={deleteColorScheme}
+                    handleDefineTheColorSchemes={handleDefineTheColorSchemes}
+                    saveAndSetNewColorScheme={saveAndSetNewColorScheme}
+                /> */}
+
+
+                {/* A <Switch> looks through its children <Route>s and renders the first one that matches the current URL. */}
+                <Switch>
+                    <Route path="/about">
+                        <AboutPage
+                            colorScheme={colorScheme}
+                            title={'about'}
+                            subHeader={'useful information about this website'}
+
+                        />
+                    </Route>
+                    <Route path="/color-control">
+                        <ColorSchemePage
+                            colorScheme={colorScheme}
+                            title={'color control'}
+                            subHeader={`don't like the default color schemes? create your own here!`}
+                            setColorScheme={setColorScheme}
+                            theColorSchemes={theColorSchemes}
+                            deleteColorScheme={deleteColorScheme}
+                            handleDefineTheColorSchemes={handleDefineTheColorSchemes}
+                            saveAndSetNewColorScheme={saveAndSetNewColorScheme}
+                        />
+                    </Route>
+                    <Route path="/">
+                        <ProjectsPage
+                            colorScheme={colorScheme}
+                            title={'projects'}
+                            subHeader={'a collection of some of my coding projects'}
+
+                        />
+                    </Route>
+                </Switch>
+
+            </div>
+        </Router>
     );
 }
 
