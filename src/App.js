@@ -5,11 +5,13 @@ import { useState } from 'react';
 
 import Header from './components/Header/Header';
 
+import { projects } from "./projects"
 import { colorSchemes, giveNextSchemeId } from "./color-schemes.js"
 import AboutPage from './components/Pages/AboutPage/AboutPage';
 import ProjectsPage from './components/Pages/ProjectsPage/ProjectsPage';
 import ColorSchemePage from './components/Pages/ColorSchemePage/ColorSchemePage';
 import HeaderPageSelect from './components/Header/Header-components/HeaderPageSelect/HeaderPageSelect';
+import ProjectDetailPage from './components/Pages/ProjectDetailPage/ProjectDetailPage';
 import {
     BrowserRouter as Router,
     Switch,
@@ -151,7 +153,6 @@ function App() {
                             colorScheme={colorScheme}
                             title={'about'}
                             subHeader={'useful information about this website'}
-
                         />
                     </Route>
                     <Route path="/color-control">
@@ -166,6 +167,13 @@ function App() {
                             saveAndSetNewColorScheme={saveAndSetNewColorScheme}
                         />
                     </Route>
+                    {projects.map((project) => (
+                        <Route path={`/${project.title}`} key={project.title}>
+                        <ProjectDetailPage
+                        project={project}
+                        />
+                        </Route>
+                    ))}
                     <Route path="/">
                         <ProjectsPage
                             colorScheme={colorScheme}

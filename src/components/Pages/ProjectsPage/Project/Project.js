@@ -2,8 +2,6 @@ import "../ProjectsPage.css"
 
 
 const Project = ({project}) => {
-    
-    
     return (
         <div
             className="project"
@@ -12,12 +10,6 @@ const Project = ({project}) => {
             <br></br>
             <br></br>
             {project.description}
-            
-            <a href={project.link}>
-                open project
-            </a>
-            
-
         </div>
     )
 }
