@@ -92,56 +92,48 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
                         </Link>
                     </div>
 
-                    {elementsAreHovered.ColorSchemePage ? (
-                        <>
-                            <div
-                                className='selector-element pointer'
-                                onMouseEnter={() => handleElementMouseEnter('ColorSchemePage')}
-                                onMouseLeave={() => handleElementMouseLeave()}
-                                style={{ color: colorScheme.color3 }}
-                            >
-                                <Link style={{textDecoration: 'none'}} to="/color-control">color control</Link>
-                            </div>
-                        </>
-                    ) : (
-                        <>
-                            <div
-                                className='selector-element'
-                                onMouseEnter={() => handleElementMouseEnter('ColorSchemePage')}
-                                onMouseLeave={() => handleElementMouseLeave()}
-                                style={{ color: colorScheme.color4 }}
-                            >
-                                <Link style={{textDecoration: 'none'}} to="/color-control">color control</Link>
-                            </div>
-                        </>
-                    )
-                    }
+                    <div
+                        className={elementsAreHovered.ColorSchemePage ? 'selector-element pointer' : 'selector-element'}
+                        onMouseEnter={() => handleElementMouseEnter('ColorSchemePage')}
+                        onMouseLeave={() => handleElementMouseLeave()}
+                    >
+                        <Link
+                            style={
+                                {
+                                    textDecoration: 'none',
+                                    color: elementsAreHovered.ColorSchemePage ? colorScheme.color3 : colorScheme.color4
+                                }
+                            }
+                            to="/color-control"
+                        >
+                            color control
+                        </Link>
+                    </div>      
 
 
-                    {elementsAreHovered.AboutPage ? (
-                        <>
-                            <div
-                                className='selector-element pointer'
-                                onMouseEnter={() => handleElementMouseEnter('AboutPage')}
-                                onMouseLeave={() => handleElementMouseLeave()}
-                                style={{ color: colorScheme.color3 }}
-                            >
-                                <Link style={{textDecoration: 'none'}} to="/about">about</Link>
-                            </div>
-                        </>
-                    ) : (
-                        <>
-                            <div
-                                className='selector-element'
-                                onMouseEnter={() => handleElementMouseEnter('AboutPage')}
-                                onMouseLeave={() => handleElementMouseLeave()}
-                                style={{ color: colorScheme.color4 }}
-                            >
-                                <Link style={{textDecoration: 'none'}} to="/about">about</Link>
-                            </div>
-                        </>
-                    )
-                    }
+
+
+
+
+                    <div
+                        className={elementsAreHovered.AboutPage ? 'selector-element pointer' : 'selector-element'}
+                        onMouseEnter={() => handleElementMouseEnter('AboutPage')}
+                        onMouseLeave={() => handleElementMouseLeave()}
+                    >
+                        <Link
+                            style={
+                                {
+                                    textDecoration: 'none',
+                                    color: elementsAreHovered.AboutPage ? colorScheme.color3 : colorScheme.color4
+                                }
+                            }
+                            to="/about"
+                        >
+                            about
+                        </Link>
+                    </div>      
+
+                    
                 </div>
 
             ) :

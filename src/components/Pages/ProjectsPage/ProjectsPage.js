@@ -21,7 +21,7 @@ const ProjectsPage = ({ colorScheme, title, subHeader }) => {
                 
                 {projects.map((project) => (
                     <Link to={`/${project.title}`} key={project.title} style={{color: colorScheme.color4, textDecoration: 'none'}}>
-                        <Project project={project} />
+                        <Project project={project} colorScheme={colorScheme}/>
                     </Link>
                 ))}
                 

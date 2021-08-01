@@ -5,8 +5,9 @@
 }
 
 .project {
-    background-color: darkslategray;
     width: 300px;
     height: 185px;
     margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
 }

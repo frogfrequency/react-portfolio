@@ -1,7 +1,6 @@
 import "./PageTitle.css"
 
 const PageTitle = ({colorScheme, title, subHeader}) => {
-    
     return (
         <div>
             <h3

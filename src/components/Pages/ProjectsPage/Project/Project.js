@@ -1,12 +1,13 @@
 import "../ProjectsPage.css"
 
 
-const Project = ({project}) => {
+const Project = ({project, colorScheme}) => {
     return (
         <div
             className="project"
+            style={{backgroundColor: colorScheme.color2}}
         >
-            {project.title}
+            <h3>{project.title}</h3>
             <br></br>
             <br></br>
             {project.description}

@@ -97,6 +97,7 @@ function App() {
 
     // --------- END OF STATE ---------
 
+
     return (
         <Router>
             <div
@@ -117,33 +118,6 @@ function App() {
                     handleSelectorVisibility={handleSelectorVisibility}
                 />
 
-                {/* <AboutPage
-                    activePage={activePage}
-                    colorScheme={colorScheme}
-                    title={'about'}
-                    subHeader={'useful information about this website'}
-
-                /> */}
-
-                {/* <ProjectsPage
-                    activePage={activePage}
-                    colorScheme={colorScheme}
-                    title={'projects'}
-                    subHeader={'a collection of some of my coding projects'}
-
-                /> */}
-
-                {/* <ColorSchemePage
-                    activePage={activePage}
-                    colorScheme={colorScheme}
-                    title={'color control'}
-                    subHeader={`don't like the default color schemes? create your own here!`}
-                    setColorScheme={setColorScheme}
-                    theColorSchemes={theColorSchemes}
-                    deleteColorScheme={deleteColorScheme}
-                    handleDefineTheColorSchemes={handleDefineTheColorSchemes}
-                    saveAndSetNewColorScheme={saveAndSetNewColorScheme}
-                /> */}
 
 
                 {/* A <Switch> looks through its children <Route>s and renders the first one that matches the current URL. */}
@@ -170,7 +144,8 @@ function App() {
                     {projects.map((project) => (
                         <Route path={`/${project.title}`} key={project.title}>
                         <ProjectDetailPage
-                        project={project}
+                            project={project}
+                            colorScheme={colorScheme}
                         />
                         </Route>
                     ))}
