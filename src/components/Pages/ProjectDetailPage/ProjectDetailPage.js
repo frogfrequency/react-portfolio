@@ -1,4 +1,6 @@
 import PageTitle from "../PageTitle"
+import PictureShow from "./PictureShow/PictureShow"
+import ProjectDetails from "./ProjectDetails/ProjectDetails"
 
 const ProjectDetailPage = ({ project, colorScheme }) => {
     return (
@@ -8,13 +10,14 @@ const ProjectDetailPage = ({ project, colorScheme }) => {
                 title='projects'
                 subHeader='a collection of some of my coding projects'
             />
-
-            <div className='project-detail-page'>
-                <h1>project: {project.title}</h1>
+            <div id='detail-page-content'>
+                <PictureShow/>
                 
-                {project.description}
+                <ProjectDetails
+                    project={project}
+                />
             </div>
-            <a href={project.tryoutLink} target="_blank">try it out</a>
+            
         </div>
     )
 }

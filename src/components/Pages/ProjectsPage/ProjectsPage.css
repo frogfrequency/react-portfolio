@@ -49,3 +49,36 @@
     font-style: italic;
     margin-top: 3px;
 }
+
+
+#detail-page-content {
+    width: 1500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+#picture-show {
+    display: flex;
+    align-items: center;
+    background-color: red;
+    width: 800px;
+    height: 600px;
+    margin: 30px;
+}
+
+#project-details {
+    background-color: blue;
+    width: 600px;
+    height: 600px;
+    margin: 30px;
+}
+
+
+
+#picture-slider {
+    background-color: darkgoldenrod;
+    width: 100px;
+    height: 500px; /* change to auto or something? */ 
+}
