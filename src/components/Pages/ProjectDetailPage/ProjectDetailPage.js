@@ -11,10 +11,10 @@ const ProjectDetailPage = ({ project, colorScheme }) => {
 
             <div className='project-detail-page'>
                 <h1>project: {project.title}</h1>
-                <br></br>
-                <br></br>
+                
                 {project.description}
             </div>
+            <a href={project.tryoutLink} target="_blank">try it out</a>
         </div>
     )
 }

@@ -29,8 +29,8 @@
     top: -26px;
     display: flex;
     flex-direction: column;
-    border-width: 10px;
-    border-left: solid;
+    /* border-width: 10px;
+    border-left: solid; */
     width: 300px;
     padding: 28px;
     margin: auto;

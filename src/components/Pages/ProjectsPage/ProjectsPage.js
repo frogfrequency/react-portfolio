@@ -1,6 +1,6 @@
 import "../../Pages/Page.css";
 import PageTitle from "../PageTitle";
-import Project from "./Project/Project";
+import ProjectCard from "./ProjectCard/ProjectCard";
 import { projects } from "../../../projects";
 import {
     Link
@@ -18,17 +18,22 @@ const ProjectsPage = ({ colorScheme, title, subHeader }) => {
             />
             
             <div className='projects-container'>
-                
                 {projects.map((project) => (
-                    <Link to={`/${project.title}`} key={project.title} style={{color: colorScheme.color4, textDecoration: 'none'}}>
-                        <Project project={project} colorScheme={colorScheme}/>
+                    <Link
+                        to={`/${project.title}`}
+                        key={project.title}
+                        style={
+                            {
+                                color: colorScheme.color4,
+                                textDecoration: 'none',
+                                margin: '20px'
+                            }
+                        }>
+                        <ProjectCard project={project} colorScheme={colorScheme}/>
                     </Link>
                 ))}
                 
             </div>
-
-
-            
 
 
 
