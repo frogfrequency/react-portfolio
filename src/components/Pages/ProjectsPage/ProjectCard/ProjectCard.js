@@ -30,7 +30,7 @@ const ProjectCard = ({project, colorScheme}) => {
                 className={isHovered ? 'card-image-hovered' : 'card-image-unhovered'}
                 style={
                     {
-                        backgroundImage: 'url("' + process.env.PUBLIC_URL + `pictures/${project.backgroundPicKey}/${project.backgroundPicKey}_${isHovered ? '' : 'un'}hovered.png")`,
+                        backgroundImage: 'url("' + process.env.PUBLIC_URL + `pictures/${project.picKey}/${project.picKey}_${isHovered ? '' : 'un'}hovered.png")`,
                     }
                 }
             />

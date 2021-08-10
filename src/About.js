@@ -12,3 +12,5 @@ let aboutText =
 
 // I did not use any design/style templates because i wantet to experience and go through the whole process of creating a page from scratch
 // i also aimed for a more classical website-style other than most modern websites
+// i am not a designer
+// unfortunately this ?? is not mobile friendly :(

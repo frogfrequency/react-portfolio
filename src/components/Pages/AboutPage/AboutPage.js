@@ -13,6 +13,10 @@ const AboutPage = ({ colorScheme, title, subHeader }) => {
             />
             <br></br>
             <br></br>
+            COPY TEXT FROM SRC/About.js IN HERE??? 
+            <br></br>
+            <br></br>
+            
             Officia consectetur incididunt ullamco culpa esse deserunt dolor qui veniam ullamco esse consequat. Exercitation consectetur ad velit nostrud deserunt exercitation magna consectetur sit mollit ullamco. Est qui occaecat officia elit aute non excepteur ad adipisicing velit quis ad. Nostrud fugiat reprehenderit velit nostrud esse laboris.
 
             Consectetur reprehenderit amet laborum eu incididunt et consectetur. Eiusmod Lorem laborum qui elit est. Est qui non labore veniam laborum mollit. Eu irure aliqua proident velit consequat nostrud anim enim dolor ad duis ea velit ad. Fugiat enim consectetur duis et fugiat Lorem velit eiusmod commodo cupidatat nostrud aliquip adipisicing irure.

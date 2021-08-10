@@ -6,7 +6,8 @@ export const projects = [
         technology: ['Javascript, HTML, CSS'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects/simulators/chess/chess_v1_redesign/',
         sourcecodeLink: '',
-        backgroundPicKey: 'chess'
+        picKey: 'chess',
+        picCount: 3
     },
     {
         title: 'graph guesser',
@@ -15,7 +16,8 @@ export const projects = [
         technology: ['Javascript, HTML, CSS'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects/waves-and-graphs/graphGuesser_V1/',
         sourcecodeLink: '',
-        backgroundPicKey: 'graphGuesser'
+        picKey: 'graphGuesser',
+        picCount: 1
     },
     {
         title: 'advent of code 2020',
@@ -24,7 +26,8 @@ export const projects = [
         technology: ['Javascript'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects',
         sourcecodeLink: '',
-        backgroundPicKey: 'aoc'
+        picKey: 'aoc',
+        picCount: 2
     },
     {
         title: 'some project',
@@ -33,7 +36,8 @@ export const projects = [
         technology: ['imagination'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects',
         sourcecodeLink: '',
-        backgroundPicKey: 'chess'
+        picKey: 'chess',
+        picCount: 1
     },
     {
         title: 'some other project',
@@ -42,7 +46,8 @@ export const projects = [
         technology: ['imagination', 'more imagination'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects',
         sourcecodeLink: '',
-        backgroundPicKey: 'chess'
+        picKey: 'chess',
+        picCount: 1
     },
     {
         title: 'and yet another project',
@@ -51,6 +56,7 @@ export const projects = [
         technology: ['imagination'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects',
         sourcecodeLink: '',
-        backgroundPicKey: 'chess'
+        picKey: 'chess',
+        picCount: 1
     }
 ]

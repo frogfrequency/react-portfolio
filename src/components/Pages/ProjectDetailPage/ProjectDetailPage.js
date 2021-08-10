@@ -11,7 +11,9 @@ const ProjectDetailPage = ({ project, colorScheme }) => {
                 subHeader='a collection of some of my coding projects'
             />
             <div id='detail-page-content'>
-                <PictureShow/>
+                <PictureShow
+                    project={project}
+                />
                 
                 <ProjectDetails
                     project={project}
