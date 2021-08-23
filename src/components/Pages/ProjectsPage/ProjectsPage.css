@@ -19,17 +19,17 @@
 
 .card-image-hovered {
     height: 340px;
-    width: 100%;
-    opacity: 100%;
-    background-size: 100%;
+    width: 340px;
+    /* opacity: 100%; */
+    /* background-size: 100%; */
     background-repeat: no-repeat;
 }
 
 .card-image-unhovered {
     height: 340px;
-    width: 100%;
+    width: 340px;
     opacity: 70%;
-    background-size: 100%;
+    /* background-size: 100%; */
     background-repeat: no-repeat;
 }
 
