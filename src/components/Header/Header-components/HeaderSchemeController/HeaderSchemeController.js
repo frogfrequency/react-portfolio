@@ -22,7 +22,7 @@ const HeaderSchemeController = ({ colorScheme, onClickFunc }) => {
 
         <div
             className='header-element'
-            style={{ backgroundColor: colorScheme.color1, color: colorScheme.color4 }}
+            style={{ backgroundColor: colorScheme.color1, color: colorScheme.color4}}
         // onClick={onClickFunc}
         >
             color schemes
