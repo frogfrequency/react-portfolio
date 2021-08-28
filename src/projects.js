@@ -5,7 +5,7 @@ export const projects = [
         description: 'a virtual chess game coded from scratch.',
         detailInformation: 'we want detailed infos here!',
         technology: ['React, Javascript, CSS'],
-        tryoutLink: 'https://frogfrequency.github.io',
+        tryoutLink: undefined,
         sourcecodeLink: 'https://github.com/frogfrequency/react-portfolio',
         picKey: 'reactPortfolio',
         picCount: 0
@@ -23,7 +23,7 @@ export const projects = [
             Consequat adipisicing amet ipsum amet excepteur deserunt ex nulla reprehenderit proident. Aute in anim laboris aliqua esse ullamco velit consequat sint. Officia culpa tempor laborum dolor exercitation fugiat sit cupidatat nisi est duis tempor quis enim. Aute tempor ut laborum consequat tempor cupidatat culpa.
             Sint est pariatur fugiat eiusmod tempor pariatur veniam labore dolor laboris magna cupidatat eiusmod cillum. Fugiat irure officia laborum ullamco incididunt ullamco commodo irure ea ullamco. Dolore sunt aliqua in magna aute consectetur non Lorem voluptate proident aliquip in aliquip eiusmod. Mollit et pariatur id aliqua est veniam do sint pariatur nostrud. Eu qui pariatur eu quis incididunt culpa cillum veniam elit sit sit dolor. Eiusmod eu ad mollit amet labore.`,
         technology: ['Javascript'],
-        tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects',
+        tryoutLink: undefined,
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/adventofcode',
         picKey: 'aoc',
         picCount: 8
@@ -32,7 +32,7 @@ export const projects = [
         title: 'chess',
         type: 'game',
         description: 'a virtual chess game coded from scratch.',
-        detailInformation: 'we want detailed infos here!',
+        detailInformation: 'Adipisicing sunt elit commodo exercitation adipisicing occaecat pariatur. Nisi tempor quis ea sunt occaecat eu aute ut. Eu esse voluptate ipsum ex sunt velit non fugiat dolor do veniam culpa eiusmod nostrud. Quis voluptate id magna in ea incididunt consectetur laboris enim exercitation cillum laboris. Aliqua officia eu sit exercitation ipsum eiusmod non tempor cillum veniam dolor aliqua. Deserunt occaecat ullamco laborum eu non. Irure eiusmod voluptate ullamco velit laboris magna incididunt ipsum.we want detailed infos here! Irure nulla adipisicing ea dolore tempor anim adipisicing incididunt esse aliqua aute dolor anim. Laborum sit cupidatat deserunt non non aliquip eiusmod nostrud dolore. Sunt tempor veniam consectetur ut incididunt dolor ad elit. Occaecat laboris culpa quis reprehenderit cupidatat id in consequat. Nostrud irure Lorem Lorem ea eiusmod. Duis enim aliquip voluptate ut adipisicing non Lorem dolor.Nulla culpa adipisicing nulla incididunt quis ullamco do adipisicing ipsum tempor.Tempor elit ea tempor esse cupidatat cupidatat ullamco voluptate et mollit. Aliqua cupidatat non excepteur proident do Lorem. Consectetur dolore consequat culpa sunt voluptate elit sint sit cillum dolor. Commodo ut tempor sint consequat sint mollit minim et enim dolore et duis proident.',
         technology: ['Javascript, HTML, CSS'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects/simulators/chess/chess_v1_redesign/',
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/simulators/chess/chess_v1_redesign',

@@ -62,6 +62,23 @@
     justify-content: center;
 }
 
+.project-overview-button-container {
+    font-size: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.project-overview-button {
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 45px;
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+}
+
 
 #picture-show {
     align-items: center;
@@ -109,12 +126,27 @@
 
 #project-detail-nav {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-top: 10px;
+    /* background-color: green; */
+}
+
+.project-detail-nav-button {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    padding-right: 6px;
+    border-radius: 6px;
+    margin-right: 12px;
+}
+
+#project-details-technologies {
+    font-weight: 1000;
+    font-size: 16px;
 }
 
 .icon {
     padding: 5px;
     /* background-color: cornflowerblue; */
-
 }
