@@ -8,7 +8,7 @@ export const projects = [
         tryoutLink: undefined,
         sourcecodeLink: 'https://github.com/frogfrequency/react-portfolio',
         picKey: 'reactPortfolio',
-        picCount: 0
+        picCount: 1
     },
     {
         title: 'advent of code 2020',

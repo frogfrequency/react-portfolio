@@ -1,3 +1,7 @@
+import reactPortfolio_hovered from "./pictures/reactPortfolio/reactPortfolio_hovered.png"
+import reactPortfolio_unhovered from "./pictures/reactPortfolio/reactPortfolio_unhovered.png"
+import reactPortfolio_1 from "./pictures/reactPortfolio/slideshow/reactPortfolio_1.png"
+
 import chess_hovered from "./pictures/chess/chess_hovered.png"
 import chess_unhovered from "./pictures/chess/chess_unhovered.png"
 import chess_1 from "./pictures/chess/slideshow/chess_1.png"
@@ -23,6 +27,9 @@ import graphGuesser_2 from "./pictures/graphGuesser/slideshow/graphGuesser_2.png
 
 
 export const pictureCollection = {
+    reactPortfolio_hovered: reactPortfolio_hovered,
+    reactPortfolio_unhovered: reactPortfolio_unhovered,
+    reactPortfolio_1: reactPortfolio_1,
     chess_hovered: chess_hovered,
     chess_unhovered: chess_unhovered,
     chess_1: chess_1,

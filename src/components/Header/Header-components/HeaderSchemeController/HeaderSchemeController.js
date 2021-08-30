@@ -21,7 +21,7 @@ const HeaderSchemeController = ({ colorScheme, onClickFunc }) => {
     return (
 
         <div
-            className='header-element'
+            className='color-scheme-controller'
             style={{ backgroundColor: colorScheme.color1, color: colorScheme.color4}}
         // onClick={onClickFunc}
         >
@@ -31,7 +31,7 @@ const HeaderSchemeController = ({ colorScheme, onClickFunc }) => {
                 className={skipIsHovered ? 'pointer' : ''}
                 onMouseEnter={handleSkipHover}
                 onMouseLeave={handleSkipUnhover}
-                style={{ marginTop: '3px', marginLeft: '2px', color: skipIsHovered ? colorScheme.color3 : colorScheme.color4 }}
+                style={{ marginTop: '2px', marginLeft: '2px', color: skipIsHovered ? colorScheme.color3 : colorScheme.color4 }}
                 onClick={() => {
                     onClickFunc();
                 }}
@@ -42,7 +42,7 @@ const HeaderSchemeController = ({ colorScheme, onClickFunc }) => {
                 className={gearIsHovered ? 'pointer' : ''}
                 onMouseEnter={handleGearHover}
                 onMouseLeave={handleGearUnhover}
-                style={{ marginTop: '3px', marginLeft: '2px', color: gearIsHovered ? colorScheme.color3 : colorScheme.color4 }}
+                style={{ marginTop: '7px', marginLeft: '2px', color: gearIsHovered ? colorScheme.color3 : colorScheme.color4 }}
 
                 size={'0.9em'}
             />

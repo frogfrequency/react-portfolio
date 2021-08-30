@@ -45,20 +45,20 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
                         className="empty-box"
                         onMouseEnter={() => handleMenuMouseEnter()}
                         onMouseLeave={() => handleMenuMouseLeave()}
-                        style={{ left: '192px' }}
+                        style={{ left: '192px',}}
                     ></div>
                     <div
                         className="empty-box"
                         onMouseEnter={() => handleMenuMouseEnter()}
                         onMouseLeave={() => handleMenuMouseLeave()}
-                        style={{ right: '192px' }}
+                        style={{ right: '192px',}}
                     ></div>
 
                     <div
                         className="empty-box"
                         onMouseEnter={() => handleMenuMouseEnter()}
                         onMouseLeave={() => handleMenuMouseLeave()}
-                        style={{ top: '46px', height: '50px' }}
+                        style={{ top: '46px', height: '50px'}}
                     ></div>
                 </>
 
