@@ -6,8 +6,8 @@ import "../ColorSchemePage.css"
 import { useState } from 'react';
 import { generateNewId } from "../../../../utility"
 
-const SchemeListContainer = ({colorScheme, setColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes, saveAndSetNewColorScheme}) => {
-    
+const SchemeListContainer = ({ colorScheme, setColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes, saveAndSetNewColorScheme, textContent }) => {
+
     const [addButtonHoverStatus, setAddButtonHoverStatus] = useState(
         false
     )
@@ -17,7 +17,7 @@ const SchemeListContainer = ({colorScheme, setColorScheme, theColorSchemes, dele
     const handleAddButtonMouseLeave = () => {
         setAddButtonHoverStatus(false);
     }
-    
+
     const [activeCustomizationId, setActiveCustomizationId] = useState(null);
 
 
@@ -35,58 +35,38 @@ const SchemeListContainer = ({colorScheme, setColorScheme, theColorSchemes, dele
 
         let theSchemes = [...theColorSchemes]
         theSchemes.push(newScheme);
-     
+
         handleDefineTheColorSchemes(theSchemes);
     }
-    
-    
+
+
     return (
         <div>
-
-
             {theColorSchemes.map((scheme) => (
-                        
-                            <SchemeListElement
-                                key={scheme.schemeId}
-                                thisColorScheme={scheme}
-                                colorScheme={colorScheme}
-                                setColorScheme={setColorScheme}
-                                deleteColorScheme={deleteColorScheme}
-                                activeCustomizationId={activeCustomizationId}
-                                setActiveCustomizationId={setActiveCustomizationId}
-                                saveAndSetNewColorScheme={saveAndSetNewColorScheme}
-                            ></SchemeListElement>
-                        
-                    ))}
 
-            {addButtonHoverStatus ? (
-    
-                <div
-                    className='addSchemeButton pointer'
-                    onMouseEnter={handleAddButtonMouseEnter}
-                    onMouseLeave={handleAddButtonMouseLeave}
-                    style={{color: colorScheme.color3}}
-                    onClick={() => addColorScheme()}
-                >
-                    add new scheme
-                    <GoPlus id='addSchemePlusSign' size={'1.1em'}/>
-                </div>
+                <SchemeListElement
+                    key={scheme.schemeId}
+                    thisColorScheme={scheme}
+                    colorScheme={colorScheme}
+                    setColorScheme={setColorScheme}
+                    deleteColorScheme={deleteColorScheme}
+                    activeCustomizationId={activeCustomizationId}
+                    setActiveCustomizationId={setActiveCustomizationId}
+                    saveAndSetNewColorScheme={saveAndSetNewColorScheme}
+                    textContent={textContent}
+                ></SchemeListElement>
+            ))}
 
-            ) : (
-
-                <div
-                    className='addSchemeButton'
-                    onMouseEnter={handleAddButtonMouseEnter}
-                    onMouseLeave={handleAddButtonMouseLeave}
-                    // onMouseClick={}
-                >
-                    add new scheme
-                    <GoPlus id='addSchemePlusSign' size={'1.1em'}/>
-                </div>
-
-            )
-            }
-            
+            <div
+                className={addButtonHoverStatus ? 'addSchemeButton pointer' : 'addSchemeButton'}
+                onMouseEnter={handleAddButtonMouseEnter}
+                onMouseLeave={handleAddButtonMouseLeave}
+                style={{ color: addButtonHoverStatus ? colorScheme.color3 : colorScheme.color4 }}
+                onClick={() => addColorScheme()}
+            >
+                {textContent.colorSchemePage.addScheme}
+                <GoPlus id='addSchemePlusSign' size={'1.1em'} />
+            </div>
         </div>
     )
 }

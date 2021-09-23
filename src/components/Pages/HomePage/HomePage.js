@@ -77,10 +77,12 @@ const HomePage = ({colorScheme}) => {
                     <HomePageLogoLineEffect><div id='line-two' className='line'  style={{backgroundColor:colorScheme.color4}}></div></HomePageLogoLineEffect>
                 {textVisibility ? 
                 <HomePageTextEffect>
-                <div id="home-page-content-container" onMouseEnter={() => uncoverHeader()}>
-                    hi there Nostrud eiusmo eu enim non labore fugiat enim ipsum aute minim dolore tempor elit non. Ea ipsum exercitation dolor irure ut non. Proident aute deserunt et fugiat ullamco do enim exercitation commodo mollit exercitation. Aute eu ipsum ad qui deserunt do dolore sunt.
-                    hi there Nostrud eiusmo eu enim non labore fugiat enim ipsum aute minim dolore tempor elit non. Ea ipsum exercitation dolor irure ut non. Proident aute deserunt et fugiat ullamco do enim exercitation commodo mollit exercitation. Aute eu ipsum ad qui deserunt do dolore sunt.
-                    hi there Nostrud eiusmo eu enim non labore fugiat enim ipsum aute minim dolore tempor elit non. Ea ipsum exercitation dolor irure ut non. Proident aute deserunt et fugiat ullamco do enim exercitation commodo mollit exercitation. Aute eu ipsum ad qui deserunt do dolore sunt.
+                <div id='max-width-container'>
+                    <div id="home-page-content-container" onMouseEnter={() => uncoverHeader()}>
+                        hi there Nostrud eiusmo eu enim non labore fugiat enim ipsum aute minim dolore tempor elit non. Ea ipsum exercitation dolor irure ut non. Proident aute deserunt et fugiat ullamco do enim exercitation commodo mollit exercitation. Aute eu ipsum ad qui deserunt do dolore sunt.
+                        hi there Nostrud eiusmo eu enim non labore fugiat enim ipsum aute minim dolore tempor elit non. Ea ipsum exercitation dolor irure ut non. Proident aute deserunt et fugiat ullamco do enim exercitation commodo mollit exercitation. Aute eu ipsum ad qui deserunt do dolore sunt.
+                        hi there Nostrud eiusmo eu enim non labore fugiat enim ipsum aute minim dolore tempor elit non. Ea ipsum exercitation dolor irure ut non. Proident aute deserunt et fugiat ullamco do enim exercitation commodo mollit exercitation. Aute eu ipsum ad qui deserunt do dolore sunt.
+                    </div>
                 </div>
                 </HomePageTextEffect>
                  : ''}

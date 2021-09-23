@@ -53,13 +53,17 @@
     /* width: 550px; */
 }
 
-
+#max-width-container {
+    /* background-color: chartreuse; */
+    width: 900px;
+    /* height: 100px; */
+    margin: auto;
+}
 
 #home-page-content-container {
     /* background-color: brown; */
-    width: 900px;
+    width: auto;
     height: auto;
-    margin: auto;
     text-align: justify;
     line-height: 20pt;
 }

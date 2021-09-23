@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { PageSelectEffect } from "../../../../utility";
 
-const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisibility }) => {
+const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisibility, textContent }) => {
 
     const defaultHoverStatuses = { HomePage: false, ProjectsPage: false, ColorSchemePage: false, AboutPage: false };
 
@@ -91,14 +91,9 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
                             }
                             to="/"
                         >
-                            home
+                            {textContent.header.home}
                         </Link>
                     </div>
-
-
-
-
-
 
                     <div
                         className={elementsAreHovered.ProjectsPage ? 'selector-element pointer' : 'selector-element'}
@@ -114,7 +109,7 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
                             }
                             to="/projects"
                         >
-                            projects
+                            {textContent.header.projects}
                         </Link>
                     </div>
 
@@ -132,14 +127,9 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
                             }
                             to="/color-control"
                         >
-                            color control
+                            {textContent.header.colorControl}
                         </Link>
                     </div>      
-
-
-
-
-
 
                     <div
                         className={elementsAreHovered.AboutPage ? 'selector-element pointer' : 'selector-element'}
@@ -155,7 +145,7 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
                             }
                             to="/about"
                         >
-                            about
+                            {textContent.header.about}
                         </Link>
                     </div>      
 

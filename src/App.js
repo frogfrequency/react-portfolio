@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 
-
+import { languagePackages } from './languagePackages';
 
 import Header from './components/Header/Header';
 
@@ -21,10 +21,6 @@ import HomePage from './components/Pages/HomePage/HomePage';
 
 
 import styled, { keyframes } from 'styled-components';
-
-
-
-
 
 
 
@@ -88,6 +84,22 @@ function App() {
         setPageSelectorVisibility(visibility);
     }
 
+    // LANGUAGE SELECT
+
+    const [textContent, setTextContent] = useState(
+        languagePackages.english
+    )
+
+    const setGerman = () => {
+        console.log('setting GERMAN')
+        setTextContent(languagePackages.german)
+    }
+
+    const setEnglish = () => {
+        console.log('setting ENGLISH')
+        setTextContent(languagePackages.english)
+    }
+
 
     // --------- END OF STATE ---------
 
@@ -103,6 +115,7 @@ function App() {
                     colorScheme={colorScheme}
                     selectorVisibility={pageSelectorVisibility}
                     handleSelectorVisibility={handleSelectorVisibility}
+                    textContent={textContent}
                 />
 
                 <Header
@@ -110,7 +123,11 @@ function App() {
                     nextColorScheme={nextColorScheme}
                     selectorVisibility={pageSelectorVisibility}
                     handleSelectorVisibility={handleSelectorVisibility}
+                    setGerman={setGerman}
+                    setEnglish={setEnglish}
+                    textContent={textContent}
                 />
+                
 
 
 
@@ -126,13 +143,14 @@ function App() {
                     <Route path="/color-control">
                         <ColorSchemePage
                             colorScheme={colorScheme}
-                            title={'color control'}
-                            subHeader={`don't like the default color schemes? create your own here!`}
+                            title={textContent.titles.colorControlTitle}
+                            subHeader={textContent.titles.colorControlSubheader}
                             setColorScheme={setColorScheme}
                             theColorSchemes={theColorSchemes}
                             deleteColorScheme={deleteColorScheme}
                             handleDefineTheColorSchemes={handleDefineTheColorSchemes}
                             saveAndSetNewColorScheme={saveAndSetNewColorScheme}
+                            textContent={textContent}
                         />
                     </Route>
                     {projects.map((project) => (
@@ -146,17 +164,16 @@ function App() {
                     <Route path="/projects">
                         <ProjectsPage
                             colorScheme={colorScheme}
-                            title={'projects'}
-                            subHeader={'a collection of some of my coding projects'}
-
+                            title={textContent.titles.projectsTitle}
+                            subHeader={textContent.titles.projectsSubheader}
                         />
                     </Route>
 
                     <Route path="/">
                         <HomePage
                             colorScheme={colorScheme}
-                            title={'home'}
-                            subHeader={'I am homepage'}
+                            title={textContent.titles.homeTitle}
+                            subHeader={textContent.titles.homeSubheader}
                             colorScheme={colorScheme}
                         />
                     </Route>

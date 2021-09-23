@@ -11,7 +11,7 @@ import CustomizationPanelElement from "./CustomizationPanelElement/Customization
 
 import { CustomizationPanelEffect, ColorPickerEffect } from "../../../../utility";
 
-const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorScheme, setActiveCustomizationId}) => {
+const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorScheme, setActiveCustomizationId, textContent}) => {
 
     const [hoverStatuses, setHoverStatuses] = useState([false, false, false]);
 
@@ -54,16 +54,15 @@ const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorSch
     function giveColorName(idx) {
         switch (idx) {
             case 1:
-                return 'background color'
+                return textContent.colorSchemePage.backgroundColor
             case 2:
-                return 'background styling color'
+                return textContent.colorSchemePage.backgroundStylingColor
             case 3:
-                return 'text styling color'
+                return textContent.colorSchemePage.textStylingColor
             case 4:
-                return 'text color'
+                return textContent.colorSchemePage.textColor
             default:
                 return 'error in giveColorName'
-
         }
     }
 
@@ -95,16 +94,10 @@ const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorSch
                 />
                 )}
 
-                
-
-
-
-
-
 
             
             <div id='customization-panel-header' style={{ borderColor: colorScheme.color3 }}>
-                <div>adjust colors for: </div>
+                <div>{textContent.colorSchemePage.adjustColorsFor}</div>
 
                 <ColorPreview
                     colorScheme={thisColorScheme}
@@ -114,7 +107,7 @@ const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorSch
             <div id='customization-panel-content'>
                 <CustomizationPanelElement
                     // thisColorScheme={thisColorScheme}
-                    text={'background color'}
+                    text={textContent.colorSchemePage.backgroundColor}
                     boxColor={newColorScheme.color1}
                     colorScheme={colorScheme}
                     setShowPicker={setShowPicker}
@@ -124,7 +117,7 @@ const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorSch
                 />
                 <CustomizationPanelElement
                     // thisColorScheme={thisColorScheme}
-                    text={'background styling color'}
+                    text={textContent.colorSchemePage.backgroundStylingColor}
                     boxColor={newColorScheme.color2}
                     colorScheme={colorScheme}
                     setShowPicker={setShowPicker}
@@ -134,7 +127,7 @@ const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorSch
                 />
                 <CustomizationPanelElement
                     // thisColorScheme={thisColorScheme}
-                    text={'text styling color'}
+                    text={textContent.colorSchemePage.textStylingColor}
                     boxColor={newColorScheme.color3}
                     colorScheme={colorScheme}
                     setShowPicker={setShowPicker}
@@ -144,7 +137,7 @@ const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorSch
                 />
                 <CustomizationPanelElement
                     // thisColorScheme={thisColorScheme}
-                    text={'text color'}
+                    text={textContent.colorSchemePage.textColor}
                     boxColor={newColorScheme.color4}
                     colorScheme={colorScheme}
                     setShowPicker={setShowPicker}
@@ -199,7 +192,7 @@ const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorSch
             {showPicker ? (
                 <>
                     <br></br>
-                    pick new {giveColorName(colorBeingChanged)}
+                    {textContent.colorSchemePage.pickNew} {giveColorName(colorBeingChanged)}
                     <br></br>
                     <br></br>
 

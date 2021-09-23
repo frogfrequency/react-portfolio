@@ -4,7 +4,8 @@ import "./ColorSchemePage.css"
 
 import { FadeIn, TitleEffectIn } from "../../../utility"
 
-const ColorSchemePage = ({ colorScheme, title, subHeader, setColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes, saveAndSetNewColorScheme }) => {
+const ColorSchemePage = ({  colorScheme, title, subHeader, setColorScheme, theColorSchemes, deleteColorScheme,
+                            handleDefineTheColorSchemes, saveAndSetNewColorScheme, textContent }) => {
 
 
 
@@ -26,6 +27,7 @@ const ColorSchemePage = ({ colorScheme, title, subHeader, setColorScheme, theCol
                         deleteColorScheme={deleteColorScheme}
                         handleDefineTheColorSchemes={handleDefineTheColorSchemes}
                         saveAndSetNewColorScheme={saveAndSetNewColorScheme}
+                        textContent={textContent}
                     />
 
                 </div>

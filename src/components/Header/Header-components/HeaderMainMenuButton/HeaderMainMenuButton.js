@@ -4,7 +4,7 @@ import { IoMenu } from "react-icons/io5";
 import "./HeaderMainMenuButton.css"
 import "../../Header.css"
 
-const HeaderMainMenuBotton = ({ colorScheme, selectorVisibility, handleSelectorVisibility }) => {
+const HeaderMainMenuBotton = ({ colorScheme, selectorVisibility, handleSelectorVisibility, textContent }) => {
 
 
     const [menuButtonIsHovered, changeMenuButtonIsHovered] = useState(false);
@@ -27,22 +27,22 @@ const HeaderMainMenuBotton = ({ colorScheme, selectorVisibility, handleSelectorV
         <>
             {menuButtonIsHovered ? (
                     <div
-                        className="header-element pointer"
+                        className="main-menu pointer"
                         style={{ backgroundColor: colorScheme.color1, color: colorScheme.color3 }}
                         onMouseEnter={() => handleMenuButtonHover()}
                         onMouseLeave={() => handleMenuButtonUnhover()}
                     >
-                        menu
+                        {textContent.header.menu}
                         <IoMenu className="main-menu-button"/>
                     </div>
             ) : (
                     <div
-                        className="header-element"
+                        className="main-menu"
                         style={{ backgroundColor: colorScheme.color1, color: colorScheme.color4 }}
                         onMouseEnter={() => handleMenuButtonHover()}
                         onMouseLeave={() => handleMenuButtonUnhover()}
                     >
-                        menu
+                        {textContent.header.menu}
                         <IoMenu className="main-menu-button"/>
                     </div>
             )

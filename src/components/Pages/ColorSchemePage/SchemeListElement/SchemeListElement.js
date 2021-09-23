@@ -9,7 +9,7 @@ import CustomizationPanel from "../CustomizationPanel/CustomizationPanel";
 
 
 
-const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, deleteColorScheme, activeCustomizationId, setActiveCustomizationId, saveAndSetNewColorScheme }) => {
+const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, deleteColorScheme, activeCustomizationId, setActiveCustomizationId, saveAndSetNewColorScheme, textContent }) => {
 
     const [hoverStatuses, updateHoverStatuses] = useState({ inactive: false, gear: false, bin: false });
 
@@ -129,6 +129,7 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, delet
                 colorScheme={colorScheme}
                 saveAndSetNewColorScheme={saveAndSetNewColorScheme}
                 setActiveCustomizationId={setActiveCustomizationId}
+                textContent={textContent}
             />
         ) : (
             null

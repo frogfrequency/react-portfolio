@@ -7,6 +7,15 @@
     margin: 12px;
 }
 
+.main-menu {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%)
+}
+
 .header-element {
     display: flex;
     align-items: center;

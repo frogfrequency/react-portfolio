@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 
 
 
-const HeaderSchemeController = ({ colorScheme, onClickFunc }) => {
+const HeaderSchemeController = ({ colorScheme, onClickFunc, textContent }) => {
 
     const [skipIsHovered, changeSkipIsHovered] = useState(false);
     const handleSkipHover = () => { changeSkipIsHovered(true) }
@@ -25,7 +25,7 @@ const HeaderSchemeController = ({ colorScheme, onClickFunc }) => {
             style={{ backgroundColor: colorScheme.color1, color: colorScheme.color4}}
         // onClick={onClickFunc}
         >
-            color schemes
+            {textContent.header.colorSchemes}
 
             <BsSkipEndFill
                 className={skipIsHovered ? 'pointer' : ''}
