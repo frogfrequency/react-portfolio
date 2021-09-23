@@ -5,7 +5,10 @@ import { AiFillGithub } from "react-icons/ai";
 
 const ProjectDetails = ({ project, colorScheme }) => {
     
-    const [hoverStatus, setHoverStatus] = useState({tryout:false, sourceCode:false})
+    let textProcessed = project.detailInformation;
+    textProcessed = textProcessed.split('\\n').map(str => <p>{str}</p>);
+
+    const [hoverStatus, setHoverStatus] = useState({tryout:false, sourceCode:false, additionalLink:false,})
 
     const handleHover = (what) => {
         let newHoverStatus = {...hoverStatus};
@@ -33,7 +36,7 @@ const ProjectDetails = ({ project, colorScheme }) => {
             <div id='project-detail-description'>{project.description}</div>
             <br></br>
             <div id='project-detail-nav'>
-                {project.tryoutLink != undefined ? <a
+                {project.tryoutLink ? <a
                     href={project.tryoutLink}
                     target="_blank"
                     className='project-detail-nav-button'
@@ -64,6 +67,24 @@ const ProjectDetails = ({ project, colorScheme }) => {
                 >
                     <AiFillGithub className='icon'/> view sourcecode 
                 </a>
+
+                {project.additionalLink ? <a 
+                    href={project.additionalLink.target}
+                    target="_blank"
+                    className='project-detail-nav-button'
+                    style={
+                        {
+                            color: hoverStatus.additionalLink ? colorScheme.color3 : colorScheme.color4,
+                            backgroundColor: colorScheme.color2,
+                        }
+                    }
+                    onMouseEnter={() => handleHover('additionalLink')}
+                    onMouseLeave={() => handleUnhover('additionalLink')}
+                >
+                    <FiExternalLink className='icon'/> {project.additionalLink.text}
+                </a> : ''}
+                
+
             </div>
 
 
@@ -71,10 +92,12 @@ const ProjectDetails = ({ project, colorScheme }) => {
             
             <br></br>
             <br></br>
-            <div id='project-detail-detailInformation'>{project.detailInformation}</div>
+            <div id='project-detail-detailInformation'>{textProcessed}</div>
             <br></br>
             <br></br>
             <div>technologies used: {project.technology}</div>
+            <br></br>
+            <br></br>
         </div>
     )
 }

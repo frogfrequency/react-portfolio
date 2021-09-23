@@ -1,6 +1,11 @@
 import reactPortfolio_hovered from "./pictures/reactPortfolio/reactPortfolio_hovered.png"
 import reactPortfolio_unhovered from "./pictures/reactPortfolio/reactPortfolio_unhovered.png"
 import reactPortfolio_1 from "./pictures/reactPortfolio/slideshow/reactPortfolio_1.png"
+import reactPortfolio_2 from "./pictures/reactPortfolio/slideshow/reactPortfolio_2.png"
+import reactPortfolio_3 from "./pictures/reactPortfolio/slideshow/reactPortfolio_3.png"
+import reactPortfolio_4 from "./pictures/reactPortfolio/slideshow/reactPortfolio_4.png"
+import reactPortfolio_5 from "./pictures/reactPortfolio/slideshow/reactPortfolio_5.png"
+
 
 import chess_hovered from "./pictures/chess/chess_hovered.png"
 import chess_unhovered from "./pictures/chess/chess_unhovered.png"
@@ -24,12 +29,38 @@ import graphGuesser_unhovered from "./pictures/graphGuesser/graphGuesser_unhover
 import graphGuesser_1 from "./pictures/graphGuesser/slideshow/graphGuesser_1.png"
 import graphGuesser_2 from "./pictures/graphGuesser/slideshow/graphGuesser_2.png"
 
+import pixelEstimator_hovered from "./pictures/pixelEstimator/pixelEstimator_hovered.png"
+import pixelEstimator_unhovered from "./pictures/pixelEstimator/pixelEstimator_unhovered.png"
+import pixelEstimator_1 from "./pictures/pixelEstimator/slideshow/pixelEstimator_1.png"
+import pixelEstimator_2 from "./pictures/pixelEstimator/slideshow/pixelEstimator_2.png"
+import pixelEstimator_3 from "./pictures/pixelEstimator/slideshow/pixelEstimator_3.png"
+import pixelEstimator_4 from "./pictures/pixelEstimator/slideshow/pixelEstimator_4.png"
+
+
+
+
+import pokerCalc_hovered from "./pictures/pokerCalc/pokerCalc_hovered.png"
+import pokerCalc_unhovered from "./pictures/pokerCalc/pokerCalc_unhovered.png"
+import pokerCalc_1 from "./pictures/pokerCalc/slideshow/pokerCalc_1.png"
+import pokerCalc_2 from "./pictures/pokerCalc/slideshow/pokerCalc_2.png"
+import pokerCalc_3 from "./pictures/pokerCalc/slideshow/pokerCalc_3.png"
+import pokerCalc_4 from "./pictures/pokerCalc/slideshow/pokerCalc_4.png"
+
+
+
+
+
+
 
 
 export const pictureCollection = {
     reactPortfolio_hovered: reactPortfolio_hovered,
     reactPortfolio_unhovered: reactPortfolio_unhovered,
     reactPortfolio_1: reactPortfolio_1,
+    reactPortfolio_2: reactPortfolio_2,
+    reactPortfolio_3: reactPortfolio_3,
+    reactPortfolio_4: reactPortfolio_4,
+    reactPortfolio_5: reactPortfolio_5,
     chess_hovered: chess_hovered,
     chess_unhovered: chess_unhovered,
     chess_1: chess_1,
@@ -49,4 +80,17 @@ export const pictureCollection = {
     graphGuesser_unhovered: graphGuesser_unhovered,
     graphGuesser_1: graphGuesser_1,
     graphGuesser_2: graphGuesser_2,
+    pixelEstimator_hovered: pixelEstimator_hovered,
+    pixelEstimator_unhovered: pixelEstimator_unhovered,
+    pixelEstimator_1: pixelEstimator_1,
+    pixelEstimator_2: pixelEstimator_2,
+    pixelEstimator_3: pixelEstimator_3,
+    pixelEstimator_4: pixelEstimator_4,
+    pokerCalc_hovered: pokerCalc_hovered,
+    pokerCalc_unhovered: pokerCalc_unhovered,
+    pokerCalc_1: pokerCalc_1,
+    pokerCalc_2: pokerCalc_2,
+    pokerCalc_3: pokerCalc_3,
+    pokerCalc_4: pokerCalc_4,
+
 }

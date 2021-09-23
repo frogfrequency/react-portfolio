@@ -17,6 +17,11 @@ import {
     Switch,
     Route
 } from "react-router-dom";
+import HomePage from './components/Pages/HomePage/HomePage';
+
+
+import styled, { keyframes } from 'styled-components';
+
 
 
 
@@ -71,17 +76,6 @@ function App() {
         handleDefineTheColorSchemes(newTheColorSchemes);
         if (colorScheme.schemeId === newColorScheme.schemeId) { defineActiveColorScheme(newColorScheme) };
     }
-
-
-    // ACTIVEPAGE SELECT
-
-    // const [activePage, setActivePage] = useState(
-    //     'ProjectsPage'
-    // )
-
-    // const handlePageSelect = (whatPage) => {
-    //     setActivePage(whatPage);
-    // }
 
 
     // SELECTOR MENU VISIBILITY
@@ -142,14 +136,14 @@ function App() {
                         />
                     </Route>
                     {projects.map((project) => (
-                        <Route path={`/${project.title}`} key={project.title}>
-                        <ProjectDetailPage
-                            project={project}
-                            colorScheme={colorScheme}
-                        />
+                        <Route path={`/projects/${project.title}`} key={project.title}>
+                            <ProjectDetailPage
+                                project={project}
+                                colorScheme={colorScheme}
+                            />
                         </Route>
                     ))}
-                    <Route path="/">
+                    <Route path="/projects">
                         <ProjectsPage
                             colorScheme={colorScheme}
                             title={'projects'}
@@ -157,6 +151,16 @@ function App() {
 
                         />
                     </Route>
+
+                    <Route path="/">
+                        <HomePage
+                            colorScheme={colorScheme}
+                            title={'home'}
+                            subHeader={'I am homepage'}
+                            colorScheme={colorScheme}
+                        />
+                    </Route>
+
                 </Switch>
 
             </div>

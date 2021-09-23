@@ -1,3 +1,4 @@
+
 import "../../Pages/Page.css";
 import PageTitle from "../PageTitle";
 import ProjectCard from "./ProjectCard/ProjectCard";
@@ -7,20 +8,27 @@ import {
 } from "react-router-dom";
 
 
+import { FadeIn, TitleEffectIn } from "../../../utility"
+
+
 
 const ProjectsPage = ({ colorScheme, title, subHeader }) => {
     return (
+        <FadeIn>
         <div className='page'>
+        <TitleEffectIn>
             <PageTitle
                 colorScheme={colorScheme}
                 title={title}
                 subHeader={subHeader}
             />
+        </TitleEffectIn>
+        
             
             <div className='projects-container'>
                 {projects.map((project) => (
                     <Link
-                        to={`/${project.title}`}
+                        to={`/projects/${project.title}`}
                         key={project.title}
                         style={
                             {
@@ -38,6 +46,7 @@ const ProjectsPage = ({ colorScheme, title, subHeader }) => {
 
 
         </div>
+        </FadeIn>
     )
 }
 

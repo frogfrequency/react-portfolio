@@ -1,6 +1,6 @@
 import "../ProjectsPage.css"
 import { useState } from 'react';
-import chess_hovered from "../../../../pictures/chess/chess_hovered.png"
+
 
 import { pictureCollection } from "../../../../pictureHandler.js";
 
@@ -27,7 +27,8 @@ const ProjectCard = ({ project, colorScheme }) => {
             style={
                 {
                     backgroundColor: colorScheme.color2,
-                    boxShadow: isHovered ? '10px 10px 10px rgb(15, 15, 15)' : '5px 5px 10px rgb(15, 15, 15)'
+                    boxShadow: isHovered ? '10px 10px 10px rgb(15, 15, 15)' : '',
+                    transform: isHovered ? 'translate(-4px, -4px)' : ''
                 }
             }
             onMouseEnter={() => handleHover()}
@@ -42,8 +43,6 @@ const ProjectCard = ({ project, colorScheme }) => {
                     }
                 }
             />
-
-            {/* <img src={pictureCollection[pictureName]}></img> */}
 
             <h3 className='project-card-title'>{project.title}</h3>
             <div className='project-card-description'>

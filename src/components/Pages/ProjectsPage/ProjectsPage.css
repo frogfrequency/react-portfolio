@@ -11,7 +11,7 @@
     width: 340px;
     height: 436px;
     /* position: relative; */
-    box-shadow: 5px 5px 10px rgb(15, 15, 15);
+    /* box-shadow: 5px 5px 10px rgb(15, 15, 15); */
     align-items: flex-end;
 }
 
@@ -84,14 +84,14 @@
     align-items: center;
     justify-content:center;
     /* background-color: red; */
-    width: 600px;
+    width: 40%;
     height: 800px;
     margin: 30px;
 }
 
 #project-details {
     /* background-color: blue; */
-    width: 600px;
+    width: 50%;
     height: 800px;
     margin: 30px;
 }
@@ -122,6 +122,8 @@
 
 #project-detail-detailInformation {
     text-align: justify;
+    line-height: 16pt;
+    /* white-space: pre-wrap; */
 }
 
 #project-detail-nav {

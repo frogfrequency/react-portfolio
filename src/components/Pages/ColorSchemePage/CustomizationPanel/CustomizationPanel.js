@@ -9,6 +9,8 @@ import { useState } from "react";
 import ColorPreview from '../../../ColorPreview/ColorPreview';
 import CustomizationPanelElement from "./CustomizationPanelElement/CustomizationPanelElement";
 
+import { CustomizationPanelEffect, ColorPickerEffect } from "../../../../utility";
+
 const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorScheme, setActiveCustomizationId}) => {
 
     const [hoverStatuses, setHoverStatuses] = useState([false, false, false]);
@@ -66,11 +68,12 @@ const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorSch
     }
 
     return (
-        <div
-            id='customization-panel'
-            style={{ backgroundColor: colorScheme.color2, borderColor: colorScheme.color1 }}
-        >
-
+            <div>
+        <CustomizationPanelEffect>
+                <div
+                id='customization-panel'
+                style={{ backgroundColor: colorScheme.color2, borderColor: colorScheme.color1 }}
+                >
 
                 {hoverStatuses[2] ? (
                     <MdClose
@@ -200,17 +203,19 @@ const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorSch
                     <br></br>
                     <br></br>
 
-
+                    <ColorPickerEffect>
                     <SketchPicker
                         color={pickerColor}
                         onChange={updatedColor => pickerColorChange(updatedColor)}
                     />
+                    </ColorPickerEffect>
                 </>
 
             ) : (
                 null
             )}
-
+        </div>
+        </CustomizationPanelEffect>
         </div>
     )
 }

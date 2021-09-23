@@ -2,9 +2,11 @@ import "./HeaderPageSelect.css"
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 
+import { PageSelectEffect } from "../../../../utility";
+
 const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisibility }) => {
 
-    const defaultHoverStatuses = { ProjectsPage: false, ColorSchemePage: false, AboutPage: false };
+    const defaultHoverStatuses = { HomePage: false, ProjectsPage: false, ColorSchemePage: false, AboutPage: false };
 
     const [elementsAreHovered, setElementsAreHovered] = useState(
         defaultHoverStatuses
@@ -37,28 +39,28 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
 
 
     return (
-
-        <>
+        <PageSelectEffect  key={selectorVisibility}>
+        < div>
             {selectorVisibility.includes(true) ? (
                 <>
                     <div
                         className="empty-box"
                         onMouseEnter={() => handleMenuMouseEnter()}
                         onMouseLeave={() => handleMenuMouseLeave()}
-                        style={{ left: '192px',}}
+                        style={{ left: '210px', }}
                     ></div>
                     <div
                         className="empty-box"
                         onMouseEnter={() => handleMenuMouseEnter()}
                         onMouseLeave={() => handleMenuMouseLeave()}
-                        style={{ right: '192px',}}
+                        style={{ right: '210px', }}
                     ></div>
 
                     <div
                         className="empty-box"
                         onMouseEnter={() => handleMenuMouseEnter()}
                         onMouseLeave={() => handleMenuMouseLeave()}
-                        style={{ top: '46px', height: '50px'}}
+                        style={{ top: '46px', height: '50px',  }}
                     ></div>
                 </>
 
@@ -74,6 +76,30 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
                     onMouseEnter={() => handleMenuMouseEnter()}
                     onMouseLeave={() => handleMenuMouseLeave()}
                 >
+
+                    <div
+                        className={elementsAreHovered.HomePage ? 'selector-element pointer' : 'selector-element'}
+                        onMouseEnter={() => handleElementMouseEnter('HomePage')}
+                        onMouseLeave={() => handleElementMouseLeave()}
+                    >
+                        <Link
+                            style={
+                                {
+                                    textDecoration: 'none',
+                                    color: elementsAreHovered.HomePage ? colorScheme.color3 : colorScheme.color4
+                                }
+                            }
+                            to="/"
+                        >
+                            home
+                        </Link>
+                    </div>
+
+
+
+
+
+
                     <div
                         className={elementsAreHovered.ProjectsPage ? 'selector-element pointer' : 'selector-element'}
                         onMouseEnter={() => handleElementMouseEnter('ProjectsPage')}
@@ -86,7 +112,7 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
                                     color: elementsAreHovered.ProjectsPage ? colorScheme.color3 : colorScheme.color4
                                 }
                             }
-                            to="/"
+                            to="/projects"
                         >
                             projects
                         </Link>
@@ -139,7 +165,8 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
             ) :
                 null
             }
-        </>
+        </div>
+        </PageSelectEffect>
     )
 }
 

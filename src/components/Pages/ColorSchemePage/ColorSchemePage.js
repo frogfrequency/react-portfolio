@@ -2,29 +2,35 @@ import PageTitle from "../PageTitle"
 import SchemeListContainer from "./SchemeListContainer/SchemeListContainer"
 import "./ColorSchemePage.css"
 
+import { FadeIn, TitleEffectIn } from "../../../utility"
+
 const ColorSchemePage = ({ colorScheme, title, subHeader, setColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes, saveAndSetNewColorScheme }) => {
 
 
 
     return (
-        <div className="page">
-            <PageTitle
-                colorScheme={colorScheme}
-                title={title}
-                subHeader={subHeader}
-            />
-            <div id="color-control">
-                <SchemeListContainer
-                    colorScheme={colorScheme}
-                    setColorScheme={setColorScheme}
-                    theColorSchemes={theColorSchemes}
-                    deleteColorScheme={deleteColorScheme}
-                    handleDefineTheColorSchemes={handleDefineTheColorSchemes}
-                    saveAndSetNewColorScheme={saveAndSetNewColorScheme}
-                />
+        <FadeIn>
+            <div className="page">
+                <TitleEffectIn>
+                    <PageTitle
+                        colorScheme={colorScheme}
+                        title={title}
+                        subHeader={subHeader}
+                    />
+                </TitleEffectIn>
+                <div id="color-control">
+                    <SchemeListContainer
+                        colorScheme={colorScheme}
+                        setColorScheme={setColorScheme}
+                        theColorSchemes={theColorSchemes}
+                        deleteColorScheme={deleteColorScheme}
+                        handleDefineTheColorSchemes={handleDefineTheColorSchemes}
+                        saveAndSetNewColorScheme={saveAndSetNewColorScheme}
+                    />
 
+                </div>
             </div>
-        </div>
+        </FadeIn>
     )
 }
 
