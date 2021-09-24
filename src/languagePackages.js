@@ -13,6 +13,8 @@ export const languagePackages = {
             projectsSubheader: 'a collection of some of my coding projects',
             colorControlTitle: 'color control',
             colorControlSubheader: `don't like the default color schemes? create your own here!`,
+            aboutTitle: 'about',
+            aboutSubheader: 'useful information about this website',
         },
         colorSchemePage: {
             addScheme: 'add new scheme',
@@ -47,6 +49,8 @@ export const languagePackages = {
             projectsSubheader: 'eine Zusammenstellung einiger meiner Coding Projekte',
             colorControlTitle: 'Farbverwaltung',
             colorControlSubheader: 'Du magst die standardmässigen Farbschemas nicht? Kreiere hier deine Eigenen!',
+            aboutTitle: 'About',
+            aboutSubheader: 'nützliche Informationen zu dieser Webseite',
         },
         colorSchemePage: {
             addScheme: 'neues Schema hinzufügen',

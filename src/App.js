@@ -143,8 +143,8 @@ function App() {
                     <Route path="/about">
                         <AboutPage
                             colorScheme={colorScheme}
-                            title={'about'}
-                            subHeader={'useful information about this website'}
+                            title={textContent.titles.aboutTitle}
+                            subHeader={textContent.titles.aboutSubheader}
                         />
                     </Route>
                     <Route path="/color-control">
