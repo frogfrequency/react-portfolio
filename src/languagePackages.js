@@ -11,8 +11,8 @@ export const languagePackages = {
         titles: {
             projectsTitle: 'projects',
             projectsSubheader: 'a collection of some of my coding projects',
-            colorControlTitle: 'projects',
-            colorControlSubheader: 'a collection of some of my coding projects',
+            colorControlTitle: 'color control',
+            colorControlSubheader: `don't like the default color schemes? create your own here!`,
         },
         colorSchemePage: {
             addScheme: 'add new scheme',
@@ -22,6 +22,12 @@ export const languagePackages = {
             textStylingColor: 'text styling color',
             textColor: 'text color',
             pickNew: 'pick new '
+        },
+        projectsPage: {
+            backToProjectsOverview: 'back to projects overview',
+            viewSourcecode: 'view sourcecode',
+            tryItOut: 'try it out',
+            technologiesUsed: 'technologies used',
         }
     },
 
@@ -39,8 +45,8 @@ export const languagePackages = {
         titles: {
             projectsTitle: 'Projekte',
             projectsSubheader: 'eine Zusammenstellung einiger meiner Coding Projekte',
-            colorControlTitle: 'Projekte',
-            colorControlSubheader: 'eine Zusammenstellung einiger meiner Coding Projekte',
+            colorControlTitle: 'Farbverwaltung',
+            colorControlSubheader: 'Du magst die standardmässigen Farbschemas nicht? Kreiere hier deine Eigenen!',
         },
         colorSchemePage: {
             addScheme: 'neues Schema hinzufügen',
@@ -50,6 +56,12 @@ export const languagePackages = {
             textStylingColor: 'Text-stylingfarbe',
             textColor: 'Textfarbe',
             pickNew: 'wähle neue '
+        },
+        projectsPage: {
+            backToProjectsOverview: 'zurück zur Projektübersicht',
+            viewSourcecode: 'zeige Quellcode',
+            tryItOut: `probier's aus`,
+            technologiesUsed: 'verwendete Technologien',
         }
     }
 

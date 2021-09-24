@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 
 import { pictureCollection } from "../../../../pictureHandler.js";
+import { projectsGerman } from "../../../../projects";
 
 
 const ProjectCard = ({ project, colorScheme }) => {
@@ -44,7 +45,17 @@ const ProjectCard = ({ project, colorScheme }) => {
                 }
             />
 
-            <h3 className='project-card-title'>{project.title}</h3>
+            <h3
+                className='project-card-title'
+                style={
+                    {
+                        fontSize: project.title.length > 32 ? '18px' : ''
+                    }
+                }
+            >
+                {project.title}
+            </h3>
+
             <div className='project-card-description'>
                 {project.type}
             </div>

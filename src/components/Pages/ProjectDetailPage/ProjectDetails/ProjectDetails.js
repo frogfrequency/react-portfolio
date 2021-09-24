@@ -3,7 +3,7 @@ import { FiExternalLink } from "react-icons/fi";
 import { GiMagnifyingGlass } from "react-icons/gi";
 import { AiFillGithub } from "react-icons/ai";
 
-const ProjectDetails = ({ project, colorScheme }) => {
+const ProjectDetails = ({ project, colorScheme, textContent }) => {
     
     let textProcessed = project.detailInformation;
     textProcessed = textProcessed.split('\\n').map(str => <p>{str}</p>);
@@ -49,7 +49,7 @@ const ProjectDetails = ({ project, colorScheme }) => {
                     onMouseEnter={() => handleHover('tryout')}
                     onMouseLeave={() => handleUnhover('tryout')}
                 >
-                    <FiExternalLink className='icon'/> try it out 
+                    <FiExternalLink className='icon'/>{textContent.projectsPage.tryItOut}
                 </a> : ''}
                 
                 <a
@@ -65,7 +65,7 @@ const ProjectDetails = ({ project, colorScheme }) => {
                     onMouseEnter={() => handleHover('sourceCode')}
                     onMouseLeave={() => handleUnhover('sourceCode')}
                 >
-                    <AiFillGithub className='icon'/> view sourcecode 
+                    <AiFillGithub className='icon'/>{textContent.projectsPage.viewSourcecode}
                 </a>
 
                 {project.additionalLink ? <a 
@@ -95,7 +95,7 @@ const ProjectDetails = ({ project, colorScheme }) => {
             <div id='project-detail-detailInformation'>{textProcessed}</div>
             <br></br>
             <br></br>
-            <div>technologies used: {project.technology}</div>
+            <div>{textContent.projectsPage.technologiesUsed}: {project.technology}</div>
             <br></br>
             <br></br>
         </div>

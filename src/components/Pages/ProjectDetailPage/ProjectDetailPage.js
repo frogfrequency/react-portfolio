@@ -12,7 +12,7 @@ import {
 } from "react-router-dom";
 
 
-const ProjectDetailPage = ({ project, colorScheme }) => {
+const ProjectDetailPage = ({ project, colorScheme, textContent }) => {
     
     const [hoverStatusGoBack, setHoverStatusGoBack] = useState(false)
     
@@ -38,7 +38,8 @@ const ProjectDetailPage = ({ project, colorScheme }) => {
                         onMouseEnter={() => setHoverStatusGoBack(true)}
                         onMouseLeave={() => setHoverStatusGoBack(false)}
                     >
-                        <IoReturnUpBack size='30px' style={{marginRight:'10px'}} />back to projects overview
+                        <IoReturnUpBack size='30px' style={{marginRight:'10px'}}/>
+                        {textContent.projectsPage.backToProjectsOverview}
                     </Link>
                 </div>
 
@@ -52,6 +53,7 @@ const ProjectDetailPage = ({ project, colorScheme }) => {
                     <ProjectDetails
                         project={project}
                         colorScheme={colorScheme}
+                        textContent={textContent}
                     />
                 </div>
                 

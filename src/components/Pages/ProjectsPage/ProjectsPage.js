@@ -2,7 +2,7 @@
 import "../../Pages/Page.css";
 import PageTitle from "../PageTitle";
 import ProjectCard from "./ProjectCard/ProjectCard";
-import { projects } from "../../../projects";
+// import { projects } from "../../../projects";
 import {
     Link
 } from "react-router-dom";
@@ -12,7 +12,7 @@ import { FadeIn, TitleEffectIn } from "../../../utility"
 
 
 
-const ProjectsPage = ({ colorScheme, title, subHeader }) => {
+const ProjectsPage = ({ colorScheme, title, subHeader, projects }) => { // add projects(app.js state) here and delete fileimport
     return (
         <FadeIn>
         <div className='page'>

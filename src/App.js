@@ -5,7 +5,7 @@ import { languagePackages } from './languagePackages';
 
 import Header from './components/Header/Header';
 
-import { projects } from "./projects"
+import { projectsEnglish, projectsGerman, projekteGerman } from "./projects"
 import { colorSchemes, giveNextSchemeId } from "./color-schemes.js"
 import AboutPage from './components/Pages/AboutPage/AboutPage';
 import ProjectsPage from './components/Pages/ProjectsPage/ProjectsPage';
@@ -84,21 +84,28 @@ function App() {
         setPageSelectorVisibility(visibility);
     }
 
-    // LANGUAGE SELECT
+    // LANGUAGE SELECT / ADJUSTING PROJECTS FILE
 
     const [textContent, setTextContent] = useState(
         languagePackages.english
     )
 
+    const [projects, setProjects] = useState(
+        projectsEnglish
+    )
+
     const setGerman = () => {
         console.log('setting GERMAN')
         setTextContent(languagePackages.german)
+        setProjects(projectsGerman)
     }
 
     const setEnglish = () => {
         console.log('setting ENGLISH')
         setTextContent(languagePackages.english)
+        setProjects(projectsEnglish)
     }
+
 
 
     // --------- END OF STATE ---------
@@ -158,6 +165,7 @@ function App() {
                             <ProjectDetailPage
                                 project={project}
                                 colorScheme={colorScheme}
+                                textContent={textContent}
                             />
                         </Route>
                     ))}
@@ -166,6 +174,7 @@ function App() {
                             colorScheme={colorScheme}
                             title={textContent.titles.projectsTitle}
                             subHeader={textContent.titles.projectsSubheader}
+                            projects={projects}
                         />
                     </Route>
 
