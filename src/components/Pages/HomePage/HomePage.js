@@ -79,9 +79,10 @@ const HomePage = ({colorScheme}) => {
                 <HomePageTextEffect>
                 <div id='max-width-container'>
                     <div id="home-page-content-container" onMouseEnter={() => uncoverHeader()}>
+                        salutti a tutti. insert witty introduction here hi there Nostrud eiusmo eu enim non labore fugiat enim ipsum aute minim dolore tempor elit non. Ea ipsum exercitation dolor irure ut non. Proident aute deserunt et fugiat ullamco do enim exercitation commodo mollit exercitation. Aute eu ipsum ad qui deserunt do dolore sunt.
                         hi there Nostrud eiusmo eu enim non labore fugiat enim ipsum aute minim dolore tempor elit non. Ea ipsum exercitation dolor irure ut non. Proident aute deserunt et fugiat ullamco do enim exercitation commodo mollit exercitation. Aute eu ipsum ad qui deserunt do dolore sunt.
                         hi there Nostrud eiusmo eu enim non labore fugiat enim ipsum aute minim dolore tempor elit non. Ea ipsum exercitation dolor irure ut non. Proident aute deserunt et fugiat ullamco do enim exercitation commodo mollit exercitation. Aute eu ipsum ad qui deserunt do dolore sunt.
-                        hi there Nostrud eiusmo eu enim non labore fugiat enim ipsum aute minim dolore tempor elit non. Ea ipsum exercitation dolor irure ut non. Proident aute deserunt et fugiat ullamco do enim exercitation commodo mollit exercitation. Aute eu ipsum ad qui deserunt do dolore sunt.
+
                     </div>
                 </div>
                 </HomePageTextEffect>
