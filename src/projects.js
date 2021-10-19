@@ -4,8 +4,9 @@ export const projectsEnglish = [
     {
         title: 'react "portfolio"',
         type: 'presentation page',
-        description: 'a virtual chess game coded from scratch',
+        description: 'egnlish',
         detailInformation: `more infos here coming!`,
+        additionalLink: { target: 'https://frogfrequency.github.io/about', text: 'go to About'},
         technology: ['React, Javascript, CSS'],
         tryoutLink: undefined,
         sourcecodeLink: 'https://github.com/frogfrequency/react-portfolio',
@@ -79,7 +80,13 @@ export const projectsEnglish = [
         title: 'graph guesser',
         type: 'game',
         description: 'a primitive game where you have to guess two variables so that a linear function with those two variables slices two previously shown rectangles',
-        detailInformation: 'we want detailed infos here!',
+        detailInformation: `One of the first apps I created when I first started using HTML and CSS. I later did some minor style changes like adding a background
+        color or changing the font. To play it you either need a little knowledge about linear functions
+        or a few minutes of time to try and figure it out.
+        \\n
+        In a few cases, the program may evaluate an answer as incorrect even though it is correct.
+        Since the drawn graph consists of individual dots that are in some cases spread very far apart this error can occur.
+        This happens primarily with large gradients/slopes (m-value) `,
         technology: ['Javascript, HTML, CSS'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects/waves-and-graphs/graphGuesser_V1/',
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/waves-and-graphs/graphGuesser_V1',
@@ -91,8 +98,8 @@ export const projectsEnglish = [
         type: 'game',
         description: 'a primitive game where you have to guess the percentage of dark tiles that are shown for a brief moment',
         detailInformation: `This is really nothing special. Just a very simple game I created when I first started using HTML and CSS. 
-        My very first steps that were not pure console application". I later did some minor style changes like adding a background
-        color or changing the font. `,
+        My very first steps that were not pure "console applications". I later did some minor style changes like adding a background
+        color or changing the font. The game should be self-explanatory and easy to understand.`,
         technology: ['Javascript, HTML, CSS'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects/pixelEstimator_V2/',
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/pixelEstimator_V2',
@@ -141,8 +148,23 @@ export const projectsGerman = [
     {
         title: 'react "portfolio"',
         type: 'Website (Präsentation)',
-        description: 'eine react Website in der meine Projekte präsentiert werden',
-        detailInformation: `mehr infos kommen hier!`,
+        description: 'eine über github gehostete und mit react erstellte website, auf der meine bisherigen Kodierprojekte eingesehen und ausprobiert werden können',
+        detailInformation: `Das Erstellen der Website mit React hat mir sehr viel Spass bereitet, da ich mein Vorwissen in Javascript, HTML und CSS sehr gut anweden konnte.
+        Die Flexibilität des Frameworks hat mich überrascht. So fand ich zum Beispiel für fast alle meine Ideen auch eine Möglichkeit diese umzusetzen. 
+        Durch den Node-Package-Managers konnte ich externe Komponenten einfach installieren und mit Hilfe der jeweiligen Dokumentationen auch rasch verwenden.
+        Anfangs nutzte ich diese Komponenten nur sehr spärlich und wollte viele (z.B. Bilder-Gallerie, Animationen oder auch das Fenster für die Farbauswahl) selbst erstellen.
+        Ich merkte dann aber schnell, dass dies zwar spannend, aber auch übertrieben aufwändig gewesen wäre. Ausserdem hätte ich auch mit gewaltigem Aufwand nicht
+        so gute Resultate erzielen können. Es war also nur logisch möglichst guten Gebrauch von diesen Komponenten zu machen!
+        Es war mir aber auch wichtig einzelne Funktionalitäten zuerst selber auszuprobieren.
+        So griff ich meistens erst auf ein externe Komponenten zurück, nachdem ich sie
+        selber nicht gescheit implementieren konnte oder aber mit meiner eigenen Lösung nicht zufrieden war. Es gibt daher im Quellcode bestimmt Stellen, die 
+        unschön bzw. unvorteilhaft umgesetzt sind und die mit einer externen Komponenten sinnvoller realisiert wären. Es war von Anfang an nicht mein Ziel mustergültigen
+        Code zu produzieren. Vielmehr wollte ich React so viel wie möglich ausprobieren und damit experimentieren.
+        \\n
+        Weitere Informationen können auf der About-Page gefunden werden.
+        
+        `,
+        additionalLink: { target: 'https://frogfrequency.github.io/about', text: 'gehe zu About'},
         technology: ['React, Javascript, CSS'],
         tryoutLink: undefined,
         sourcecodeLink: 'https://github.com/frogfrequency/react-portfolio',
@@ -230,10 +252,17 @@ export const projectsGerman = [
         picCount: 3
     },
     {
-        title: 'Graph-Rater',
+        title: 'Graph-Errater',
         type: 'Spiel',
         description: 'GERMAN a primitive game where you have to guess two variables so that a linear function with those two variables slices two previously shown rectangles',
-        detailInformation: 'GERMAN we want detailed infos here!',
+        detailInformation: `Eine der ersten Anwendungen, die ich erstellte als ich anfing HTML und CSS zu verwenden.
+        Vor dem Einbinden in meine React-Website nahm ich dann noch kleine Stiländerungen (u.a. Schriftart und Hintergrundfarbe) vor.
+        Um es zu spielen, braucht man entweder ein wenig Vorwissen über lineare Funktionen
+        oder ein paar Minuten Zeit um es auszuprobieren und zu verstehen. 
+        \\n
+        Manchmal kann es vorkommen, dass das Programm eine Antwort als falsch bewertet, obwohl sie richtig ist.
+        Da der gezeichnete Graph aus einzelnen, manchmal sehr weit auseinanderliegenden Punkten besteht, kann dieser Fehler auftreten.
+        Dies passiert vor allem bei grossen Steigungen (m-Wert) `,
         technology: ['Javascript, HTML, CSS'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects/waves-and-graphs/graphGuesser_V1/',
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/waves-and-graphs/graphGuesser_V1',
@@ -241,12 +270,13 @@ export const projectsGerman = [
         picCount: 2
     },
     {
-        title: 'Pixel-Rater 2',
+        title: 'Pixel-Errater 2',
         type: 'Spiel',
-        description: 'GERMAN a primitive game where you have to guess the percentage of dark tiles that are shown for a brief moment',
-        detailInformation: `GERMAN This is really nothing special. Just a very simple game I created when I first started using HTML and CSS. 
-        My very first steps that were not pure console application". I later did some minor style changes like adding a background
-        color or changing the font. `,
+        description: 'ein primitives Spiel, bei dem man den Prozentsatz der dunklen Felder erraten muss, die für einen kurzen Moment angezeigt werden',
+        detailInformation: `Dieses Spiel ist wirklich nichts Besonderes. Als ich anfing HTML und CSS zu benutzen, war es eine der ersten
+        Programme, die ich damit erstellte. Zuvor hatte ich praktisch nur Apps und kleine Programme auf der Konsole erstellt.
+        Vor dem Einbinden in meine React-Website nahm ich dann noch kleine Stiländerungen (u.a. Schriftart und Hintergrundfarbe) vor.
+        Das Spiel sollte selbsterklärend und einfach zu verstehen sein.`,
         technology: ['Javascript, HTML, CSS'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects/pixelEstimator_V2/',
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/pixelEstimator_V2',
