@@ -181,9 +181,7 @@ function App() {
                     <Route path="/">
                         <HomePage
                             colorScheme={colorScheme}
-                            title={textContent.titles.homeTitle}
-                            subHeader={textContent.titles.homeSubheader}
-                            colorScheme={colorScheme}
+                            homePageTextContent={textContent.homePage}
                         />
                     </Route>
 

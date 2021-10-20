@@ -1,17 +1,21 @@
 import { useState } from 'react';
 import { FiExternalLink } from "react-icons/fi";
-import { GiMagnifyingGlass } from "react-icons/gi";
+import { FaGamepad } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
+import { HiOutlineArrowRight, HiArrowNarrowRight } from "react-icons/hi";
+import { IoLogoGameControllerB } from "react-icons/io";
+
+import { Link } from "react-router-dom";
 
 const ProjectDetails = ({ project, colorScheme, textContent }) => {
     
     let textProcessed = project.detailInformation;
     textProcessed = textProcessed.split('\\n').map(str => <p>{str}</p>);
 
-    const [hoverStatus, setHoverStatus] = useState({tryout:false, sourceCode:false, additionalLink:false,})
+    const [hoverStatus, setHoverStatus] = useState({tryout:false, sourceCode:false, additionalLink:false, additionalInternLink:false,})
 
     const handleHover = (what) => {
-        let newHoverStatus = {...hoverStatus};
+        let newHoverStatus = {tryout:false, sourceCode:false, additionalLink:false, additionalInternLink:false};
         newHoverStatus[what] = true;
         setHoverStatus(newHoverStatus);
     }
@@ -49,9 +53,9 @@ const ProjectDetails = ({ project, colorScheme, textContent }) => {
                     onMouseEnter={() => handleHover('tryout')}
                     onMouseLeave={() => handleUnhover('tryout')}
                 >
-                    <FiExternalLink className='icon'/>{textContent.projectsPage.tryItOut}
+                    <IoLogoGameControllerB className='icon' size='18px'/>{textContent.projectsPage.tryItOut}
                 </a> : ''}
-                
+
                 <a
                     href={project.sourcecodeLink}
                     target="_blank"
@@ -83,6 +87,22 @@ const ProjectDetails = ({ project, colorScheme, textContent }) => {
                 >
                     <FiExternalLink className='icon'/> {project.additionalLink.text}
                 </a> : ''}
+
+
+                {project.additionalInternLink ? <Link 
+                    to="/about"
+                    className='project-detail-nav-button'
+                    style={
+                        {
+                            color: hoverStatus.additionalInternLink ? colorScheme.color3 : colorScheme.color4,
+                            backgroundColor: colorScheme.color2,
+                        }
+                    }
+                    onMouseEnter={() => handleHover('additionalInternLink')}
+                    onMouseLeave={() => handleUnhover('additionalInternLink')}
+                >
+                    <HiOutlineArrowRight className='icon'/> {project.additionalInternLink.text}
+                </Link> : ''}
                 
 
             </div>

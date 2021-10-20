@@ -19,11 +19,6 @@ const ProjectDetailPage = ({ project, colorScheme, textContent }) => {
     return (
         <FadeIn>
             <div className='page'>
-                {/* <PageTitle
-                    colorScheme={colorScheme}
-                    title='projects'
-                    subHeader='a collection of some of my coding projects'
-                /> */}
 
                 <div className='project-overview-button-container'>
                     <Link

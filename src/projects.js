@@ -3,10 +3,10 @@
 export const projectsEnglish = [
     {
         title: 'react "portfolio"',
-        type: 'presentation page',
+        type: 'website',
         description: 'egnlish',
         detailInformation: `more infos here coming!`,
-        additionalLink: { target: 'https://frogfrequency.github.io/about', text: 'go to About'},
+        additionalInternLink: { target: 'https://frogfrequency.github.io/about', text: 'go to About'},
         technology: ['React, Javascript, CSS'],
         tryoutLink: undefined,
         sourcecodeLink: 'https://github.com/frogfrequency/react-portfolio',
@@ -147,7 +147,7 @@ export const projectsEnglish = [
 export const projectsGerman = [
     {
         title: 'react "portfolio"',
-        type: 'Website (Präsentation)',
+        type: 'Website',
         description: 'eine über github gehostete und mit react erstellte website, auf der meine bisherigen Kodierprojekte eingesehen und ausprobiert werden können',
         detailInformation: `Das Erstellen der Website mit React hat mir sehr viel Spass bereitet, da ich mein Vorwissen in Javascript, HTML und CSS sehr gut anweden konnte.
         Die Flexibilität des Frameworks hat mich überrascht. So fand ich zum Beispiel für fast alle meine Ideen auch eine Möglichkeit diese umzusetzen. 
@@ -164,7 +164,7 @@ export const projectsGerman = [
         Weitere Informationen können auf der About-Page gefunden werden.
         
         `,
-        additionalLink: { target: 'https://frogfrequency.github.io/about', text: 'gehe zu About'},
+        additionalInternLink: { target: 'https://frogfrequency.github.io/about', text: 'gehe zu About'},
         technology: ['React, Javascript, CSS'],
         tryoutLink: undefined,
         sourcecodeLink: 'https://github.com/frogfrequency/react-portfolio',

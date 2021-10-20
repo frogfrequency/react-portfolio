@@ -55,7 +55,7 @@
 
 #max-width-container {
     /* background-color: chartreuse; */
-    width: 900px;
+    width: 970px;
     /* height: 100px; */
     margin: auto;
 }
@@ -65,5 +65,6 @@
     width: auto;
     height: auto;
     text-align: justify;
-    line-height: 20pt;
+    text-align-last: center;
+    line-height: 28pt;
 }
