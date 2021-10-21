@@ -78,7 +78,7 @@ const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorSch
                     <MdClose
                     size='1.3em'
                     id='closeX'
-                    style={{color: colorScheme.color3}}
+                    style={{color: colorScheme.color3, cursor: 'pointer'}}
                     onClick={() => setActiveCustomizationId(null)}
                     onMouseEnter={() => handleMouseEnter(2)}
                     onMouseLeave={() => handleMouseLeave(2)}
@@ -151,7 +151,7 @@ const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorSch
                 {hoverStatuses[0] ? (
                     <RiSave3Fill
                         size='1.3em'
-                        style={{color: colorScheme.color3}}
+                        style={{color: colorScheme.color3, cursor: 'pointer'}}
                         onMouseEnter={() => handleMouseEnter(0)}
                         onMouseLeave={() => handleMouseLeave(0)}
                         onClick={() => saveAndSetNewColorScheme(newColorScheme)}
@@ -172,7 +172,7 @@ const CustomizationPanel = ({thisColorScheme, colorScheme, saveAndSetNewColorSch
 
                 {hoverStatuses[1] ? (
                     <FaUndo
-                        style={{color: colorScheme.color3}}
+                        style={{color: colorScheme.color3, cursor: 'pointer'}}
                         onMouseEnter={() => handleMouseEnter(1)}
                         onMouseLeave={() => handleMouseLeave(1)}
                         onClick={resetNewColorScheme}

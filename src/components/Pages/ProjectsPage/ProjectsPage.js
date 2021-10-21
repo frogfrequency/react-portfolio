@@ -23,13 +23,12 @@ const ProjectsPage = ({ colorScheme, title, subHeader, projects }) => { // add p
                 subHeader={subHeader}
             />
         </TitleEffectIn>
-        
             
             <div className='projects-container'>
                 {projects.map((project) => (
                     <Link
-                        to={`/projects/${project.title}`}
-                        key={project.title}
+                        to={`/projects/${project.key}`}
+                        key={project.key}
                         style={
                             {
                                 color: colorScheme.color4,

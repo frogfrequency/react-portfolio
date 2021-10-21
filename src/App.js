@@ -161,7 +161,7 @@ function App() {
                         />
                     </Route>
                     {projects.map((project) => (
-                        <Route path={`/projects/${project.title}`} key={project.title}>
+                        <Route path={`/projects/${project.key}`} key={project.key}>
                             <ProjectDetailPage
                                 project={project}
                                 colorScheme={colorScheme}

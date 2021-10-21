@@ -2,10 +2,24 @@
 
 export const projectsEnglish = [
     {
+        key: 'reactPortfolio',
         title: 'react "portfolio"',
         type: 'website',
-        description: 'egnlish',
-        detailInformation: `more infos here coming!`,
+        description: 'the website you are currently looking at. hosted via github and created with react. my coding work can be viewed and tried out on it',
+        detailInformation: `I had a lot of fun creating this website with React because I was able to apply my previous knowledge in Javascript, HTML and CSS very well.
+        I was surprised by this framework's flexibility. I found way's to implement almost all of my ideas with ease. Through the usage of the Node Package Manger 
+        I could easily install external components and use them quickly with the help of the respective documentation. 
+        At the beginning I used these components only very sparsely and wanted to create many (e.g. picture gallery, animations and also 
+        the color picker) myself. But then I soon realized that although this promised to be very exciting, it would've been immensely time-consuming. 
+        And I also would not have been able to achieve such brilliant results even with enormous effort. Hence it was only logical to make the best possible 
+        use of these highly sophisticated components. 
+        Then again it was also important for me to keep on experimenting and trying to create those functionalities myself or at least think of possible ways to do so.
+        This way I mostly used external components only after I couldn't implement the wanted functionality in my own way or when I considered my 
+        solution not to be satisfactory enough. 
+        This is why some of these functionalities are unfavourably implemented and would better be done so by using an external component. 
+        From the very beginning it was never my goal to produce exemplary code. Rather, I wanted to try out React as much as possible and experiment with it.
+        \\n
+        More information can be found on the about page.`,
         additionalInternLink: { target: 'https://frogfrequency.github.io/about', text: 'go to About'},
         technology: ['React, Javascript, CSS'],
         tryoutLink: undefined,
@@ -13,7 +27,8 @@ export const projectsEnglish = [
         picKey: 'reactPortfolio',
         picCount: 5
     },
-    {
+    {   
+        key: 'adventOfCode2020',
         title: 'advent of code 2020',
         type: 'series of coding challenges',
         description: `25 coding challenges with two riddles each where the second one builds upon the first but is more difficult`,
@@ -26,7 +41,7 @@ export const projectsEnglish = [
         or make it harder to solve by simply increasing the amount of necessary computation by an immense amount (see anecdote below). My solutions are in no way ideal
         and if I were to refactor or rather redo them (which I'll probably do using C# or Java to deepen my knowledge about object-oriented languages) they would most
         certainly look very different! Almost every puzzle taught me something new and the respective solutions reflect my evolution from a complete beginner in
-        creating problem solving algorithms to a ...well it is always hard to make statements about one's own abilities ;) However I believe that I have definately left the
+        creating problem solving algorithms to a ...well it is always hard to make statements about one's own abilities ;) However I believe that I have definitely left the
         beginner territory and continuously getting better at solving problems. 
 
         \\n Anecdote:
@@ -49,6 +64,7 @@ export const projectsEnglish = [
         picCount: 8
     },
     {
+        key: 'chess',
         title: 'chess',
         type: 'game',
         description: 'a virtual chess game coded from scratch',
@@ -77,6 +93,7 @@ export const projectsEnglish = [
         picCount: 3
     },
     {
+        key: 'graphGuesser',
         title: 'graph guesser',
         type: 'game',
         description: 'a primitive game where you have to guess two variables so that a linear function with those two variables slices two previously shown rectangles',
@@ -94,6 +111,7 @@ export const projectsEnglish = [
         picCount: 2
     },
     {
+        key: 'pixelEstimator2',
         title: 'pixel estimator 2',
         type: 'game',
         description: 'a primitive game where you have to guess the percentage of dark tiles that are shown for a brief moment',
@@ -107,6 +125,7 @@ export const projectsEnglish = [
         picCount: 4
     },
     {
+        key: 'pokerProbabilityCalculator',
         title: 'poker probability calculator',
         type: 'simulation',
         description: 'a simulator that creates an immense number of poker hands and calculates the probabilities for each hand from it',
@@ -146,9 +165,10 @@ export const projectsEnglish = [
 
 export const projectsGerman = [
     {
+        key: 'reactPortfolio',
         title: 'react "portfolio"',
         type: 'Website',
-        description: 'eine über github gehostete und mit react erstellte website, auf der meine bisherigen Kodierprojekte eingesehen und ausprobiert werden können',
+        description: 'Die über github gehostete und mit react erstellte website, welche du gerade anschaust! Meine bisherigen Coding-Projekte können hier eingesehen und ausprobiert werden',
         detailInformation: `Das Erstellen der Website mit React hat mir sehr viel Spass bereitet, da ich mein Vorwissen in Javascript, HTML und CSS sehr gut anweden konnte.
         Die Flexibilität des Frameworks hat mich überrascht. So fand ich zum Beispiel für fast alle meine Ideen auch eine Möglichkeit diese umzusetzen. 
         Durch den Node-Package-Managers konnte ich externe Komponenten einfach installieren und mit Hilfe der jeweiligen Dokumentationen auch rasch verwenden.
@@ -172,6 +192,7 @@ export const projectsGerman = [
         picCount: 5
     },
     {
+        key: 'adventOfCode2020',
         title: 'advent of code 2020',
         type: 'Serie von Programmieraufgaben',
         description: `25 Programmieraufgaben mit je zwei Teilen wobei der zweite auf den ersten aufbaut und deutlich schwieriger ist`,
@@ -218,6 +239,7 @@ export const projectsGerman = [
         picCount: 8
     },
     {
+        key: 'chess',
         title: 'Schach',
         type: 'Spiel',
         description: 'ein virtuelles, von Grund auf programmiertes Schachspiel',
@@ -252,6 +274,7 @@ export const projectsGerman = [
         picCount: 3
     },
     {
+        key: 'graphGuesser',
         title: 'Graph-Errater',
         type: 'Spiel',
         description: 'GERMAN a primitive game where you have to guess two variables so that a linear function with those two variables slices two previously shown rectangles',
@@ -270,6 +293,7 @@ export const projectsGerman = [
         picCount: 2
     },
     {
+        key: 'pixelEstimator2',
         title: 'Pixel-Errater 2',
         type: 'Spiel',
         description: 'ein primitives Spiel, bei dem man den Prozentsatz der dunklen Felder erraten muss, die für einen kurzen Moment angezeigt werden',
@@ -284,6 +308,7 @@ export const projectsGerman = [
         picCount: 4
     },
     {
+        key: 'pokerProbabilityCalculator',
         title: 'Wahrscheinlichkeitsrechner für Poker',
         type: 'Simulator',
         description: 'GERMAN a simulator that creates an immense number of poker hands and calculates the probabilities for each hand from it',
