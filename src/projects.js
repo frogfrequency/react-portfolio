@@ -169,7 +169,7 @@ export const projectsGerman = [
         title: 'react "portfolio"',
         type: 'Website',
         description: 'Die über github gehostete und mit react erstellte website, welche du gerade anschaust! Meine bisherigen Coding-Projekte können hier eingesehen und ausprobiert werden',
-        detailInformation: `Das Erstellen der Website mit React hat mir sehr viel Spass bereitet, da ich mein Vorwissen in Javascript, HTML und CSS sehr gut anweden konnte.
+        detailInformation: `Das Erstellen der Website mit React hat mir sehr viel Spass bereitet, da ich mein Vorwissen in Javascript, HTML und CSS sehr gut anwenden konnte.
         Die Flexibilität des Frameworks hat mich überrascht. So fand ich zum Beispiel für fast alle meine Ideen auch eine Möglichkeit diese umzusetzen. 
         Durch den Node-Package-Managers konnte ich externe Komponenten einfach installieren und mit Hilfe der jeweiligen Dokumentationen auch rasch verwenden.
         Anfangs nutzte ich diese Komponenten nur sehr spärlich und wollte viele (z.B. Bilder-Gallerie, Animationen oder auch das Fenster für die Farbauswahl) selbst erstellen.
@@ -207,7 +207,7 @@ export const projectsGerman = [
         Meistens erhöhen die zweiten Teile der Rätsel den Schwierigkeitsgrad der Rätsel entweder indem sie die Komplexität der Aufgabe erhöhen, oder indem sie 
         die nötigen Rechenschritte zur Lösungs des Problems massiv erhöhen (siehe Anekdote weiter unten).
         Meine Lösungen sind selten ideal und würde ich sie refaktorisieren oder sogar nochmals lösen 
-        (was ich wahrscheinlich in C# oder Java machen werde um objektorientierte Sprachen besser kennen zu lernen), sähen sie bestimmt ganz anders aus!
+        (was ich wahrscheinlich in C# oder Java machen  werde um objektorientierte Sprachen besser kennen zu lernen), sähen sie bestimmt ganz anders aus!
         Bei praktisch jedem Rätsel konnte ich etwas neues lernen und die jeweiligen Lösungen widerspiegeln meinen Fortschritt vom kompletten Anfänger im Lösen
         von Kodieraufgaben zum ...nun es ist immer schwierig Aussagen über seine eigenen Fähigkeiten zu machen ;)  
         Ich bin jedoch überzeugt, dass ich definitiv kein Anfänger mehr bin und mich im Problemlösen stetig verbessere.
@@ -311,27 +311,30 @@ export const projectsGerman = [
         key: 'pokerProbabilityCalculator',
         title: 'Wahrscheinlichkeitsrechner für Poker',
         type: 'Simulator',
-        description: 'GERMAN a simulator that creates an immense number of poker hands and calculates the probabilities for each hand from it',
-        detailInformation: `GERMAN My very first real Javascript Project!
-        I was told that working on projects is the only way to truly learn coding. So after learning basic javascript syntax on 
-        freeCodeCamp.org I started working on this project. Since I was pretty much into poker back then, I decided to make a simulator
-        and check whether the result would match wikipedia's probability tables. 
-        It really helped me alot and also taught me the use and importance of 
-        the debugger.
+        description: 'aus einer sehr grossen Anzahl von simulierten Pokerhänden werden die Häufigkeiten der einzelnen möglichen Blätter errechnet',
+        detailInformation: `Mein erstes richtiges Javascript-Projekt!
+        Von vielen Quellen erfuhr ich, dass man das Programmieren am besten lernt, wenn man an Projekten arbeitet.
+        Nachdem ich also die grundlegende Syntax von Javascript auf freeCodeCamp.org erlernt hatte, fing ich mit diesem Projekt an. 
+        Da ich zu dieser Zeit gerne Poker spielte und mich gerne mit Wahrscheinlichkeiten auseinander setzte, beschloss ich, 
+        einen Simulator zu bauen und zu überprüfen, ob das Ergebnis mit den Wahrscheinlichkeitstabellen von Wikipedia übereinstimmt. 
+        Das Entwickeln dieses Simulators half mir sehr und zeigte mir auch die grosse Bedeutung des Debuggers auf. 
         \\n
-        To understand it, you might need a bit of poker knowledge. In general the programm will generate 1'000'000 pokerhands
-        and evaluate them. First a random poker deck is created and the topmost 7 cards are "drawn". The algorithm will then
-        find the best possible hand that can be created with those 7 cards (either pair, two pair, three of a kind...).
-        It then increases the counter for this specific hand (e.g. pairCounter++). After all 1'000'000 hands have been created
-        you get a percentage probability for each combination. Important: the programm does not calculate the theoretical probability
-        but instead simulates hands and derives the probabilties from them. It also does not differ between straight- and royal flushes.
+        Um den Simulator zu verstehen, braucht man ein wenig Vorwissen über Poker. Kurz gesagt generiert der Simulator 1'000'000
+        Pokerhände und wertet diese aus. Zuerst wird ein zufälliges Kartendeck erstellt und die obersten 7 Karten davon werden gezogen. 
+        Der Algorithmus sucht dann nach dem best möglichen Blatt, das mit diesen 7 Karten geformt werden kann (ein Paar, zwei Paare, Drilling...).
+        Danach wird der entsprechende Zähler um eins erhöht (z.B. pairCounter++). Nachdem alle 1'000'000 simuliert worden sind wird aus
+        den Zählerständen die Häufigkeit des jeweiligen Blattes angegeben. Wichtig: Das Programm berechnet nicht die theoretische
+        Wahrscheinlichkeit sondern simuliert Blätter und leitet daraus die Wahrscheinlichkeit ab. Ausserdem wird nicht zwischen Straight Flush 
+        und Royal Flush unterschieden.
         \\n
-        Unfortunately the algorithm is not 100% accurate in his evaluation. It does not know that the ace can act as a one when
-        creating straights. I simply forgot to implement this at the time. Before publishing this on my react-page I wanted to fix this bug
-        but eventually decided against it. Since it was my first project I wanted to leave it in its original state.
-        However as you can see from the screenshots, the probabilities are very close and the code seems to be working otherwise.
-        When looking at the code nowadays, I realize that commenting and keeping your code clean and easy to understand is
-        very important when coding!
+        Leider ist der Algorithmus nicht ganz perfekt. Dass das Ass beim Formen von Strassen auch als "1" fungieren kann 
+        wird von Algorithmus nicht brücksichtigt. Leider dachte ich nicht daran dies zu programmieren, als ich den Code schrieb.
+        Vor dem Veröffentlichen auf dieser React Website wollte ich diesen Fehler zuerst beheben, entschied mich dann aber dagegen. 
+        Da es mein erstes Projekt war, wollte ich es in seinem ursprünglichen Zustand belassen.
+        Wie man jedoch an den Screenshots sehen kann sind die Wahrscheindlichkeiten sehr nahe an denjenigen auf Wikipedia und das Programm
+        scheint ansonsten zu funktionieren. 
+        Wenn ich mir den Code heute ansehe, wird mir klar wie wichtig es ist den Code strukturiert, sauber und selbsterklärend zu halten 
+        und ihn dort wo er das nicht ist mit Kommentaren zu versehen. 
         `,
         technology: ['Javascript'],
         tryoutLink: '',

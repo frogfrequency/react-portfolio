@@ -59,83 +59,46 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, delet
                     style={{ color: colorScheme.color4 }}
                 />
             ) : (
-                <>
-                {hoverStatuses.inactive ? (
-                    <FaRegCircle
-                        className='color-container-symbol pointer'
-                        style={{ color: colorScheme.color3 }}
-                        onMouseEnter={() => handleMouseEnter('inactive')}
-                        onMouseLeave={() => handleMouseLeave('inactive')}
-                        onClick={() => handleInactiveClick(thisColorScheme.schemeId)}
-                    />
-                ) : (
-                    <FaRegCircle
-                        className='color-container-symbol'
-                        style={{ color: colorScheme.color4 }}
-                        onMouseEnter={() => handleMouseEnter('inactive')}
-                        onMouseLeave={() => handleMouseLeave('inactive')}
-                        onClick={() => handleInactiveClick(thisColorScheme.schemeId)}
-                    />
-                )
-                }
-
-                </>
-            )
-            }
-
-            {hoverStatuses.gear ? (
-                <BsFillGearFill
+                <FaRegCircle
                     className='color-container-symbol pointer'
-                    style={{ color: colorScheme.color3 }}
-                    onMouseEnter={() => handleMouseEnter('gear')}
-                    onMouseLeave={() => handleMouseLeave('gear')}
-                    onClick={() => handleGearClick(thisColorScheme.schemeId)}
-                />
-            ): (
-                <BsFillGearFill
-                    className='color-container-symbol'
-                    style={{ color: colorScheme.color4 }}
-                    onMouseEnter={() => handleMouseEnter('gear')}
-                    onMouseLeave={() => handleMouseLeave('gear')}
-                    // onClick={() => handleGearClick} // this is theoretically not needed since it cant be clicked without being hovered
+                    style={{ color: hoverStatuses.inactive ? colorScheme.color3 : colorScheme.color4 }}
+                    onMouseEnter={() => handleMouseEnter('inactive')}
+                    onMouseLeave={() => handleMouseLeave('inactive')}
+                    onClick={() => handleInactiveClick(thisColorScheme.schemeId)}
                 />
             )
             }
-
-            {hoverStatuses.bin ? (
-                <MdDelete
-                    className='color-container-symbol pointer'
-                    style={{ color: colorScheme.color3 }}
-                    onMouseEnter={() => handleMouseEnter('bin')}
-                    onMouseLeave={() => handleMouseLeave('bin')}
-                    onClick={() => handleBinClick(thisColorScheme.schemeId)}
-                    size={'1.15em'}
-                />
-            ): (
-                <MdDelete
-                    className='color-container-symbol'
-                    style={{ color: colorScheme.color4 }}
-                    onMouseEnter={() => handleMouseEnter('bin')}
-                    onMouseLeave={() => handleMouseLeave('bin')}
-                    onClick={() => handleBinClick(thisColorScheme.schemeId)}
-                    size={'1.15em'}
-                />
-            )
-            }
-        {activeCustomizationId === thisColorScheme.schemeId ? (
-            
-            <CustomizationPanel
-                thisColorScheme={thisColorScheme}
-                colorScheme={colorScheme}
-                saveAndSetNewColorScheme={saveAndSetNewColorScheme}
-                setActiveCustomizationId={setActiveCustomizationId}
-                textContent={textContent}
+            <BsFillGearFill
+                className='color-container-symbol pointer'
+                style={{ color: hoverStatuses.gear ? colorScheme.color3 : colorScheme.color4 }}
+                onMouseEnter={() => handleMouseEnter('gear')}
+                onMouseLeave={() => handleMouseLeave('gear')}
+                onClick={() => handleGearClick(thisColorScheme.schemeId)}
             />
-        ) : (
-            null
-        )
-        }
-        
+
+            <MdDelete
+                className='color-container-symbol pointer'
+                style={{ color: hoverStatuses.bin ? colorScheme.color3 : colorScheme.color4 }}
+                onMouseEnter={() => handleMouseEnter('bin')}
+                onMouseLeave={() => handleMouseLeave('bin')}
+                onClick={() => handleBinClick(thisColorScheme.schemeId)}
+                size={'1.15em'}
+            />
+
+            {activeCustomizationId === thisColorScheme.schemeId ? (
+
+                <CustomizationPanel
+                    thisColorScheme={thisColorScheme}
+                    colorScheme={colorScheme}
+                    saveAndSetNewColorScheme={saveAndSetNewColorScheme}
+                    setActiveCustomizationId={setActiveCustomizationId}
+                    textContent={textContent}
+                />
+            ) : (
+                null
+            )
+            }
+
 
         </div>
     )

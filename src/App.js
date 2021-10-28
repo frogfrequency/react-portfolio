@@ -12,6 +12,7 @@ import ProjectsPage from './components/Pages/ProjectsPage/ProjectsPage';
 import ColorSchemePage from './components/Pages/ColorSchemePage/ColorSchemePage';
 import HeaderPageSelect from './components/Header/Header-components/HeaderPageSelect/HeaderPageSelect';
 import ProjectDetailPage from './components/Pages/ProjectDetailPage/ProjectDetailPage';
+import LiteraturePage from './components/Pages/LiteraturePage/LiteraturePage';
 import {
     BrowserRouter as Router,
     Switch,
@@ -175,6 +176,15 @@ function App() {
                             title={textContent.titles.projectsTitle}
                             subHeader={textContent.titles.projectsSubheader}
                             projects={projects}
+                        />
+                    </Route>
+
+                    <Route path="/literature">
+                        <LiteraturePage
+                            colorScheme={colorScheme}
+                            title={textContent.titles.literatureTitle}
+                            subHeader={textContent.titles.literatureSubheader}
+                            textContent={textContent}
                         />
                     </Route>
 

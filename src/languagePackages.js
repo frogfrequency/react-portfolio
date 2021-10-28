@@ -7,6 +7,7 @@ export const languagePackages = {
             projects: 'projects',
             colorControl: 'color control',
             about: 'about',
+            literature: 'literature',
         },
         titles: {
             projectsTitle: 'projects',
@@ -15,6 +16,8 @@ export const languagePackages = {
             colorControlSubheader: `don't like the default color schemes? create your own here!`,
             aboutTitle: 'about',
             aboutSubheader: 'useful information about this website',
+            literatureTitle: 'literature',
+            literatureSubheader: `books i've read <-- change this`,
         },
         colorSchemePage: {
             addScheme: 'add new scheme',
@@ -37,6 +40,21 @@ export const languagePackages = {
             an overview of my coding skills. For those who are interested, there is a description text to each coding project. However
             reading those sometimes verbose descriptions is not necessary.`,
             haveFun: 'Have fun exploring!'
+        },
+        literaturePage: {
+            handbuchFuerSoftwareentwickler: {
+                imageKey: 'handbuchFuerSoftwareentwickler',
+                title: 'Handbuch für Softwareentwickler',
+                subheader: 'ein Buch mit vielen Seiten',
+                text: 'bla bla bla in german here',
+            },
+            
+            algorithmenKompaktUndVerstaendlich: {
+                imageKey: 'algorithmenKompaktUndVerstaendlich',
+                title: 'Algorithmen kompakt und verständlich',
+                subheader: 'ein Buch über Algorithmen',
+                text: 'bla bla bla algorithmen und so',
+            },
         }
     },
 
@@ -49,7 +67,8 @@ export const languagePackages = {
             home: 'Home',
             projects: 'Projekte',
             colorControl: 'Farbverwaltung',
-            about: 'About'
+            about: 'About',
+            literature: 'Literatur',
         },
         titles: {
             projectsTitle: 'Projekte',
@@ -58,6 +77,8 @@ export const languagePackages = {
             colorControlSubheader: 'Du magst die standardmässigen Farbschemas nicht? Kreiere hier deine Eigenen!',
             aboutTitle: 'About',
             aboutSubheader: 'nützliche Informationen zu dieser Webseite',
+            literatureTitle: 'Literatur',
+            literatureSubheader: `Bücher die ich gelesen habe <-- change this`,
         },
         colorSchemePage: {
             addScheme: 'neues Schema hinzufügen',
@@ -80,6 +101,21 @@ export const languagePackages = {
             in möglichst kurzer Zeit einen Überblick über meine Coding-Fähigkeiten geben. Für Interessierte ist bei den Projekten
             ein Beschreibungstext verfügbar. Es ist aber nicht nötig diese zum Teil langen Texte alle durchzulesen.`,
             haveFun: 'Viel Spass beim Erkunden!'
+        },
+        literaturePage: {
+            handbuchFuerSoftwareentwickler: {
+                imageKey: 'handbuchFuerSoftwareentwickler',
+                title: 'Handbuch für Softwareentwickler',
+                subheader: 'a book about software development',
+                text: 'bla bla bla in english here',
+            },
+            
+            algorithmenKompaktUndVerstaendlich: {
+                imageKey: 'algorithmenKompaktUndVerstaendlich',
+                title: 'Algorithmen kompakt und verständlich',
+                subheader: 'a book about algorithms',
+                text: 'bla bla bla algorithmen and so oon',
+            },
         }
     }
 

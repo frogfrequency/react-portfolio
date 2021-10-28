@@ -6,7 +6,7 @@ import { PageSelectEffect } from "../../../../utility";
 
 const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisibility, textContent }) => {
 
-    const defaultHoverStatuses = { HomePage: false, ProjectsPage: false, ColorSchemePage: false, AboutPage: false };
+    const defaultHoverStatuses = { HomePage: false, ProjectsPage: false, ColorSchemePage: false, AboutPage: false, LiteraturePage: false };
 
     const [elementsAreHovered, setElementsAreHovered] = useState(
         defaultHoverStatuses
@@ -40,7 +40,7 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
 
     return (
         <PageSelectEffect  key={selectorVisibility}>
-        < div>
+        <div>
             {selectorVisibility.includes(true) ? (
                 <>
                     <div
@@ -60,7 +60,7 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
                         className="empty-box"
                         onMouseEnter={() => handleMenuMouseEnter()}
                         onMouseLeave={() => handleMenuMouseLeave()}
-                        style={{ top: '46px', height: '50px',  }}
+                        style={{ top: '46px', height: '50px', }}
                     ></div>
                 </>
 
@@ -112,6 +112,30 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
                             {textContent.header.projects}
                         </Link>
                     </div>
+
+{///////////////////////////////////////////////////////////////////////////////////////////
+}
+                    <div
+                        className={elementsAreHovered.LiteraturePage ? 'selector-element pointer' : 'selector-element'}
+                        onMouseEnter={() => handleElementMouseEnter('LiteraturePage')}
+                        onMouseLeave={() => handleElementMouseLeave()}
+                    >
+                        <Link
+                            style={
+                                {
+                                    textDecoration: 'none',
+                                    color: elementsAreHovered.LiteraturePage ? colorScheme.color3 : colorScheme.color4
+                                }
+                            }
+                            to="/literature"
+                        >
+                            {textContent.header.literature}
+                        </Link>
+                    </div>
+
+{///////////////////////////////////////////////////////////////////////////////////////////
+}
+
 
                     <div
                         className={elementsAreHovered.ColorSchemePage ? 'selector-element pointer' : 'selector-element'}

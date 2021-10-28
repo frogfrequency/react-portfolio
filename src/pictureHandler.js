@@ -37,8 +37,6 @@ import pixelEstimator_3 from "./pictures/pixelEstimator/slideshow/pixelEstimator
 import pixelEstimator_4 from "./pictures/pixelEstimator/slideshow/pixelEstimator_4.png"
 
 
-
-
 import pokerCalc_hovered from "./pictures/pokerCalc/pokerCalc_hovered.png"
 import pokerCalc_unhovered from "./pictures/pokerCalc/pokerCalc_unhovered.png"
 import pokerCalc_1 from "./pictures/pokerCalc/slideshow/pokerCalc_1.png"
@@ -46,6 +44,9 @@ import pokerCalc_2 from "./pictures/pokerCalc/slideshow/pokerCalc_2.png"
 import pokerCalc_3 from "./pictures/pokerCalc/slideshow/pokerCalc_3.png"
 import pokerCalc_4 from "./pictures/pokerCalc/slideshow/pokerCalc_4.png"
 
+import algorithmenKompaktUndVerstaendlich from "./pictures/AlgorithmenKompaktUndVerstaendlich.png"
+import beingHumanInTheAgeOfAlgorithms from "./pictures/BeingHumanInTheAgeOfAlgorithms.png"
+import handbuchFuerSoftwareentwickler from "./pictures/HandbuchFuerSoftwareentwickler.png"
 
 
 
@@ -93,4 +94,7 @@ export const pictureCollection = {
     pokerCalc_3: pokerCalc_3,
     pokerCalc_4: pokerCalc_4,
 
+    algorithmenKompaktUndVerstaendlich: algorithmenKompaktUndVerstaendlich,
+    beingHumanInTheAgeOfAlgorithms: beingHumanInTheAgeOfAlgorithms,
+    handbuchFuerSoftwareentwickler: handbuchFuerSoftwareentwickler,
 }
