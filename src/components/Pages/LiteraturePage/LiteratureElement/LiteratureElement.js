@@ -1,37 +1,69 @@
 import "../LiteraturePage.css"
 import { pictureCollection } from "../../../../pictureHandler"
+import Progressbar from "./Progressbar/Progressbar"
 
-const LiteratureElement = ({ textContent, literatureElementTitle, literatureElementSubheader, literatureElementText, imagePositionIsLeft, imageKey }) => {
+const LiteratureElement = ({ colorScheme, textContent, literatureElementTitle, literatureElementSubheader, literatureElementText, imagePositionIsLeft, imageKey }) => {
     return (
         
             
             <div className='literature-element'>
-                {imagePositionIsLeft ? <div className='literature-element-container'>
-                    <h1>{literatureElementTitle}</h1>
-                    <h3>{literatureElementSubheader}</h3>
-                    <div>{literatureElementText}</div>
+                {!imagePositionIsLeft ? 
+                <div
+                    className='literature-element-info-container'
+                    style={
+                        {
+                            marginRight: '40px',
+                        }
+                    }
+                >
+                    <div>
+                        <div className='literature-element-header'>{literatureElementTitle}</div>
+                        <div className='literature-element-subheader'>{literatureElementSubheader}</div>
+                        <div className='literature-element-infotext'>{literatureElementText}</div>
+                    </div>
+                    <Progressbar
+                        colorScheme={colorScheme}
+                        pages={textContent.literaturePage.handbuchFuerSoftwareentwickler.pages}
+                        currentPage={textContent.literaturePage.handbuchFuerSoftwareentwickler.currentPage}
+                    />
                 </div> : ''}
                 
                 
 
                 <div
-                    className='literature-element-container'
+                    className='book-cover'
                     style={
                         {
-                            width: '400px',
-                            height: '300px',
-                            backgroundImage: `url(${pictureCollection[imageKey]})`,
-                            backgroundSize: 'contain',
-                            backgroundRepeat: 'no-repeat'
+                            backgroundImage: `url(${pictureCollection[imageKey]})`, 
                         }
                     }
                 />
 
-                {!imagePositionIsLeft ? <div className='literature-element-container'>
-                    <h1>{literatureElementTitle}</h1>
-                    <h3>{literatureElementSubheader}</h3>
-                    <div>{literatureElementText}</div>
+                
+
+                {imagePositionIsLeft ? 
+                <div
+                    className='literature-element-info-container'
+                    style={
+                        {
+                            marginLeft: '40px',
+                        }
+                    }
+                >
+                    <div>
+                        <div className='literature-element-header'>{literatureElementTitle}</div>
+                        <div className='literature-element-subheader'>{literatureElementSubheader}</div>
+                        <div className='literature-element-infotext'>{literatureElementText}</div>
+                    </div>
+                    <Progressbar
+                        colorScheme={colorScheme}
+                        pages={textContent.literaturePage.algorithmenKompaktUndVerstaendlich.pages}
+                        currentPage={textContent.literaturePage.algorithmenKompaktUndVerstaendlich.currentPage}
+                        
+                    />
                 </div> : ''}
+
+                    
 
             </div>
 
