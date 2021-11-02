@@ -42,30 +42,19 @@ export const languagePackages = {
             haveFun: 'Have fun exploring!'
         },
         literaturePage: {
-            mainText: `hi i am main text in english`,
-            handbuchFuerSoftwareentwickler: {
-                imageKey: 'handbuchFuerSoftwareentwickler',
-                title: 'Handbuch für Softwareentwickler',
-                subheader: 'a book about software development ',
-                text: `The standard work for professional software engineering. Every developer knows that it is not enough to just know languages and 
-                programming platforms is not enough. Anyone who wants to develop software successfully should be familiar with many specialist areas and methods - from 
-                from architecture to data management, requirements management, security issues to project management. Here you will find a comprehensive 
-                treatment of this variety of topics. The team of authors provides practical recommendations on fundamental and current issues in professional 
-                software development. The theoretical foundation and the well-explained technical terms are never an end in themselves, but are in the service of the 
-                The art of developing good software for your customers.
-                (source: https://www.orellfuessli.ch translated with https://deepl.com)`,
-                pages: 701,
-                currentPage: 701,
-            },
-            
-            algorithmenKompaktUndVerstaendlich: {
-                imageKey: 'algorithmenKompaktUndVerstaendlich',
-                title: 'Algorithmen kompakt und verständlich',
-                subheader: 'a book about algorithms',
-                text: 'bla bla bla algorithmen and so oon',
-                pages: 336,
-                currentPage: 53,
-            },
+            mainText: `On the Internet, you can find learning material about programming and software development with ease. This material can 
+            be found in the form of videos, interactive tutorials, articles, forum entries etc. Consequently a lion's share
+            of my learning material is in digital form and there are many reasons why I prefer learning with digital media. 
+
+            Some of these reasons are for example the to me essential use of the search function (Ctrl + F) 
+            or the universal access to the material wherever I have either internet or mobile phone reception.  
+            \\n
+            Nevertheless, I also like to read texts and books in the classical way, especially the lenghty ones. Tough I usually keep either laptop or phone close-by 
+            so to be able to google unclear terms or concepts any time.
+            Below I want to list the books I read about programming and software development. There are not too many, but they were very informative for me.
+            They have for example helped me to distinguish individual areas of software development and thus gave me a clearer overall picture.
+            `,
+            page: 'page',
         }
     },
 
@@ -120,31 +109,20 @@ export const languagePackages = {
             haveFun: 'Viel Spass beim Erkunden!'
         },
         literaturePage: {
-            mainText: `hallo ich bin der haupt text von literatur in deutsch`,
-            handbuchFuerSoftwareentwickler: {
-                imageKey: 'handbuchFuerSoftwareentwickler',
-                title: 'Handbuch für Softwareentwickler',
-                subheader: 'ein Buch mit vielen Seiten',
-                text: `Das Standardwerk für professionelles Software Engineering. Jeder Entwickler weiss, dass es mit der Kenntnis von Sprachen und 
-                Programmierplattformen nicht getan ist. Wer erfolgreich Software entwickeln möchte, sollte mit vielen Fachgebieten und Methoden vertraut sein - 
-                von der Architektur über Datenhaltung, Anforderungsmanagement, Sicherheitsfragen bis zum Projektmanagement. Hier finden Sie eine umfassende 
-                Behandlung dieser Themenvielfalt. Das Autorenteam gibt praktische Empfehlungen zu grundlegenden und aktuellen Fragen der professionellen 
-                Softwareentwicklung. Das theoretische Fundament und die gut erläuterten Fachbegriffe sind dabei niemals Selbstzweck, sondern stehen im Dienst der 
-                Kunst, für Ihre Kunden gute Software zu entwickeln.
-                (Quelle: https://www.orellfuessli.ch)`,
-                pages: 701,
-                currentPage: 701,
-            },
-            
-            algorithmenKompaktUndVerstaendlich: {
-                imageKey: 'algorithmenKompaktUndVerstaendlich',
-                title: 'Algorithmen kompakt und verständlich',
-                subheader: 'ein Buch über Algorithmen',
-                text: 'bla bla bla algorithmen und so',
-                pages: 336,
-                currentPage: 53,
-            },
-        }
+            mainText: `Im Internet findet man mit nur wenig Aufwand sehr viele Lerninhalte zum Programmieren und zur Softwareentwicklung.
+            Diese Inhalte und Quellen können zum Beispiel Videos, interaktive Tutorials, Artikel, Foreneinträge etc. sein. Den grössten Teil
+            meines Lernmaterials habe ich dementsprechend in digitaler Form gefunden und es gibt auch zahlreiche Gründe, weshalb ich das Lernen 
+            mit digitalen Medien bevorzuge. Einige dieser Gründe sind zum Beispiel der unverzichtbare Einsatz der Suchfunktion (Ctrl + F) 
+            oder auch der universelle Zugriff auf die Unterlagen überall dort, wo ich entweder Internet oder Mobilfunkempfang habe.  
+            \\n
+            Längere Texte und Bücher lese ich aber auch gerne in klassischer Form, wobei dann Laptop oder Handy auch jederzeit
+            in Griffnähe sind um zum Beispiel unklar Begriffe oder Konzepte schnell nachschlagen zu können. 
+            Hier möchte ich von mir gelesenen Bücher über das Programmieren und die Softwareentwicklung auflisten.
+            Es sind nicht allzu viele, sie waren für mich jedoch sehr informativ. 
+            Sie haben mir zum Beispiel dabei geholfen 
+            einzelne Bereiche der Softwareentwicklung voneinander getrennt zu betrachten und mir damit ein deutlicheres Gesamtbild vermittelt.`,
+            page: 'Seite',
+        },
     }
 
 }

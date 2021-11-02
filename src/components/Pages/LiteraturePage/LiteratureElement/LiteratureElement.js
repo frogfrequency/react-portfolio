@@ -2,71 +2,80 @@ import "../LiteraturePage.css"
 import { pictureCollection } from "../../../../pictureHandler"
 import Progressbar from "./Progressbar/Progressbar"
 
-const LiteratureElement = ({ colorScheme, textContent, literatureElementTitle, literatureElementSubheader, literatureElementText, imagePositionIsLeft, imageKey }) => {
-    return (
-        
-            
-            <div className='literature-element'>
-                {!imagePositionIsLeft ? 
-                <div
-                    className='literature-element-info-container'
-                    style={
-                        {
-                            marginRight: '40px',
+const LiteratureElement = ( { colorScheme, element, index, textContent} ) => {
+
+    
+    let textProcessed = element.text;
+    textProcessed = textProcessed.split('\\n').map(str => <p>{str}</p>);
+    console.log(textProcessed);
+
+    return ( 
+        <>
+            {index !=0 ? <div className='endLine' style={{backgroundColor: colorScheme.color2}}></div> : ''}
+                <div className='literature-element'>
+                    {index%2 === 0  ? 
+                        <div
+                        className='literature-element-info-container'
+                        style={
+                            {
+                                marginRight: '40px',
+                            }
                         }
+                        >
+                            <div>
+                                <div className='literature-element-header'>{element.title}</div>
+                                <div className='literature-element-subheader'>{element.subheader}</div>
+                                <div className='literature-element-infotext'>{textProcessed}</div>
+                            </div>
+                            <Progressbar
+                                colorScheme={colorScheme}
+                                pages={element.pages}
+                                currentPage={element.currentPage}
+                                textContent={textContent}
+                            />
+                        </div> : ''
                     }
-                >
-                    <div>
-                        <div className='literature-element-header'>{literatureElementTitle}</div>
-                        <div className='literature-element-subheader'>{literatureElementSubheader}</div>
-                        <div className='literature-element-infotext'>{literatureElementText}</div>
-                    </div>
-                    <Progressbar
-                        colorScheme={colorScheme}
-                        pages={textContent.literaturePage.handbuchFuerSoftwareentwickler.pages}
-                        currentPage={textContent.literaturePage.handbuchFuerSoftwareentwickler.currentPage}
+                    
+                    
+
+                    <div
+                        className='book-cover'
+                        style={
+                            {
+                                backgroundImage: `url(${pictureCollection[element.imageKey]})`, 
+                            }
+                        }
                     />
-                </div> : ''}
-                
-                
 
-                <div
-                    className='book-cover'
-                    style={
-                        {
-                            backgroundImage: `url(${pictureCollection[imageKey]})`, 
-                        }
-                    }
-                />
+                    
 
-                
-
-                {imagePositionIsLeft ? 
-                <div
+                    {index%2 === 1 ? 
+                    <div
                     className='literature-element-info-container'
                     style={
                         {
                             marginLeft: '40px',
                         }
                     }
-                >
-                    <div>
-                        <div className='literature-element-header'>{literatureElementTitle}</div>
-                        <div className='literature-element-subheader'>{literatureElementSubheader}</div>
-                        <div className='literature-element-infotext'>{literatureElementText}</div>
-                    </div>
-                    <Progressbar
-                        colorScheme={colorScheme}
-                        pages={textContent.literaturePage.algorithmenKompaktUndVerstaendlich.pages}
-                        currentPage={textContent.literaturePage.algorithmenKompaktUndVerstaendlich.currentPage}
+                    >
+                        <div>
+                                <div className='literature-element-header'>{element.title}</div>
+                                <div className='literature-element-subheader'>{element.subheader}</div>
+                                <div className='literature-element-infotext'>{element.text}</div>
+                            </div>
+                            <Progressbar
+                                colorScheme={colorScheme}
+                                pages={element.pages}
+                                currentPage={element.currentPage}
+                                textContent={textContent}
+                            />
+                    </div> : ''
+                    }
+
                         
-                    />
-                </div> : ''}
-
                     
-
-            </div>
-
+                </div>
+        </>
     )
 }
 

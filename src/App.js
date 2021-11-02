@@ -5,8 +5,9 @@ import { languagePackages } from './languagePackages';
 
 import Header from './components/Header/Header';
 
-import { projectsEnglish, projectsGerman, projekteGerman } from "./projects"
-import { colorSchemes, giveNextSchemeId } from "./color-schemes.js"
+import { projectsEnglish, projectsGerman } from "./projects";
+import { literatureEnglish, literatureGerman } from "./literatureElements";
+import { colorSchemes, giveNextSchemeId } from "./color-schemes.js";
 import AboutPage from './components/Pages/AboutPage/AboutPage';
 import ProjectsPage from './components/Pages/ProjectsPage/ProjectsPage';
 import ColorSchemePage from './components/Pages/ColorSchemePage/ColorSchemePage';
@@ -95,16 +96,22 @@ function App() {
         projectsEnglish
     )
 
+    const [literatureElements, setLiteratureElements] = useState(
+        literatureEnglish
+    )
+
     const setGerman = () => {
         console.log('setting GERMAN')
         setTextContent(languagePackages.german)
         setProjects(projectsGerman)
+        setLiteratureElements(literatureGerman)
     }
 
     const setEnglish = () => {
         console.log('setting ENGLISH')
         setTextContent(languagePackages.english)
         setProjects(projectsEnglish)
+        setLiteratureElements(literatureEnglish)
     }
 
 
@@ -185,6 +192,7 @@ function App() {
                             title={textContent.titles.literatureTitle}
                             subHeader={textContent.titles.literatureSubheader}
                             textContent={textContent}
+                            literatureElements={literatureElements}
                         />
                     </Route>
 
@@ -196,7 +204,7 @@ function App() {
                     </Route>
 
                 </Switch>
-
+                <h1>bye</h1>
             </div>
         </Router>
     );

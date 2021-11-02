@@ -3,10 +3,16 @@ import LiteratureElement from "./LiteratureElement/LiteratureElement"
 import PageTitle from "../PageTitle"
 import { FadeIn, TitleEffectIn } from "../../../utility"
 
-const LiteraturePage = ({ colorScheme, title, subHeader, textContent }) => {
+const LiteraturePage = ({ colorScheme, title, subHeader, textContent, literatureElements }) => {
+    
+    let textProcessed = textContent.literaturePage.mainText;
+    textProcessed = textProcessed.split('\\n').map(str => <p style={{textAlignLast: 'center'}}>{str}</p>);
+    console.log(textProcessed);
+    
     return (
 
         <FadeIn>
+            
             <div className='page'>
                 <TitleEffectIn>
                     <PageTitle
@@ -17,7 +23,7 @@ const LiteraturePage = ({ colorScheme, title, subHeader, textContent }) => {
                 </TitleEffectIn>
                 
                 <div id='literature-main-text'>
-                {textContent.literaturePage.mainText}
+                {textProcessed}
                 </div>
                 <br/>
                 <br/>
@@ -25,37 +31,18 @@ const LiteraturePage = ({ colorScheme, title, subHeader, textContent }) => {
                 <br/>
                 <br/>
 
-                <br/>
-                <div className='endLine' style={{backgroundColor: colorScheme.color2}}></div>
                 
-                {
-                    // maybe map through the elements? ( need to alternate left and right alignment or maybe use key or id and odd / even numbers?)
-                }
-                <LiteratureElement
-                    textContent={textContent}
-                    colorScheme={colorScheme}
-                    literatureElementTitle={textContent.literaturePage.handbuchFuerSoftwareentwickler.title}
-                    literatureElementSubheader={textContent.literaturePage.handbuchFuerSoftwareentwickler.subheader}
-                    literatureElementText={textContent.literaturePage.handbuchFuerSoftwareentwickler.text}
-                    imagePositionIsLeft={false}
-                    imageKey={textContent.literaturePage.handbuchFuerSoftwareentwickler.imageKey}
-                />
-                <div className='endLine' style={{backgroundColor: colorScheme.color2}}></div>
+                
 
-
-                <LiteratureElement
-                    textContent={textContent}
-                    colorScheme={colorScheme}
-                    literatureElementTitle={textContent.literaturePage.algorithmenKompaktUndVerstaendlich.title}
-                    literatureElementSubheader={textContent.literaturePage.algorithmenKompaktUndVerstaendlich.subheader}
-                    literatureElementText={textContent.literaturePage.algorithmenKompaktUndVerstaendlich.text}
-                    imagePositionIsLeft={true}
-                    imageKey={textContent.literaturePage.algorithmenKompaktUndVerstaendlich.imageKey}
-                />
-
-                <div className='endLine' style={{backgroundColor: colorScheme.color2}}></div>
-
-
+                {literatureElements.map((element, index) => (
+                        <LiteratureElement
+                            colorScheme={colorScheme}
+                            key={element.key}
+                            element={element}
+                            index={index}
+                            textContent={textContent}
+                        />
+                ))}
                 
             </div>
 
