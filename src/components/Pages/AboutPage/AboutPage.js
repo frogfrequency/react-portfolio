@@ -18,25 +18,102 @@ const AboutPage = ({ colorScheme, title, subHeader }) => {
                 </TitleEffectIn>
                 <br></br>
                 <br></br>
-                COPY TEXT FROM SRC/About.js IN HERE??? 
                 <br></br>
                 <br></br>
-                
-                Officia consectetur incididunt ullamco culpa esse deserunt dolor qui veniam ullamco esse consequat. Exercitation consectetur ad velit nostrud deserunt exercitation magna consectetur sit mollit ullamco. Est qui occaecat officia elit aute non excepteur ad adipisicing velit quis ad. Nostrud fugiat reprehenderit velit nostrud esse laboris.
 
-                Consectetur reprehenderit amet laborum eu incididunt et consectetur. Eiusmod Lorem laborum qui elit est. Est qui non labore veniam laborum mollit. Eu irure aliqua proident velit consequat nostrud anim enim dolor ad duis ea velit ad. Fugiat enim consectetur duis et fugiat Lorem velit eiusmod commodo cupidatat nostrud aliquip adipisicing irure.
+                <div
+                    className='about-subheader'
+                    style={
+                        {
+                            width: 'max-content',
+                            margin: 'auto'
+                        }
+                    }
+                >
+                    hoi hoih oihoi hoiho
+                </div>
 
-                Cillum sint voluptate sint do est anim. Veniam dolor ad laborum proident anim. Culpa laborum id voluptate cillum mollit do sint consequat. Quis eiusmod fugiat nostrud qui laborum nulla ea sunt sint. Adipisicing sint aute Lorem eiusmod eiusmod Lorem enim quis fugiat nostrud.
+                {
+                    // Purpose ---------------------------------------------------
+                }
 
-                Id ad laborum aute elit cillum velit non tempor nulla elit labore. In consequat culpa in magna irure consectetur mollit. Lorem eu magna ex eiusmod eu irure excepteur adipisicing cupidatat fugiat eiusmod sint. Anim velit nulla sint ipsum minim exercitation deserunt eiusmod cupidatat minim. Officia irure Lorem adipisicing sunt duis proident eu sit do adipisicing ipsum et.
+                <div
+                    className='about-header'
+                >
+                    Purpose
+                </div>
 
-                Minim sunt pariatur ad cupidatat ex enim non et tempor commodo ea qui. Ad aliqua quis elit irure id dolor incididunt anim cupidatat. Fugiat do ullamco duis commodo enim est. Adipisicing in et eiusmod sit sit aliqua irure occaecat aliquip minim. Incididunt ullamco voluptate aliquip labore proident velit. Cillum sit ut anim quis excepteur eiusmod in irure aute cupidatat dolore et.
+                <div
+                    className='about-subheader'
+                >
+                    this page is for both of us
+                </div>
 
-                Cillum do fugiat et Lorem fugiat proident elit. Et consequat non sint et cillum id Lorem magna enim nulla adipisicing. Qui id labore mollit consequat est sint pariatur non exercitation laborum velit dolor ea. Nisi sit adipisicing sit veniam pariatur velit. Exercitation reprehenderit irure nostrud officia tempor nostrud adipisicing ipsum dolor reprehenderit reprehenderit enim. Velit consectetur non excepteur do enim occaecat culpa nulla nulla eu enim exercitation sint excepteur. Sit elit aute fugiat voluptate ad.
+                <div
+                    className='about-text'
+                >
+                    The main purpose of this website is to enable you to quickly get an overview of my coding skills. It aims to save you
+                    time. Instead of browsing through my github profile and cloning many repositories just to try the programms out, you 
+                    can get an overview and even try the code out in no time. 
+                    If I had simply wanted to create a website, I could have used providers like wix or squarespace which would
+                    have saved me alot of time. But by creating it with react, I could learn and experiment alot. So this website is not only 
+                    for you, it also served me by providing me with countless hours of practice. In some places it might seem that I have
+                    "overdone" it and the same results could have been achieved with less and simpler code. Please bear in mind that it 
+                    was important to me to try out as much as possible and the result therefore is not state of the art code.
+                </div>
 
-                Eiusmod anim do esse amet. Lorem nostrud dolore sit veniam nulla eiusmod occaecat minim dolor reprehenderit excepteur veniam elit adipisicing. Est culpa occaecat veniam ut mollit culpa labore amet excepteur occaecat ullamco anim sit. Commodo magna eu velit id sunt tempor officia nostrud velit non do officia qui. Reprehenderit deserunt laboris mollit ad eiusmod. Quis eu nisi ea fugiat eiusmod ullamco mollit. Cupidatat velit culpa tempor incididunt enim dolor aliquip esse irure quis ullamco Lorem voluptate.
 
-                Cupidatat nostrud enim cupidatat occaecat pariatur laboris adipisicing consectetur eu enim ea. Incididunt laborum sit nulla et consectetur mollit velit qui. Aute proident do reprehenderit magna.
+
+
+                {
+                    // components used below ---------------------------------------------------
+                }
+
+                <div
+                    className='about-header'
+                >
+                    external components & packages
+                </div>
+
+                <div
+                    className='about-subheader'
+                >
+                    sometech
+                </div>
+
+                <div
+                    className='about-text'
+                >
+                    explanainteon asdf asddf asdfassdlöfkja sdfas fdölaksjdf fassldfas dfasdf
+                </div>
+
+
+                <br />
+                <br />
+
+                {
+                    // FAQ ---------------------------------------------------
+                }
+
+                <div
+                    className='about-header'
+                >
+                    FAQ
+                </div>
+
+                <div
+                    className='about-subheader'
+                >
+                    why is this page in english?
+                </div>
+
+                <div
+                    className='about-text'
+                >
+                    because it is you know
+                </div>
+
+
 
             </div>
         </FadeIn>

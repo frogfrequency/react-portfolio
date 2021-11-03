@@ -113,8 +113,7 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
                         </Link>
                     </div>
 
-{///////////////////////////////////////////////////////////////////////////////////////////
-}
+
                     <div
                         className={elementsAreHovered.LiteraturePage ? 'selector-element pointer' : 'selector-element'}
                         onMouseEnter={() => handleElementMouseEnter('LiteraturePage')}
@@ -133,8 +132,6 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
                         </Link>
                     </div>
 
-{///////////////////////////////////////////////////////////////////////////////////////////
-}
 
 
                     <div

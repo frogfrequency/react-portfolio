@@ -1,3 +1,19 @@
-.text {
+.about-text {
     text-align: justify;
+    margin-left: 48px;
 }
+
+.about-header {
+    font-weight: 1000;
+    font-size: 24px;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+}
+
+.about-subheader {
+    font-weight: 1000;
+    margin-left: 32px;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+}
+

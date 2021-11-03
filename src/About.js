@@ -3,7 +3,6 @@ let aboutText =
 
 // what do we want to put on the about page
 
-
 // why is this page in english? --> i want to learn
 
 // if you read this you likely are either an acquaintance of mine or you found your way here via my application papers
