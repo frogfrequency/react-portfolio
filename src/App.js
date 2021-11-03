@@ -204,7 +204,7 @@ function App() {
                     </Route>
 
                 </Switch>
-                <h1>bye</h1>
+                
             </div>
         </Router>
     );

@@ -7,6 +7,22 @@
     margin: 12px;
 }
 
+/* this is experimental -- to have the header fixed, the hovering over the header page-select needs adjustment 
+
+/* .header {
+    padding: 14px 10px 10px 10px;
+    border-bottom: solid;
+    border-width: 2px;
+    display: flex;
+    justify-content: space-between;
+    margin: 12px;
+    position: fixed;
+    width: 95%;
+    top: -15px;
+} */
+
+
+
 .main-menu {
     display: flex;
     align-items: center;

@@ -55,6 +55,7 @@ export const languagePackages = {
             They have for example helped me to distinguish individual areas of software development and thus gave me a clearer overall picture.
             `,
             page: 'page',
+            visit: 'visit'
         }
     },
 
@@ -122,6 +123,7 @@ export const languagePackages = {
             Sie haben mir zum Beispiel dabei geholfen 
             einzelne Bereiche der Softwareentwicklung voneinander getrennt zu betrachten und mir damit ein deutlicheres Gesamtbild vermittelt.`,
             page: 'Seite',
+            visit: 'besuche'
         },
     }
 

@@ -10,7 +10,8 @@
     justify-content: space-between;
     margin: auto;
     width: 88%;
-    padding: 40px 40px 40px 40px; 
+    padding: 56px 40px 40px 40px;
+    /* align-items: center; */
 }
 
 .literature-element-info-container {
@@ -25,24 +26,37 @@
 .literature-element-header {
     font-size: 26px;
     font-weight: 1000;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     /* background-color: cadetblue; */
 }
+
+.literature-detail-nav-button {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    padding-right: 6px;
+    border-radius: 6px;
+    margin-right: 12px;
+    width: max-content;
+}
+
 
 .literature-element-subheader {
     font-size: 16px;
     font-style: italic;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .literature-element-infotext {
     font-size: 16px;
     text-align: justify;
+    margin-top: 32px;
 }
 
 .book-cover { 
-    width: 224px; 
-    height: 320px;
+    width: 238px; 
+    height: 340px;
     min-width: 100px;
     background-size: contain;
     background-repeat: no-repeat;
