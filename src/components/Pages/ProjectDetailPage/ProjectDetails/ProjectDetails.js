@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { FiExternalLink } from "react-icons/fi";
-import { FaGamepad } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
-import { HiOutlineArrowRight, HiArrowNarrowRight } from "react-icons/hi";
+import { HiOutlineArrowRight } from "react-icons/hi";
 import { IoLogoGameControllerB } from "react-icons/io";
 
 import { Link } from "react-router-dom";
@@ -10,7 +9,7 @@ import { Link } from "react-router-dom";
 const ProjectDetails = ({ project, colorScheme, textContent }) => {
     
     let textProcessed = project.detailInformation;
-    textProcessed = textProcessed.split('\\n').map(str => <p>{str}</p>);
+    textProcessed = textProcessed.split('\\n').map((str, idx )=> <p key={idx}>{str}</p>);
 
     const [hoverStatus, setHoverStatus] = useState({tryout:false, sourceCode:false, additionalLink:false, additionalInternLink:false,})
 
@@ -43,6 +42,7 @@ const ProjectDetails = ({ project, colorScheme, textContent }) => {
                 {project.tryoutLink ? <a
                     href={project.tryoutLink}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className='project-detail-nav-button'
                     style={
                         {
@@ -59,6 +59,7 @@ const ProjectDetails = ({ project, colorScheme, textContent }) => {
                 <a
                     href={project.sourcecodeLink}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className='project-detail-nav-button'
                     style={
                         {
@@ -75,6 +76,7 @@ const ProjectDetails = ({ project, colorScheme, textContent }) => {
                 {project.additionalLink ? <a 
                     href={project.additionalLink.target}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className='project-detail-nav-button'
                     style={
                         {

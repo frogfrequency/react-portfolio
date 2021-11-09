@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
 import {
-    FadeIn, HomePageLogoEffect1, HomePageLogoEffect2, HomePageLogoEffect3, HomePageLogoEffect4, HomePageLogoEffect5,
+    HomePageLogoEffect1, HomePageLogoEffect2, HomePageLogoEffect3, HomePageLogoEffect4, HomePageLogoEffect5,
     HomePageLogoEffect6, HomePageLogoEffect7, HomePageLogoEffect8, HomePageLogoEffect9, HomePageLogoEffect10, HomePageLogoLineEffect,
     HomePageTextEffect, HomePageLogoFadeIn, HeaderCoverFadeOut
 } from "../../../utility"
@@ -29,12 +29,11 @@ const HomePage = ({ colorScheme, homePageTextContent }) => {
     );
 
     const showText = () => {
-        setTextVisibility(true)
-        console.log('i fire herererere')
+        setTextVisibility(true);
     }
 
     useEffect(() => {
-        setTimeout(showText, 1800)
+        setTimeout(showText, 1800);
     });
 
     const [hoverStatus, setHoverStatus] = useState(false);

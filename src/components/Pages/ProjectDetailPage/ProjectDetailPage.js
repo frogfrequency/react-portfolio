@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import PageTitle from "../PageTitle"
 import PictureShow from "./PictureShow/PictureShow"
 import ProjectDetails from "./ProjectDetails/ProjectDetails"
 import { IoReturnUpBack } from "react-icons/io5";
 
-import { FadeIn, TitleEffectIn } from "../../../utility"
+import { FadeIn, } from "../../../utility"
 
 
 import {

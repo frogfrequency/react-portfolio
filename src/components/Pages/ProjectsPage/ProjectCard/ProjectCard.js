@@ -3,8 +3,6 @@ import { useState } from 'react';
 
 
 import { pictureCollection } from "../../../../pictureHandler.js";
-import { projectsGerman } from "../../../../projects";
-
 
 const ProjectCard = ({ project, colorScheme }) => {
 

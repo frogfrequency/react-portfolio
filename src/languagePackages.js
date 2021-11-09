@@ -56,6 +56,31 @@ export const languagePackages = {
             `,
             page: 'page',
             visit: 'visit'
+        },
+        aboutPage: {
+            headers: {
+                purposeHeader: `this page is for both of us`,
+                bugsHeader: 'bugs, errors and poor design',
+                componentsHeader: 'external components and packages',
+                mobileFriendlyHeader: 'mobile friendly- / responsiveness',
+                contactHeader: 'contact',
+            },
+            texts: {
+                purposeText: `The main purpose of this website is to enable you to quickly get an overview of my coding skills. It aims to save you time. 
+                Instead of browsing through my github profile and cloning many repositories just to try the programms out, you can get an overview and even 
+                try the code out in no time. If I had simply wanted to create a website, I could have used providers like wix or squarespace which would have 
+                saved me alot of time. But by creating it with react, I could learn and experiment alot. So this website is not only for you, it also served me 
+                by providing me with countless hours of practice.`,
+                bugsText: `In some places it might seem that I have "overdone" it and the same results could have been achieved with less and simpler code. In 
+                other places you might stumble upon designs and code that is not to your liking or even violates coding and/or design conventions. Please bear 
+                in mind that this is my first website and it was important to me to try out as much as possible and the result therefore is not state of the art 
+                code. If you happen to find a bug or any of the above-mentioned shortcomings please let me know about it. This would very much be appreciated!`,
+                componentsText: `Although you could also find them in the package.json files, I've listed most of the external used components here.`,
+                mobileFriendlyText: `Even though it is very important nowadays, unfortunately this site is not yet mobile-friendly /-responsive. My primary focus was 
+                to have the site work properly on desktop. As a future project I might make the site mobile friendly one day.`,
+                contactText: `If you've found your way to this website, you should know how to contact me :)`,
+            },
+            closingSentence: 'Thank you for visiting my site! I hope you had a pleasant stay. See you soon!',
         }
     },
 
@@ -125,6 +150,32 @@ export const languagePackages = {
             page: 'Seite',
             visit: 'besuche'
         },
+        aboutPage: {
+            headers: {
+                purposeHeader: `Diese Seite ist für uns beide`,
+                bugsHeader: 'Bugs, Fehler und schlechtes Design',
+                componentsHeader: 'Externe Komponenten und Pakete',
+                mobileFriendlyHeader: 'Mobilfähigkeit',
+                contactHeader: 'Kontakt',
+            },
+            texts: {
+                purposeText: `GERMANThe main purpose of this website is to enable you to quickly get an overview of my coding skills. It aims to save you time. 
+                Instead of browsing through my github profile and cloning many repositories just to try the programms out, you can get an overview and even 
+                try the code out in no time. If I had simply wanted to create a website, I could have used providers like wix or squarespace which would have 
+                saved me alot of time. But by creating it with react, I could learn and experiment alot. So this website is not only for you, it also served me 
+                by providing me with countless hours of practice.`,
+                bugsText: `GERMANIn some places it might seem that I have "overdone" it and the same results could have been achieved with less and simpler code. In 
+                other places you might stumble upon designs and code that is not to your liking or even violates coding and/or design conventions. Please bear 
+                in mind that this is my first website and it was important to me to try out as much as possible and the result therefore is not state of the art 
+                code. If you happen to find a bug or any of the above-mentioned shortcomings please let me know about it. This would very much be appreciated!`,
+                componentsText: `GERMANAlthough you could also find them in the package.json files, I've listed most of the external used components here.`,
+                mobileFriendlyText: `GERMANEven though it is very important nowadays, unfortunately this site is not yet mobile-friendly /-responsive. My primary focus was 
+                to have the site work properly on desktop. As a future project I might make the site mobile friendly one day.`,
+                contactText: `GERMANIf you've found your way to this website, you should know how to contact me :)`,
+            },
+            closingSentence: 'GERMANThank you for visiting my site! I hope you had a pleasant stay. See you soon!',
+        }
+        
     }
 
 }

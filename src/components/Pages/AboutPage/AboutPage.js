@@ -5,7 +5,7 @@ import PageTitle from "../PageTitle"
 import { FadeIn, TitleEffectIn } from "../../../utility"
 
 
-const AboutPage = ({ colorScheme, title, subHeader }) => {
+const AboutPage = ({ colorScheme, title, subHeader, textContent }) => {
     return (
         <FadeIn>
             <div className='page text'>
@@ -16,86 +16,114 @@ const AboutPage = ({ colorScheme, title, subHeader }) => {
                         subHeader={subHeader}
                     />
                 </TitleEffectIn>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
 
-                <div
-                    className='about-subheader'
-                    style={
-                        {
-                            width: 'max-content',
-                            margin: 'auto'
-                        }
+                <div className='about-text-container'>
+                    
+
+                    <div
+                        className='about-subheader'
+                    >
+                        {textContent.aboutPage.headers.purposeHeader}
+                    </div>
+
+                    <div
+                        className='about-text'
+                    >
+                        {textContent.aboutPage.texts.purposeText}
+                    </div>
+
+                    <div
+                        className='about-subheader'
+                    >
+                        {textContent.aboutPage.headers.bugsHeader}
+                    </div>
+
+                    <div
+                        className='about-text'
+                    >
+                        {textContent.aboutPage.texts.bugsText}
+                    </div>
+
+
+
+
+                    {
+                        // components used below ---------------------------------------------------
                     }
-                >
-                    hoi hoih oihoi hoiho
-                </div>
-
-                {
-                    // Purpose ---------------------------------------------------
-                }
-
-                <div
-                    className='about-header'
-                >
-                    Purpose
-                </div>
-
-                <div
-                    className='about-subheader'
-                >
-                    this page is for both of us
-                </div>
-
-                <div
-                    className='about-text'
-                >
-                    The main purpose of this website is to enable you to quickly get an overview of my coding skills. It aims to save you
-                    time. Instead of browsing through my github profile and cloning many repositories just to try the programms out, you 
-                    can get an overview and even try the code out in no time. 
-                    If I had simply wanted to create a website, I could have used providers like wix or squarespace which would
-                    have saved me alot of time. But by creating it with react, I could learn and experiment alot. So this website is not only 
-                    for you, it also served me by providing me with countless hours of practice. In some places it might seem that I have
-                    "overdone" it and the same results could have been achieved with less and simpler code. Please bear in mind that it 
-                    was important to me to try out as much as possible and the result therefore is not state of the art code.
-                </div>
 
 
 
-
-                {
-                    // components used below ---------------------------------------------------
-                }
-
-                <div
-                    className='about-header'
-                >
-                    external components & packages
-                </div>
-
-                <div
-                    className='about-subheader'
-                >
-                    sometech
-                </div>
-
-                <div
-                    className='about-text'
-                >
-                    explanainteon asdf asddf asdfassdlöfkja sdfas fdölaksjdf fassldfas dfasdf
-                </div>
+                    <div
+                        className='about-subheader'
+                    >
+                        {textContent.aboutPage.headers.componentsHeader}
+                    </div>
 
 
-                <br />
-                <br />
+                    <div
+                        className='about-text'
+                    >
+                        {textContent.aboutPage.texts.componentsText}
+                        <br />
+                        <br />
+                        <li>react-image-gallery</li>
+                        <li>react-icons</li>
+                        <li>react-color</li>
+                        <li>react-router-dom</li>
+                        <li>react-animations</li>
+                        <li>styled-components</li>
+                    </div>
+                    {/* <li>React Image Gallery (https://www.npmjs.com/package/react-image-gallery)</li>
+                    <li>React Icons (https://www.npmjs.com/package/react-icons)</li>
+                    <li>React Color (https://www.npmjs.com/package/react-color)</li>
+                    <li>react-router-dom (https://www.npmjs.com/package/react-router-dom)</li>
+                    <li>react-animations (https://www.npmjs.com/package/react-animations)</li>
+                    <li>styled-components (https://www.npmjs.com/package/styled-components)</li> */}
 
-                {
-                    // FAQ ---------------------------------------------------
-                }
 
-                <div
+
+                    <div
+                        className='about-subheader'
+                    >
+                        {textContent.aboutPage.headers.mobileFriendlyHeader}
+                    </div>
+
+                    <div
+                        className='about-text'
+                    >
+                        {textContent.aboutPage.texts.mobileFriendlyText}
+                    </div>
+
+
+
+
+
+                    <div
+                        className='about-subheader'
+                    >
+                        {textContent.aboutPage.headers.contactHeader}
+                    </div>
+
+                    <div
+                        className='about-text'
+                    >
+                        {textContent.aboutPage.texts.contactText}
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                    {
+                        // FAQ ---------------------------------------------------
+                    }
+
+                    {/* <div
                     className='about-header'
                 >
                     FAQ
@@ -111,9 +139,23 @@ const AboutPage = ({ colorScheme, title, subHeader }) => {
                     className='about-text'
                 >
                     because it is you know
+                </div> */}
+
+                    <div
+                        className='about-subheader'
+                        style={
+                            {
+                                width: 'max-content',
+                                margin: 'auto',
+                                marginTop: '64px',
+                                marginBottom: '48px',
+                            }
+                        }
+                    >
+                        {textContent.aboutPage.closingSentence}
+                    </div>
+
                 </div>
-
-
 
             </div>
         </FadeIn>

@@ -7,8 +7,7 @@ import { FiExternalLink } from "react-icons/fi";
 const LiteratureElement = ({ colorScheme, element, index, textContent }) => {
 
     let textProcessed = element.text;
-    textProcessed = textProcessed.split('\\n').map(str => <p>{str}</p>);
-    console.log(textProcessed);
+    textProcessed = textProcessed.split('\\n').map((str, idx) => <p key={idx}>{str}</p>);
 
 
     const [moreInfoHoverStatus, setMoreInfoHoverStatus] = useState(false)
@@ -17,7 +16,7 @@ const LiteratureElement = ({ colorScheme, element, index, textContent }) => {
 
     return (
         <>
-            {index == 0 ? <div className='endLine' style={{ backgroundColor: colorScheme.color2 }}></div> : ''}
+            {index === 0 ? <div className='endLine' style={{ backgroundColor: colorScheme.color2 }}></div> : ''}
 
             <div className='literature-element'>
 
@@ -53,6 +52,7 @@ const LiteratureElement = ({ colorScheme, element, index, textContent }) => {
                             <a
                                 href={element.infoLink}
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className='literature-detail-nav-button'
                                 style={
                                     {

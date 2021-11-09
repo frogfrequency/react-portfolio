@@ -23,7 +23,6 @@ const SchemeListContainer = ({ colorScheme, setColorScheme, theColorSchemes, del
 
 
     const addColorScheme = () => {
-        console.log('addColorScheme called');
         let newId = generateNewId(theColorSchemes);
         let newScheme = {
             schemeId: newId,

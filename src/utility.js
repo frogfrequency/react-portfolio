@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { fadeIn, fadeInUp, fadeOut, fadeInDown, bounceIn, zoomIn, pulse, flip, flipInX } from 'react-animations'
+import { fadeIn, fadeInUp, fadeOut, fadeInDown } from 'react-animations'
 
 export const FadeIn = styled.div`animation: 0.4s ${keyframes`${fadeIn}`}`;
 export const TitleEffectIn = styled.div`animation: 0.4s ${keyframes`${fadeInDown}`}`; // 0.7s pulse

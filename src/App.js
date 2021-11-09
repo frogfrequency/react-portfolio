@@ -22,10 +22,6 @@ import {
 import HomePage from './components/Pages/HomePage/HomePage';
 
 
-import styled, { keyframes } from 'styled-components';
-
-
-
 function App() {
 
 
@@ -101,14 +97,14 @@ function App() {
     )
 
     const setGerman = () => {
-        console.log('setting GERMAN')
+        // console.log('setting GERMAN')
         setTextContent(languagePackages.german)
         setProjects(projectsGerman)
         setLiteratureElements(literatureGerman)
     }
 
     const setEnglish = () => {
-        console.log('setting ENGLISH')
+        // console.log('setting ENGLISH')
         setTextContent(languagePackages.english)
         setProjects(projectsEnglish)
         setLiteratureElements(literatureEnglish)
@@ -153,6 +149,7 @@ function App() {
                             colorScheme={colorScheme}
                             title={textContent.titles.aboutTitle}
                             subHeader={textContent.titles.aboutSubheader}
+                            textContent={textContent}
                         />
                     </Route>
                     <Route path="/color-control">
