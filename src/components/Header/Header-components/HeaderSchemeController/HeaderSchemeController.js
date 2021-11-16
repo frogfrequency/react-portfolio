@@ -28,7 +28,7 @@ const HeaderSchemeController = ({ colorScheme, onClickFunc, textContent }) => {
             {textContent.header.colorSchemes}
 
             <BsSkipEndFill
-                className={skipIsHovered ? 'pointer' : ''}
+                className='pointer'
                 onMouseEnter={handleSkipHover}
                 onMouseLeave={handleSkipUnhover}
                 style={{ marginTop: '2px', marginLeft: '2px', color: skipIsHovered ? colorScheme.color3 : colorScheme.color4 }}
@@ -39,7 +39,7 @@ const HeaderSchemeController = ({ colorScheme, onClickFunc, textContent }) => {
             />
             <Link to="/color-control">
             <BsFillGearFill
-                className={gearIsHovered ? 'pointer' : ''}
+                className='pointer'
                 onMouseEnter={handleGearHover}
                 onMouseLeave={handleGearUnhover}
                 style={{ marginTop: '7px', marginLeft: '2px', color: gearIsHovered ? colorScheme.color3 : colorScheme.color4 }}

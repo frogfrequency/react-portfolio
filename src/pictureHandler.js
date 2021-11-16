@@ -47,6 +47,7 @@ import pokerCalc_4 from "./pictures/pokerCalc/slideshow/pokerCalc_4.png"
 import algorithmenKompaktUndVerstaendlich from "./pictures/AlgorithmenKompaktUndVerstaendlich.png"
 import beingHumanInTheAgeOfAlgorithms from "./pictures/BeingHumanInTheAgeOfAlgorithms.png"
 import handbuchFuerSoftwareentwickler from "./pictures/HandbuchFuerSoftwareentwickler.png"
+import modernesSoftwareEngineering from "./pictures/ModernesSoftwareEngineering.png"
 
 
 
@@ -97,4 +98,5 @@ export const pictureCollection = {
     algorithmenKompaktUndVerstaendlich: algorithmenKompaktUndVerstaendlich,
     beingHumanInTheAgeOfAlgorithms: beingHumanInTheAgeOfAlgorithms,
     handbuchFuerSoftwareentwickler: handbuchFuerSoftwareentwickler,
+    modernesSoftwareEngineering: modernesSoftwareEngineering,
 }

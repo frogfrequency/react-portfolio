@@ -40,3 +40,16 @@
     top: 31px; 
     display: flex;
 }
+
+
+.hitbox-enlarger {
+    width: 460px;
+    height: 24px;
+    /* background-color: blue; */
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    top: 100px;
+    left: 0;
+    right: 0;
+}

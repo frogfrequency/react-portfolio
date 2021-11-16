@@ -1,5 +1,5 @@
 import "./ColorPreview.css"
-import"../Header/Header.css"
+import"../../Header.css"
 
 const ColorPreview = ({colorScheme}) => {
 

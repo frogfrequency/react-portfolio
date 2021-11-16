@@ -29,7 +29,7 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, delet
             deleteColorScheme(id);
         }
         else {
-            alert("Sry you cannot delete a scheme that is currently active");
+            alert(textContent.colorSchemePage.alertText);
         }
     }
 

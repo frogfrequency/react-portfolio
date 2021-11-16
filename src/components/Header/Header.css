@@ -22,8 +22,6 @@
     top: -15px;
 } */
 
-
-
 .main-menu {
     display: flex;
     align-items: center;
@@ -36,6 +34,5 @@
 .header-element {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     padding: 4px;
 }

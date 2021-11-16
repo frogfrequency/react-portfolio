@@ -1,38 +1,36 @@
-import './App.css';
 import { useState } from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
 
 import { languagePackages } from './languagePackages';
-
-import Header from './components/Header/Header';
-
 import { projectsEnglish, projectsGerman } from "./projects";
 import { literatureEnglish, literatureGerman } from "./literatureElements";
 import { colorSchemes, giveNextSchemeId } from "./color-schemes.js";
+
+import Header from './components/Header/Header';
 import AboutPage from './components/Pages/AboutPage/AboutPage';
 import ProjectsPage from './components/Pages/ProjectsPage/ProjectsPage';
 import ColorSchemePage from './components/Pages/ColorSchemePage/ColorSchemePage';
 import HeaderPageSelect from './components/Header/Header-components/HeaderPageSelect/HeaderPageSelect';
 import ProjectDetailPage from './components/Pages/ProjectDetailPage/ProjectDetailPage';
 import LiteraturePage from './components/Pages/LiteraturePage/LiteraturePage';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-} from "react-router-dom";
 import HomePage from './components/Pages/HomePage/HomePage';
 
+import './App.css';
 
 function App() {
 
 
-    // ACTIVE SCHEME
+    // state: active scheme 
 
     const [colorScheme, defineActiveColorScheme] = useState(
         colorSchemes[0]
     )
 
     document.body.style.backgroundColor = colorScheme.color1;
-
 
     const nextColorScheme = () => {
         let nextId = giveNextSchemeId(theColorSchemes, colorScheme.schemeId);
@@ -46,8 +44,7 @@ function App() {
     }
 
 
-
-    // COLORSCHEMES
+    // state: colorschemes
 
     const [theColorSchemes, defineTheColorSchemes] = useState(colorSchemes)
 
@@ -72,7 +69,7 @@ function App() {
     }
 
 
-    // SELECTOR MENU VISIBILITY
+    // state: selector menu visibility
 
     const [pageSelectorVisibility, setPageSelectorVisibility] = useState(
         [false, false]
@@ -82,7 +79,8 @@ function App() {
         setPageSelectorVisibility(visibility);
     }
 
-    // LANGUAGE SELECT / ADJUSTING PROJECTS FILE
+
+    // state: language select (setting textContent, projects and literatureElements)
 
     const [textContent, setTextContent] = useState(
         languagePackages.english
@@ -97,23 +95,19 @@ function App() {
     )
 
     const setGerman = () => {
-        // console.log('setting GERMAN')
         setTextContent(languagePackages.german)
         setProjects(projectsGerman)
         setLiteratureElements(literatureGerman)
     }
 
     const setEnglish = () => {
-        // console.log('setting ENGLISH')
         setTextContent(languagePackages.english)
         setProjects(projectsEnglish)
         setLiteratureElements(literatureEnglish)
     }
 
 
-
-    // --------- END OF STATE ---------
-
+    // --------- END OF STATE ---------  //
 
     return (
         <Router>
@@ -121,7 +115,6 @@ function App() {
                 className="App"
                 style={{ backgroundColor: colorScheme.color1, color: colorScheme.color4 }}
             >
-
                 <HeaderPageSelect
                     colorScheme={colorScheme}
                     selectorVisibility={pageSelectorVisibility}
@@ -138,12 +131,10 @@ function App() {
                     setEnglish={setEnglish}
                     textContent={textContent}
                 />
-                
-
-
 
                 {/* A <Switch> looks through its children <Route>s and renders the first one that matches the current URL. */}
                 <Switch>
+
                     <Route path="/about">
                         <AboutPage
                             colorScheme={colorScheme}
@@ -152,6 +143,7 @@ function App() {
                             textContent={textContent}
                         />
                     </Route>
+
                     <Route path="/color-control">
                         <ColorSchemePage
                             colorScheme={colorScheme}
@@ -165,6 +157,7 @@ function App() {
                             textContent={textContent}
                         />
                     </Route>
+
                     {projects.map((project) => (
                         <Route path={`/projects/${project.key}`} key={project.key}>
                             <ProjectDetailPage
@@ -174,6 +167,7 @@ function App() {
                             />
                         </Route>
                     ))}
+
                     <Route path="/projects">
                         <ProjectsPage
                             colorScheme={colorScheme}
@@ -199,9 +193,8 @@ function App() {
                             homePageTextContent={textContent.homePage}
                         />
                     </Route>
-
-                </Switch>
-                
+                    
+                </Switch>        
             </div>
         </Router>
     );

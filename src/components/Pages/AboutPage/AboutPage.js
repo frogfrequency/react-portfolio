@@ -95,9 +95,6 @@ const AboutPage = ({ colorScheme, title, subHeader, textContent }) => {
                     </div>
 
 
-
-
-
                     <div
                         className='about-subheader'
                     >
@@ -109,37 +106,6 @@ const AboutPage = ({ colorScheme, title, subHeader, textContent }) => {
                     >
                         {textContent.aboutPage.texts.contactText}
                     </div>
-
-
-
-
-
-
-
-
-
-
-                    {
-                        // FAQ ---------------------------------------------------
-                    }
-
-                    {/* <div
-                    className='about-header'
-                >
-                    FAQ
-                </div>
-
-                <div
-                    className='about-subheader'
-                >
-                    why is this page in english?
-                </div>
-
-                <div
-                    className='about-text'
-                >
-                    because it is you know
-                </div> */}
 
                     <div
                         className='about-subheader'

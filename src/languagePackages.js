@@ -26,7 +26,8 @@ export const languagePackages = {
             backgroundStylingColor: 'background styling color',
             textStylingColor: 'text styling color',
             textColor: 'text color',
-            pickNew: 'pick new '
+            pickNew: 'pick new ',
+            alertText: 'The currently active color scheme cannot be deleted!',
         },
         projectsPage: {
             backToProjectsOverview: 'back to projects overview',
@@ -45,11 +46,10 @@ export const languagePackages = {
             mainText: `On the Internet, you can find learning material about programming and software development with ease. This material can 
             be found in the form of videos, interactive tutorials, articles, forum entries etc. Consequently a lion's share
             of my learning material is in digital form and there are many reasons why I prefer learning with digital media. 
-
             Some of these reasons are for example the to me essential use of the search function (Ctrl + F) 
             or the universal access to the material wherever I have either internet or mobile phone reception.  
             \\n
-            Nevertheless, I also like to read texts and books in the classical way, especially the lenghty ones. Tough I usually keep either laptop or phone close-by 
+            Nevertheless, I also like to read texts and books in the classical way, especially the lengthy ones. Tough I usually keep either laptop or phone close-by 
             so to be able to google unclear terms or concepts any time.
             Below I want to list the books I read about programming and software development. There are not too many, but they were very informative for me.
             They have for example helped me to distinguish individual areas of software development and thus gave me a clearer overall picture.
@@ -67,16 +67,16 @@ export const languagePackages = {
             },
             texts: {
                 purposeText: `The main purpose of this website is to enable you to quickly get an overview of my coding skills. It aims to save you time. 
-                Instead of browsing through my github profile and cloning many repositories just to try the programms out, you can get an overview and even 
+                Instead of browsing through my GitHub profile and cloning many repositories just to try the programs out, you can get an overview and even 
                 try the code out in no time. If I had simply wanted to create a website, I could have used providers like wix or squarespace which would have 
-                saved me alot of time. But by creating it with react, I could learn and experiment alot. So this website is not only for you, it also served me 
+                saved me a lot of time. But by creating it with react, I could learn and experiment a lot. So this website is not only for you, it also served me 
                 by providing me with countless hours of practice.`,
                 bugsText: `In some places it might seem that I have "overdone" it and the same results could have been achieved with less and simpler code. In 
                 other places you might stumble upon designs and code that is not to your liking or even violates coding and/or design conventions. Please bear 
-                in mind that this is my first website and it was important to me to try out as much as possible and the result therefore is not state of the art 
-                code. If you happen to find a bug or any of the above-mentioned shortcomings please let me know about it. This would very much be appreciated!`,
-                componentsText: `Although you could also find them in the package.json files, I've listed most of the external used components here.`,
-                mobileFriendlyText: `Even though it is very important nowadays, unfortunately this site is not yet mobile-friendly /-responsive. My primary focus was 
+                in mind that this is my first website, and it was important to me to try out as much as possible and the result therefore is not state of the art 
+                code. If you happen to find a bug or any of the above-mentioned shortcomings, please let me know about it. This would very much be appreciated!`,
+                componentsText: `Although you could also find them in the package.json file, I've listed most of the external used components here.`,
+                mobileFriendlyText: `Even though it is very important nowadays, unfortunately this site is not yet mobile-friendly / -responsive. My primary focus was 
                 to have the site work properly on desktop. As a future project I might make the site mobile friendly one day.`,
                 contactText: `If you've found your way to this website, you should know how to contact me :)`,
             },
@@ -84,13 +84,7 @@ export const languagePackages = {
         }
     },
 
-    // german part below this line ///////////////////////////////////////////////////////////////////////////////////////////////
-    // german part below this line ///////////////////////////////////////////////////////////////////////////////////////////////
-    // german part below this line ///////////////////////////////////////////////////////////////////////////////////////////////
-    // german part below this line ///////////////////////////////////////////////////////////////////////////////////////////////
-    // german part below this line ///////////////////////////////////////////////////////////////////////////////////////////////
-    // german part below this line ///////////////////////////////////////////////////////////////////////////////////////////////
-
+    // german part below this line
 
     german: {
         header: {
@@ -119,7 +113,8 @@ export const languagePackages = {
             backgroundStylingColor: 'Hintergrund-stylingfarbe',
             textStylingColor: 'Text-stylingfarbe',
             textColor: 'Textfarbe',
-            pickNew: 'wähle neue '
+            pickNew: 'wähle neue ',
+            alertText: 'Das momentan aktive Farbschema kann nicht gelöscht werden!',
         },
         projectsPage: {
             backToProjectsOverview: 'zurück zur Projektübersicht',
@@ -128,10 +123,10 @@ export const languagePackages = {
             technologiesUsed: 'verwendete Technologien',
         },
         homePage: {
-            introText: `Auf dieser Website kannst du meine Coding-Projekte ansehen und ausprobieren! Es ist keine "Portfolio-website"
+            introText: `Auf dieser Website kannst du meine Coding-Projekte ansehen und ausprobieren! Es ist keine "Portfolio-Website"
             im herkömmlichen Sinne. Du findest hier keine persönlichen Angaben wie Personalien oder einen Lebenslauf. Die Seite soll dir 
             in möglichst kurzer Zeit einen Überblick über meine Coding-Fähigkeiten geben. Für Interessierte ist bei den Projekten
-            ein Beschreibungstext verfügbar. Es ist aber nicht nötig diese zum Teil langen Texte alle durchzulesen.`,
+            ein Beschreibungstext verfügbar. Es ist aber nicht nötig, diese zum Teil langen Texte alle durchzulesen.`,
             haveFun: 'Viel Spass beim Erkunden!'
         },
         literaturePage: {
@@ -159,25 +154,28 @@ export const languagePackages = {
                 contactHeader: 'Kontakt',
             },
             texts: {
-                purposeText: `GERMANThe main purpose of this website is to enable you to quickly get an overview of my coding skills. It aims to save you time. 
-                Instead of browsing through my github profile and cloning many repositories just to try the programms out, you can get an overview and even 
-                try the code out in no time. If I had simply wanted to create a website, I could have used providers like wix or squarespace which would have 
-                saved me alot of time. But by creating it with react, I could learn and experiment alot. So this website is not only for you, it also served me 
-                by providing me with countless hours of practice.`,
-                bugsText: `GERMANIn some places it might seem that I have "overdone" it and the same results could have been achieved with less and simpler code. In 
-                other places you might stumble upon designs and code that is not to your liking or even violates coding and/or design conventions. Please bear 
-                in mind that this is my first website and it was important to me to try out as much as possible and the result therefore is not state of the art 
-                code. If you happen to find a bug or any of the above-mentioned shortcomings please let me know about it. This would very much be appreciated!`,
-                componentsText: `GERMANAlthough you could also find them in the package.json files, I've listed most of the external used components here.`,
-                mobileFriendlyText: `GERMANEven though it is very important nowadays, unfortunately this site is not yet mobile-friendly /-responsive. My primary focus was 
-                to have the site work properly on desktop. As a future project I might make the site mobile friendly one day.`,
-                contactText: `GERMANIf you've found your way to this website, you should know how to contact me :)`,
+                purposeText: `Auf dieser Website kannst du dir einen Überblick über meine Programmierkenntnisse zu verschaffen.  
+                Du musst dich nicht durch mein GitHub-Profil wühlen und die Repositorys klonen, nur um die Programme darin zu starten.
+                Stattdessen kannst du sie mit nur einem Klick selber ausprobieren. So kannst du viel Zeit sparen, während du dir einen Eindruck machst.  
+                Ich hätte diese Seite natürlich auch mit Anbietern wie Wix oder Squarespace erstellen können. Durch einen kleinen Aufpreis hätte ich dann sogar 
+                eine Menge Zeit sparen können. 
+                Indem ich sie aber selber mit React erstellt habe, konnte ich durch das viele Ausprobieren und Experimentieren enorm viel lernen. 
+                Diese Website ist also nicht nur für dich, damit du meine Projekte ansehen kannst. Sie hat auch mir einen grossen Dienst getan indem sie mir  
+                unzähligen Stunden praktischer Übung ermöglichte.`,
+                bugsText: `An einigen Stellen mag es so aussehen, als hätte ich es "übertrieben" und die gleichen Ergebnisse hätten mit weniger und einfacherem Code erreicht 
+                werden können.
+                Andernorts findest du möglicherweise Code oder Designs, die dir nicht gefallen oder sogar gegen die üblichen Coding- und Designkonventionen verstossen.
+                Bitte behalte dabei im Hinterkopf, dass dies meine erste Website ist und es mir besonders wichtig war, so viel wie möglich auszuprobieren. Das Ergebnis 
+                entspricht daher nicht den neusten Standards und Konventionen.
+                Ich bin über alle Inputs und Verbesserungsvorschläge froh und weiss es zu schätzen, wenn du dir die Zeit nimmst sie mir mitzuteilen!`,
+                componentsText: `Obwohl du sie auch in der package.json-Datei finden könntest, habe ich die meisten der extern verwendeten Komponenten hier aufgelistet.`,
+                mobileFriendlyText: `Auch wenn es heutzutage sehr wichtig ist, ist diese Website leider noch nicht mobilfreundlich/responsiv. 
+                Mein Hauptaugenmerk lag darauf, dass die Seite auf dem Desktop-PC richtig funktioniert.`,
+                contactText: `Wer den Weg auf diese Website gefunden hat, sollte wissen, wie man mich kontaktieren kann :)`,
             },
-            closingSentence: 'GERMANThank you for visiting my site! I hope you had a pleasant stay. See you soon!',
-        }
-        
+            closingSentence: 'Vielen Dank für deinen Besuch auf meiner Website! Ich hoffe, du hattest Spass beim Erkunden. Bis bald!',
+        } 
     }
-
 }
 
 

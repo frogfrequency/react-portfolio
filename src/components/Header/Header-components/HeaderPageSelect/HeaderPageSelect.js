@@ -70,6 +70,7 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
 
 
             {selectorVisibility.includes(true) ? (
+            <div>    
                 <div
                     className='page-selector'
                     style={{ backgroundColor: colorScheme.color1, color: colorScheme.color4, borderColor: colorScheme.color2 }}
@@ -171,7 +172,15 @@ const HeaderPageSelect = ({ colorScheme, selectorVisibility, handleSelectorVisib
                     </div>      
 
                     
+                
                 </div>
+                <div
+                    className='hitbox-enlarger'
+                    onMouseEnter={() => handleMenuMouseEnter()}
+                    onMouseLeave={() => handleMenuMouseLeave()}
+                />
+
+            </div>
 
             ) :
                 null

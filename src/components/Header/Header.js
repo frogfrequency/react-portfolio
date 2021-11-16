@@ -1,34 +1,48 @@
 import { useState } from 'react';
 import './Header.css';
 import HeaderSchemeController from './Header-components/HeaderSchemeController/HeaderSchemeController';
-import ColorPreview from '../ColorPreview/ColorPreview';
+import ColorPreview from './Header-components/ColorPreview/ColorPreview';
 import HeaderMainMenuButton from './Header-components/HeaderMainMenuButton/HeaderMainMenuButton';
 
 
 const Header = ({ colorScheme, nextColorScheme, selectorVisibility, handleSelectorVisibility, setGerman, setEnglish, textContent }) => {
 
+    // language select
+
     const [languagesAreHovered, setLanguagesAreHovered] = useState(
-        {english: false, german: false}
+        { english: false, german: false }
     );
 
     const handleLanguageMouseEnter = (language) => {
-        let copy = { ...languagesAreHovered }
-        copy[language] = true;
-        setLanguagesAreHovered(copy);
+        let hoverStatuses = { english: false, german: false }
+        hoverStatuses[language] = true;
+        setLanguagesAreHovered(hoverStatuses);
     }
     const handleLanguageMouseLeave = () => {
-        setLanguagesAreHovered({english: false, german: false})
+        setLanguagesAreHovered({ english: false, german: false })
     }
 
     return (
         <div
             className='header'
-            style={{
-                backgroundColor: colorScheme.color1, color: colorScheme.color2
-            }}
+            style={
+                {
+                    backgroundColor: colorScheme.color1, color: colorScheme.color2
+                }
+            }
         >
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <ColorPreview colorScheme={colorScheme} className="header-element" />
+            <div
+                style={
+                    {
+                        display: 'flex', justifyContent: 'center', alignItems: 'center'
+                    }
+                }
+            >
+                <ColorPreview
+                    colorScheme={colorScheme}
+                    className="header-element"
+                />
+
                 <div
                     onClick={setGerman}
                     style={
@@ -43,7 +57,15 @@ const Header = ({ colorScheme, nextColorScheme, selectorVisibility, handleSelect
                     &nbsp;&nbsp;Deutsch
                 </div>
 
-                <div style={{ color: colorScheme.color4 }}>&nbsp;|&nbsp;</div>
+                <div
+                    style={
+                        {
+                            color: colorScheme.color4
+                        }
+                    }
+                >
+                    &nbsp;|&nbsp;
+                </div>
 
                 <div
                     onClick={setEnglish}
@@ -66,13 +88,12 @@ const Header = ({ colorScheme, nextColorScheme, selectorVisibility, handleSelect
                 handleSelectorVisibility={handleSelectorVisibility}
                 textContent={textContent}
             />
+
             <HeaderSchemeController
                 colorScheme={colorScheme}
                 onClickFunc={nextColorScheme}
                 textContent={textContent}
             />
-
-
         </div>
     )
 }

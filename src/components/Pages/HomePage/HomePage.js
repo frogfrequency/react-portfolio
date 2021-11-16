@@ -86,7 +86,7 @@ const HomePage = ({ colorScheme, homePageTextContent }) => {
                                 style={
                                     {
                                         color: hoverStatus ? colorScheme.color3 : colorScheme.color4,
-                                        cursor: hoverStatus ? 'pointer' : '',
+                                        cursor: 'pointer',
                                         textDecoration: 'none',
                                     }
                                 }
@@ -98,21 +98,8 @@ const HomePage = ({ colorScheme, homePageTextContent }) => {
                 </HomePageTextEffect>
                 : ''}
 
-            {/* <Link
-                            className=''
-                            style={
-                                {
-                                    textDecoration: 'none',
-                                }
-                            }
-                            to="/projects"
-                            // onMouseEnter={() => setHoverStatusGoBack(true)}
-                            // onMouseLeave={() => setHoverStatusGoBack(false)}
-                        >
-                            go to projects here
-                    </Link> */}
+            
         </div>
-        // </FadeIn>
     )
 }
 

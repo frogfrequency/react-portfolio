@@ -3,7 +3,7 @@ export const literatureEnglish = [
         key: 'handbuchFuerSoftwareentwickler',
         imageKey: 'handbuchFuerSoftwareentwickler',
         title: 'Handbuch für Softwareentwickler',
-        subheader: 'a book about software development ',
+        subheader: 'a comprehensive textbook and reference about professional software engineering',
         text: `The standard work for professional software engineering. Every developer knows that it is not enough to just know languages and 
         programming platforms is not enough. Anyone who wants to develop software successfully should be familiar with many specialist areas and methods - from 
         from architecture to data management, requirements management, security issues to project management. Here you will find a comprehensive 
@@ -45,6 +45,24 @@ export const literatureEnglish = [
         infoLink: 'https://www.barnesandnoble.com/w/hello-world-hannah-fry/1128679983',
         infoSourceName: 'Barnes & Noble',
     },
+    {
+        key: 'modernesSoftwareEngineering',
+        imageKey: 'modernesSoftwareEngineering',
+        title: 'Modernes Software-Engineering',
+        subheader: 'design and development of software products',
+        text: `Most software products today are developed as software products or as part of products such as IoT devices. The developer decides what 
+        features to integrate, and getting the software to market quickly is critical. 
+        We all use software products, and it's hard for students to compare what they learn in a software systems engineering course to 
+        the products they use.
+        Therefore, this introductory textbook "Modern Software Engineering" focuses on software engineering methods and techniques that 
+        are relevant for software product development. In addition to chapters on agile software development, software architecture, reliable programming 
+        and testing, there are two chapters on cloud computing, a chapter on feature set design, a chapter on security and privacy, and a chapter on 
+        DevOps. You will not find these in any other current software engineering book. This is a book from a professional for (aspiring) professionals.`,
+        pages: 336,
+        currentPage: 84,
+        infoLink: 'https://www.orellfuessli.ch/shop/home/artikeldetails/A1058310090',
+        infoSourceName: 'Orell Füssli',
+    },
 ]
 
 export const literatureGerman = [
@@ -52,7 +70,7 @@ export const literatureGerman = [
         key: 'handbuchFuerSoftwareentwickler',
         imageKey: 'handbuchFuerSoftwareentwickler',
         title: 'Handbuch für Softwareentwickler',
-        subheader: 'ein Buch mit vielen Seiten',
+        subheader: 'ein umfassendes Lehr- und Nachschlagewerk für professionelles Software-Engineering',
         text: `Das Standardwerk für professionelles Software Engineering. Jeder Entwickler weiss, dass es mit der Kenntnis von Sprachen und 
         Programmierplattformen nicht getan ist. Wer erfolgreich Software entwickeln möchte, sollte mit vielen Fachgebieten und Methoden vertraut sein - 
         von der Architektur über Datenhaltung, Anforderungsmanagement, Sicherheitsfragen bis zum Projektmanagement. Hier finden Sie eine umfassende 
@@ -93,5 +111,23 @@ export const literatureGerman = [
         currentPage: 256,
         infoLink: 'https://www.barnesandnoble.com/w/hello-world-hannah-fry/1128679983',
         infoSourceName: 'Barnes & Noble',
+    },
+    {
+        key: 'modernesSoftwareEngineering',
+        imageKey: 'modernesSoftwareEngineering',
+        title: 'Modernes Software-Engineering',
+        subheader: 'Entwurf und Entwicklung von Softwareprodukten',
+        text: `Die meisten Softwareprodukte werden heute als Softwareprodukte oder als Teil von Produkten wie IoT-Geräten entwickelt. Der Entwickler der 
+        Software entscheidet, welche Funktionen integriert werden sollen, und die Software schnell auf den Markt zu bringen, ist entscheidend. Wir alle 
+        verwenden Softwareprodukte und es ist schwer für die Studierenden, das, was sie in einem Kurs zum Thema Software Systems Engineering lernen, mit 
+        den Produkten zu vergleichen, die sie verwenden.
+        Deshalb konzentriert sich dieses einführende Lehrbuch "Modernes Software-Engineering" auf Methoden und Techniken des Software-Engineerings, die 
+        für die Software-Produktentwicklung relevant sind. Neben den Kapiteln über agile Softwareentwicklung, Softwarearchitektur, zuverlässige Programmierung 
+        und Test gibt es zwei Kapitel über Cloud Computing, ein Kapitel über Feature-Set-Design, ein Kapitel über Sicherheit und Datenschutz und ein Kapitel über 
+        DevOps. Diese werden Sie in keinem anderen aktuellen Software-Engineering-Buch finden. Ein Buch vom Profi für (angehende) Profis.`,
+        pages: 336,
+        currentPage: 84,
+        infoLink: 'https://www.orellfuessli.ch/shop/home/artikeldetails/A1058310090',
+        infoSourceName: 'Orell Füssli',
     },
 ]
