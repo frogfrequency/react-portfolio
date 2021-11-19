@@ -174,7 +174,7 @@ export const languagePackages = {
                 contactText: `Wer den Weg auf diese Website gefunden hat, sollte wissen, wie man mich kontaktieren kann :)`,
             },
             closingSentence: 'Vielen Dank für deinen Besuch auf meiner Website! Ich hoffe, du hattest Spass beim Erkunden. Bis bald!',
-        } 
+        }
     }
 }
 

@@ -1,17 +1,18 @@
+import { FadeIn, TitleEffectIn } from "../../../utility"
+
 import PageTitle from "../PageTitle"
 import SchemeListContainer from "./SchemeListContainer/SchemeListContainer"
+
 import "./ColorSchemePage.css"
 
-import { FadeIn, TitleEffectIn } from "../../../utility"
 
 const ColorSchemePage = ({  colorScheme, title, subHeader, setColorScheme, theColorSchemes, deleteColorScheme,
                             handleDefineTheColorSchemes, saveAndSetNewColorScheme, textContent }) => {
 
-
-
     return (
         <FadeIn>
             <div className="page">
+
                 <TitleEffectIn>
                     <PageTitle
                         colorScheme={colorScheme}
@@ -19,6 +20,7 @@ const ColorSchemePage = ({  colorScheme, title, subHeader, setColorScheme, theCo
                         subHeader={subHeader}
                     />
                 </TitleEffectIn>
+
                 <div id="color-control">
                     <SchemeListContainer
                         colorScheme={colorScheme}
@@ -29,8 +31,8 @@ const ColorSchemePage = ({  colorScheme, title, subHeader, setColorScheme, theCo
                         saveAndSetNewColorScheme={saveAndSetNewColorScheme}
                         textContent={textContent}
                     />
-
                 </div>
+                
             </div>
         </FadeIn>
     )

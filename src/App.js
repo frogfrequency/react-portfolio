@@ -21,8 +21,8 @@ import HomePage from './components/Pages/HomePage/HomePage';
 
 import './App.css';
 
-function App() {
 
+function App() {
 
     // state: active scheme 
 

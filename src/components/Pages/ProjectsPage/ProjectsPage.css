@@ -10,30 +10,20 @@
 .project-card {
     width: 340px;
     height: 436px;
-    /* position: relative; */
-    /* box-shadow: 5px 5px 10px rgb(15, 15, 15); */
     align-items: flex-end;
 }
-
-
 
 .card-image-hovered {
     height: 340px;
     width: 340px;
-    /* opacity: 100%; */
-    /* background-size: 100%; */
     background-repeat: no-repeat;
 }
 
 .card-image-unhovered {
     height: 340px;
     width: 340px;
-    /* opacity: 70%; */ 
-    /* background-size: 100%; */
     background-repeat: no-repeat;
 }
-
-
 
 .project-card-title {
     font-size: 21px;
@@ -52,9 +42,7 @@
     margin-top: 3px;
 }
 
-
 #detail-page-content {
-    /* width: 1500px; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -67,30 +55,25 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    /* align-items: center; */
 }
 
 .project-overview-button {
     font-size: 18px;
     padding: 5px;
     margin-bottom: 45px;
-    /* background-color: black; */
     display: flex;
     align-items: center;
 }
 
-
 #picture-show {
     align-items: center;
     justify-content:center;
-    /* background-color: red; */
     width: 40%;
     height: 800px;
     margin: 30px;
 }
 
 #project-details {
-    /* background-color: blue; */
     width: 50%;
     height: 800px;
     margin: 30px;
@@ -104,13 +87,9 @@
     border-bottom: solid;
     border-width: 2px;
     padding-bottom: 4px;
-    /* padding-left: 6px; */
-    /* padding-right: 6px; */
-    /* background-color: cornflowerblue; */
 }
 
 #project-details-title {
-    /* color: red; */
     font-size: 30px;
     font-weight: bold;
 }
@@ -123,14 +102,11 @@
 #project-detail-detailInformation {
     text-align: justify;
     line-height: 16pt;
-    /* white-space: pre-wrap; */
 }
 
 #project-detail-nav {
     display: flex;
-    /* justify-content: space-between; */
     margin-top: 10px;
-    /* background-color: green; */
 }
 
 .project-detail-nav-button {
@@ -150,5 +126,4 @@
 
 .icon {
     padding: 5px;
-    /* background-color: cornflowerblue; */
 }

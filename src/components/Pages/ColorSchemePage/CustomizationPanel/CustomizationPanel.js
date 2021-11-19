@@ -1,15 +1,16 @@
-import "./CustomizationPanel.css"
-import "../ColorSchemePage.css"
-// import "../../../ColorPreview/ColorPreview.css"
 import { SketchPicker } from 'react-color';
 import { RiSave3Fill } from "react-icons/ri";
 import { FaUndo } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { useState } from "react";
+
+import { CustomizationPanelEffect, ColorPickerEffect } from "../../../../utility";
+
 import ColorPreview from '../../../../components/Header/Header-components/ColorPreview/ColorPreview';
 import CustomizationPanelElement from "./CustomizationPanelElement/CustomizationPanelElement";
 
-import { CustomizationPanelEffect, ColorPickerEffect } from "../../../../utility";
+import "../ColorSchemePage.css"
+
 
 const CustomizationPanel = ({ thisColorScheme, colorScheme, saveAndSetNewColorScheme, setActiveCustomizationId, textContent }) => {
 
@@ -29,7 +30,6 @@ const CustomizationPanel = ({ thisColorScheme, colorScheme, saveAndSetNewColorSc
         // maybe add functionality for tooltip here
     }
 
-
     const oldColorScheme = { ...thisColorScheme };
     const [newColorScheme, setNewColorScheme] = useState(thisColorScheme);
     const [showPicker, setShowPicker] = useState(false);
@@ -45,11 +45,9 @@ const CustomizationPanel = ({ thisColorScheme, colorScheme, saveAndSetNewColorSc
         setNewColorScheme(newColorSchemeCopy);
     }
 
-
     const resetNewColorScheme = () => {
         setNewColorScheme(oldColorScheme);
     }
-
 
     function giveColorName(idx) {
         switch (idx) {
@@ -65,6 +63,8 @@ const CustomizationPanel = ({ thisColorScheme, colorScheme, saveAndSetNewColorSc
                 return 'error in giveColorName'
         }
     }
+
+
 
     return (
         <div>
@@ -82,11 +82,10 @@ const CustomizationPanel = ({ thisColorScheme, colorScheme, saveAndSetNewColorSc
                         onMouseLeave={() => handleMouseLeave(2)}
                     />
 
-
-
-
                     <div id='customization-panel-header' style={{ borderColor: colorScheme.color3 }}>
-                        <div>{textContent.colorSchemePage.adjustColorsFor}</div>
+                        <div>
+                            {textContent.colorSchemePage.adjustColorsFor}
+                        </div>
 
                         <ColorPreview
                             colorScheme={thisColorScheme}
@@ -95,7 +94,6 @@ const CustomizationPanel = ({ thisColorScheme, colorScheme, saveAndSetNewColorSc
 
                     <div id='customization-panel-content'>
                         <CustomizationPanelElement
-                            // thisColorScheme={thisColorScheme}
                             text={textContent.colorSchemePage.backgroundColor}
                             boxColor={newColorScheme.color1}
                             colorScheme={colorScheme}
@@ -105,7 +103,6 @@ const CustomizationPanel = ({ thisColorScheme, colorScheme, saveAndSetNewColorSc
                             boxId={1}
                         />
                         <CustomizationPanelElement
-                            // thisColorScheme={thisColorScheme}
                             text={textContent.colorSchemePage.backgroundStylingColor}
                             boxColor={newColorScheme.color2}
                             colorScheme={colorScheme}
@@ -115,7 +112,6 @@ const CustomizationPanel = ({ thisColorScheme, colorScheme, saveAndSetNewColorSc
                             boxId={2}
                         />
                         <CustomizationPanelElement
-                            // thisColorScheme={thisColorScheme}
                             text={textContent.colorSchemePage.textStylingColor}
                             boxColor={newColorScheme.color3}
                             colorScheme={colorScheme}
@@ -125,7 +121,6 @@ const CustomizationPanel = ({ thisColorScheme, colorScheme, saveAndSetNewColorSc
                             boxId={3}
                         />
                         <CustomizationPanelElement
-                            // thisColorScheme={thisColorScheme}
                             text={textContent.colorSchemePage.textColor}
                             boxColor={newColorScheme.color4}
                             colorScheme={colorScheme}
@@ -135,6 +130,7 @@ const CustomizationPanel = ({ thisColorScheme, colorScheme, saveAndSetNewColorSc
                             boxId={4}
                         />
                     </div>
+
 
                     <div className='customization-panel-action-bar'>
 
@@ -146,12 +142,7 @@ const CustomizationPanel = ({ thisColorScheme, colorScheme, saveAndSetNewColorSc
                             onClick={() => saveAndSetNewColorScheme(newColorScheme)}
                         />
 
-
-
-
                         &nbsp;&nbsp;&nbsp;&nbsp;
-
-
 
                         <FaUndo
                             style={{ color: hoverStatuses[1] ? colorScheme.color3 : colorScheme.color4, cursor: 'pointer' }}
@@ -160,16 +151,14 @@ const CustomizationPanel = ({ thisColorScheme, colorScheme, saveAndSetNewColorSc
                             onClick={resetNewColorScheme}
                         />
 
-
-
                     </div>
 
                     {showPicker ? (
                         <>
-                            <br></br>
+                            <br/>
                             {textContent.colorSchemePage.pickNew} {giveColorName(colorBeingChanged)}
-                            <br></br>
-                            <br></br>
+                            <br/>
+                            <br/>
 
                             <ColorPickerEffect>
                                 <SketchPicker

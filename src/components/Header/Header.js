@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import './Header.css';
+
 import HeaderSchemeController from './Header-components/HeaderSchemeController/HeaderSchemeController';
 import ColorPreview from './Header-components/ColorPreview/ColorPreview';
 import HeaderMainMenuButton from './Header-components/HeaderMainMenuButton/HeaderMainMenuButton';
+
+import './Header.css';
 
 
 const Header = ({ colorScheme, nextColorScheme, selectorVisibility, handleSelectorVisibility, setGerman, setEnglish, textContent }) => {

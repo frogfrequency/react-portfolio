@@ -1,10 +1,13 @@
-import SchemeListElement from "../SchemeListElement/SchemeListElement"
+import { useState } from 'react';
 import { GoPlus } from "react-icons/go";
-import "./SchemeListContainer.css";
+
+import { generateNewId } from "../../../../utility"
+
+import SchemeListElement from "../SchemeListElement/SchemeListElement"
+
 import "../../../../App.css"
 import "../ColorSchemePage.css"
-import { useState } from 'react';
-import { generateNewId } from "../../../../utility"
+
 
 const SchemeListContainer = ({ colorScheme, setColorScheme, theColorSchemes, deleteColorScheme, handleDefineTheColorSchemes, saveAndSetNewColorScheme, textContent }) => {
 
@@ -19,7 +22,6 @@ const SchemeListContainer = ({ colorScheme, setColorScheme, theColorSchemes, del
     }
 
     const [activeCustomizationId, setActiveCustomizationId] = useState(null);
-
 
 
     const addColorScheme = () => {
@@ -64,7 +66,10 @@ const SchemeListContainer = ({ colorScheme, setColorScheme, theColorSchemes, del
                 onClick={() => addColorScheme()}
             >
                 {textContent.colorSchemePage.addScheme}
-                <GoPlus id='addSchemePlusSign' size={'1.1em'} />
+                <GoPlus
+                    id='addSchemePlusSign'
+                    size={'1.1em'}
+                />
             </div>
         </div>
     )

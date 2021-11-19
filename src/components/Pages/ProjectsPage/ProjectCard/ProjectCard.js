@@ -1,26 +1,28 @@
-import "../ProjectsPage.css"
 import { useState } from 'react';
-
 
 import { pictureCollection } from "../../../../pictureHandler.js";
 
-const ProjectCard = ({ project, colorScheme }) => {
+import "../ProjectsPage.css"
 
+
+const ProjectCard = ({ project, colorScheme }) => {
 
     const [isHovered, setIsHovered] = useState(false);
     const [pictureName, setPictureName] = useState(`${project.picKey}_unhovered`);
 
-    const handleHover = (newColorSchemes) => {
+    const handleHover = () => {
         setIsHovered(true);
         setPictureName(`${project.picKey}_hovered`);
     }
 
-    const handleUnhover = (newColorSchemes) => {
+    const handleUnhover = () => {
         setIsHovered(false);
         setPictureName(`${project.picKey}_unhovered`);
     }
 
+
     return (
+
         <div
             className="project-card"
             style={
@@ -57,9 +59,11 @@ const ProjectCard = ({ project, colorScheme }) => {
             <div className='project-card-description'>
                 {project.type}
             </div>
+
             <div className='project-card-description'>
                 {project.technology}
             </div>
+            
         </div>
     )
 }

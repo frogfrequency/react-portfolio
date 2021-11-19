@@ -1,12 +1,11 @@
 import { useState } from "react";
-import "./SchemeListElement.css"
 import { BsFillGearFill } from "react-icons/bs";
 import { FaCircle, FaRegCircle } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import "../CustomizationPanel/CustomizationPanel.css"
-import CustomizationPanel from "../CustomizationPanel/CustomizationPanel";
-// import { CustomizationPanel } from "../CustomizationPanel/CustomizationPanel"
 
+import CustomizationPanel from "../CustomizationPanel/CustomizationPanel";
+
+import "./SchemeListElement.css"
 
 
 const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, deleteColorScheme, activeCustomizationId, setActiveCustomizationId, saveAndSetNewColorScheme, textContent }) => {
@@ -42,16 +41,16 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, delet
         setActiveCustomizationId(id);
     }
 
-    // ------------- END OF STATE ------------
 
     return (
         <div className='page-box-container'>
+
             <div className='page-color-box' style={{ backgroundColor: thisColorScheme.color1, color: thisColorScheme.color4 }}>{thisColorScheme.schemeId}</div>
             <div className='page-color-box' style={{ backgroundColor: thisColorScheme.color2 }}></div>
             <div className='page-color-box' style={{ backgroundColor: thisColorScheme.color3 }}></div>
             <div className='page-color-box' style={{ backgroundColor: thisColorScheme.color4 }}></div>
-            &nbsp;
 
+            &nbsp;
 
             {thisColorScheme.schemeId === colorScheme.schemeId ? (
                 <FaCircle
@@ -66,8 +65,8 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, delet
                     onMouseLeave={() => handleMouseLeave('inactive')}
                     onClick={() => handleInactiveClick(thisColorScheme.schemeId)}
                 />
-            )
-            }
+            )}
+
             <BsFillGearFill
                 className='color-container-symbol pointer'
                 style={{ color: hoverStatuses.gear ? colorScheme.color3 : colorScheme.color4 }}
@@ -86,7 +85,6 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, delet
             />
 
             {activeCustomizationId === thisColorScheme.schemeId ? (
-
                 <CustomizationPanel
                     thisColorScheme={thisColorScheme}
                     colorScheme={colorScheme}
@@ -96,10 +94,7 @@ const SchemeListElement = ({ thisColorScheme, colorScheme, setColorScheme, delet
                 />
             ) : (
                 null
-            )
-            }
-
-
+            )}
         </div>
     )
 }

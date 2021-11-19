@@ -20,14 +20,14 @@ export const projectsEnglish = [
         From the very beginning it was never my goal to produce exemplary code. Rather, I wanted to try out React as much as possible and experiment with it.
         \\n
         More information can be found on the about page.`,
-        additionalInternLink: { target: undefined, text: 'go to About'},
+        additionalInternLink: { target: undefined, text: 'go to About' },
         technology: ['React, JavaScript, CSS'],
         tryoutLink: undefined,
         sourcecodeLink: 'https://github.com/frogfrequency/react-portfolio',
         picKey: 'reactPortfolio',
         picCount: 5
     },
-    {   
+    {
         key: 'adventOfCode2020',
         title: 'advent of code 2020',
         type: 'series of coding challenges',
@@ -56,8 +56,8 @@ export const projectsEnglish = [
         Since I had only briefly heard of them I first had to properly understand the concept and how to implement it. Luckily because of the numerous but
         unfruitful attempts and time I had already invested in trying to solve the puzzle, the underlying problem was quite clear to me. Understanding the problem in
         the first place helped me a lot to finally solve it by using a linked-list approach. (albeit with a computation time of 24 seconds which, to be frank, still isn't very impressive)`,
-        additionalLink: { target: 'https://adventofcode.com/2020/about', text: 'visit AoC'},
-        technology: ['Javascript'],
+        additionalLink: { target: 'https://adventofcode.com/2020/about', text: 'visit AoC' },
+        technology: ['JavaScript'],
         tryoutLink: undefined,
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/adventofcode',
         picKey: 'aoc',
@@ -85,8 +85,8 @@ export const projectsEnglish = [
         \\n
         At the end I consciously didn't remove the square-id's or 
         any kind of square coloring during the game. It lets you guess how the underlying game logic works, and I've also grown quite fond of them :) Especially the blue
-        coloring that shows possible 'en passant' moves after an opposing pawn advances two squares at once.`, 
-        technology: ['Javascript, HTML, CSS'],
+        coloring that shows possible 'en passant' moves after an opposing pawn advances two squares at once.`,
+        technology: ['JavaScript, HTML, CSS'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects/simulators/chess/chess_v1_redesign/',
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/simulators/chess/chess_v1_redesign',
         picKey: 'chess',
@@ -104,7 +104,7 @@ export const projectsEnglish = [
         In a few cases, the program may evaluate an answer as incorrect even though it is correct.
         Since the drawn graph consists of individual dots that are in some cases spread very far apart this error can occur.
         This happens primarily with large gradients/slopes (m-value).`,
-        technology: ['Javascript, HTML, CSS'],
+        technology: ['JavaScript, HTML, CSS'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects/waves-and-graphs/graphGuesser_V1/',
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/waves-and-graphs/graphGuesser_V1',
         picKey: 'graphGuesser',
@@ -118,7 +118,7 @@ export const projectsEnglish = [
         detailInformation: `This is really nothing special. Just a very simple game I created when I first started using HTML and CSS. 
         My very first steps that were not pure "console applications". I later did some minor style changes like adding a background
         color or changing the font. The game should be self-explanatory and easy to understand.`,
-        technology: ['Javascript, HTML, CSS'],
+        technology: ['JavaScript, HTML, CSS'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects/pixelEstimator_V2/',
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/pixelEstimator_V2',
         picKey: 'pixelEstimator',
@@ -150,7 +150,7 @@ export const projectsEnglish = [
         When looking at the code nowadays, I realize that commenting and keeping your code clean and easy to understand is
         very important when coding!
         `,
-        technology: ['Javascript'],
+        technology: ['JavaScript'],
         tryoutLink: '',
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/blob/main/JS-only-projects/Poker/poker-master-build/Master_build.js',
         picKey: 'pokerCalc',
@@ -169,7 +169,7 @@ export const projectsGerman = [
         title: 'react "portfolio"',
         type: 'Website',
         description: 'Die über github gehostete und mit react erstellte website, welche du gerade anschaust! Meine bisherigen Coding-Projekte können hier eingesehen und ausprobiert werden',
-        detailInformation: `Das Erstellen der Website mit React hat mir sehr viel Spass bereitet, da ich mein Vorwissen in Javascript, HTML und CSS sehr gut anwenden konnte.
+        detailInformation: `Das Erstellen der Website mit React hat mir sehr viel Spass bereitet, da ich mein Vorwissen in JavaScript, HTML und CSS sehr gut anwenden konnte.
         Die Flexibilität des Frameworks hat mich überrascht. So fand ich zum Beispiel für fast alle meine Ideen auch eine Möglichkeit diese umzusetzen. 
         Durch den Node-Package-Manager konnte ich externe Komponenten einfach installieren und mit Hilfe der jeweiligen Dokumentationen auch rasch verwenden.
         Anfangs nutzte ich diese Komponenten nur sehr spärlich und wollte viele (z.B. Bilder-Galerie, Animationen oder auch das Fenster für die Farbauswahl) selbst erstellen.
@@ -182,8 +182,8 @@ export const projectsGerman = [
         Code zu produzieren. Vielmehr wollte ich React so viel wie möglich ausprobieren und damit experimentieren.
         \\n
         Weitere Informationen können auf der About-Page gefunden werden.`,
-        additionalInternLink: { target: 'https://frogfrequency.github.io/about', text: 'gehe zu About'},
-        technology: ['React, Javascript, CSS'],
+        additionalInternLink: { target: 'https://frogfrequency.github.io/about', text: 'gehe zu About' },
+        technology: ['React, JavaScript, CSS'],
         tryoutLink: undefined,
         sourcecodeLink: 'https://github.com/frogfrequency/react-portfolio',
         picKey: 'reactPortfolio',
@@ -195,7 +195,7 @@ export const projectsGerman = [
         type: 'Serie von Programmieraufgaben',
         description: `25 Programmieraufgaben mit je zwei Teilen wobei der zweite auf den ersten aufbaut und deutlich schwieriger ist`,
         detailInformation: `Wenn du noch nie vom Advent of Code gehört hast, solltest du das unbedingt nachholen!
-        Ich konnte durch die Rätsel sowohl meine Javascript-, wie auch meine allgemeinen Problemlösefähigkeiten enorm verbessern.    
+        Ich konnte durch die Rätsel sowohl meine JavaScript-, wie auch meine allgemeinen Problemlösefähigkeiten enorm verbessern.    
         Leider kannst du als Gast auf der Seite nur die jeweils ersten Teile der Rätsel sehen. 
         Da ich nicht sicher bin, ob ich aus urheberrechtlichen Gründen die zweiten Teile der Rätsel teilen darf, werde ich dies auch nicht tun.
         Wenn du meine Lösungen zu den Rätseln durchschaust, wirst du merken, dass die Namensgebung der Ordner und Dateien nicht konsistent ist und es teilweise
@@ -228,8 +228,8 @@ export const projectsGerman = [
         Zum Glück war mir die der Aufgabe zugrunde liegende Problematik klar, hatte ich mich doch schon sehr lange und intensiv mit ihr auseinandergesetzt. 
         Das Verständnis des eigentlichen Problems half mir somit enorm beim Entwickeln der Lösung mithilfe einer verketteten Liste. (wenn auch die Rechenzeit von 24 Sekunden
         immer noch nicht besonders beeindruckend war)`,
-        additionalLink: { target: 'https://adventofcode.com/2020/about', text: 'besuche AoC'},
-        technology: ['Javascript'],
+        additionalLink: { target: 'https://adventofcode.com/2020/about', text: 'besuche AoC' },
+        technology: ['JavaScript'],
         tryoutLink: undefined,
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/adventofcode',
         picKey: 'aoc',
@@ -243,7 +243,7 @@ export const projectsGerman = [
         detailInformation: `Rückblickend war es wohl zu früh dieses Projekt in Angriff zu nehmen.
         Ich war zu unerfahren (es war noch bevor ich die Advent of Code Rätsel begann) und meine Programmierfähigkeiten waren stark begrenzt. 
         Auch hatte ich keine wirkliche Ahnung wie man grössere Projekte angeht. 
-        Ich verschwand keinen Gedanken an Dingen wie Programmstruktur, Architektur oder der gescheiten Aufteilung des Codes in Einheiten (erst Monate später
+        Ich verschwendete keinen Gedanken an Dingen wie Programmstruktur, Architektur oder der gescheiten Aufteilung des Codes in Einheiten (erst Monate später
         begann ich mich mit Hilfe von Sachbüchern darüber richtig zu informieren). 
         Erst nach einiger Zeit merkte ich dann, dass ich die Darstellung auf dem Bildschirm von der zugrunde liegenden Spiellogik trennen musste. 
         Ausserdem begann ich die Funktionen für die Bestimmung der möglichen Züge einer Figur in einer separaten Datei zu speichern.
@@ -263,8 +263,8 @@ export const projectsGerman = [
         Am Ende habe ich die Identifikationsnummern in den Feldern und auch die farbliche Hervorhebung dieser während dem Spiel bewusst nicht aus dem Programm entfernt. 
         So kann man die zugrunde liegende Spiellogik erahnen und ausserdem sind sie mir nach den vielen Stunden doch ein wenig ans Herz gewachsen :)
         Besonders das blaue Einfärben gewisser Felder, welches mögliche "en passant" Züge anzeigt, nachdem ein gegnerischer Bauer einen Doppelschritt von
-        der Grundlinie aus macht.`, 
-        technology: ['Javascript, HTML, CSS'],
+        der Grundlinie aus macht.`,
+        technology: ['JavaScript, HTML, CSS'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects/simulators/chess/chess_v1_redesign/',
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/simulators/chess/chess_v1_redesign',
         picKey: 'chess',
@@ -284,7 +284,7 @@ export const projectsGerman = [
         Manchmal kann es vorkommen, dass das Programm eine Antwort als falsch bewertet, obwohl sie richtig ist.
         Da der gezeichnete Graph aus einzelnen, manchmal sehr weit auseinanderliegenden Punkten besteht, kann dieser Fehler auftreten.
         Dies passiert vor allem bei grossen Steigungen (m-Wert).`,
-        technology: ['Javascript, HTML, CSS'],
+        technology: ['JavaScript, HTML, CSS'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects/waves-and-graphs/graphGuesser_V1/',
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/waves-and-graphs/graphGuesser_V1',
         picKey: 'graphGuesser',
@@ -299,7 +299,7 @@ export const projectsGerman = [
         Programme, die ich damit erstellte. Zuvor hatte ich praktisch nur Apps und kleine Programme auf der Konsole erstellt.
         Vor dem Einbinden in meine React-Website nahm ich dann noch kleine Stiländerungen (u.a. Schriftart und Hintergrundfarbe) vor.
         Das Spiel sollte selbsterklärend und einfach zu verstehen sein.`,
-        technology: ['Javascript, HTML, CSS'],
+        technology: ['JavaScript, HTML, CSS'],
         tryoutLink: 'https://frogfrequency.github.io/JS-Mini-Projects/pixelEstimator_V2/',
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/tree/main/pixelEstimator_V2',
         picKey: 'pixelEstimator',
@@ -310,9 +310,9 @@ export const projectsGerman = [
         title: 'Wahrscheinlichkeitsrechner für Poker',
         type: 'Simulator',
         description: 'aus einer sehr grossen Anzahl von simulierten Pokerhänden werden die Häufigkeiten der einzelnen möglichen Blätter errechnet',
-        detailInformation: `Mein erstes richtiges Javascript-Projekt!
+        detailInformation: `Mein erstes richtiges JavaScript-Projekt!
         Von vielen Quellen erfuhr ich, dass man das Programmieren am besten lernt, wenn man an Projekten arbeitet.
-        Nachdem ich also die grundlegende Syntax von Javascript auf freeCodeCamp.org erlernt hatte, fing ich mit diesem Projekt an. 
+        Nachdem ich also die grundlegende Syntax von JavaScript auf freeCodeCamp.org erlernt hatte, fing ich mit diesem Projekt an. 
         Da ich zu dieser Zeit gerne Poker spielte und mich gerne mit Wahrscheinlichkeiten auseinandersetzte, beschloss ich, 
         einen Simulator zu bauen und zu überprüfen, ob das Ergebnis mit den Wahrscheinlichkeitstabellen von Wikipedia übereinstimmt. 
         Das Entwickeln dieses Simulators half mir sehr und zeigte mir auch die grosse Bedeutung des Debuggers auf. 
@@ -334,7 +334,7 @@ export const projectsGerman = [
         Wenn ich mir den Code heute ansehe, wird mir klar wie wichtig es ist den Code strukturiert, sauber und selbsterklärend zu halten 
         und ihn dort wo er das nicht ist mit Kommentaren zu versehen. 
         `,
-        technology: ['Javascript'],
+        technology: ['JavaScript'],
         tryoutLink: '',
         sourcecodeLink: 'https://github.com/frogfrequency/JS-Mini-Projects/blob/main/JS-only-projects/Poker/poker-master-build/Master_build.js',
         picKey: 'pokerCalc',

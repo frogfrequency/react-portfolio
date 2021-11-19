@@ -1,6 +1,7 @@
 import "./ColorPreview.css"
 import"../../Header.css"
 
+
 const ColorPreview = ({colorScheme}) => {
 
     return (

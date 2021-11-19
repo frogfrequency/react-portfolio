@@ -3,7 +3,6 @@
     margin: auto;
 }
 
-
 .about-text {
     text-align: justify;
     margin-left: 24px;
@@ -19,7 +18,6 @@
 
 .about-subheader {
     font-weight: bold;
-    /* margin-left: 32px; */
     margin-top: 0.67em;
     margin-bottom: 16px;
 }

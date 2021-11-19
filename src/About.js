@@ -5,6 +5,7 @@ let aboutText =
 
 // why is this page in english? --> i want to learn
 
+
 // if you read this you likely are either an acquaintance of mine or you found your way here via my application papers
 
 // anyhow here is some useful information about this page

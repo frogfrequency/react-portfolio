@@ -1,12 +1,10 @@
+import { useState } from 'react';
+import { Link } from "react-router-dom";
 import { BsSkipEndFill } from "react-icons/bs";
 import { BsFillGearFill } from "react-icons/bs";
+
 import './HeaderSchemeController.css';
 import "../../Header.css"
-import { useState } from 'react';
-import {Link} from "react-router-dom";
-
-
-
 
 const HeaderSchemeController = ({ colorScheme, onClickFunc, textContent }) => {
 
@@ -23,7 +21,6 @@ const HeaderSchemeController = ({ colorScheme, onClickFunc, textContent }) => {
         <div
             className='color-scheme-controller'
             style={{ backgroundColor: colorScheme.color1, color: colorScheme.color4}}
-        // onClick={onClickFunc}
         >
             {textContent.header.colorSchemes}
 
