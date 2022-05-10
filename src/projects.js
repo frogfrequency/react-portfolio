@@ -171,14 +171,14 @@ export const projectsGerman = [
         description: 'Die über github gehostete und mit react erstellte website, welche du gerade anschaust! Meine bisherigen Coding-Projekte können hier eingesehen und ausprobiert werden',
         detailInformation: `Das Erstellen der Website mit React hat mir sehr viel Spass bereitet, da ich mein Vorwissen in JavaScript, HTML und CSS sehr gut anwenden konnte.
         Die Flexibilität des Frameworks hat mich überrascht. So fand ich zum Beispiel für fast alle meine Ideen auch eine Möglichkeit diese umzusetzen. 
-        Durch den Node-Package-Manager konnte ich externe Komponenten einfach installieren und mit Hilfe der jeweiligen Dokumentationen auch rasch verwenden.
-        Anfangs nutzte ich diese Komponenten nur sehr spärlich und wollte viele (z.B. Bilder-Galerie, Animationen oder auch das Fenster für die Farbauswahl) selbst erstellen.
+        Durch den Node-Package-Manager konnte ich externe Komponenten einfach installieren und mit Hilfe der jeweiligen Dokumentationen rasch verwenden.
+        Anfangs nutzte ich diese Komponenten nur sehr spärlich und wollte viele davon (z.B. Bilder-Galerie, Animationen oder auch das Fenster für die Farbauswahl) selbst erstellen.
         Ich merkte dann aber schnell, dass dies zwar spannend, aber auch übertrieben aufwändig gewesen wäre. Ausserdem hätte ich auch mit gewaltigem Aufwand nicht
-        so gute Resultate erzielen können. Es war also nur logisch möglichst guten Gebrauch von diesen Komponenten zu machen!
+        so gute Resultate erzielen können. Es war also nur logisch möglichst guten Gebrauch von diesen Komponenten zu machen.
         Es war mir aber auch wichtig einzelne Funktionalitäten zuerst selber auszuprobieren.
         So griff ich meistens erst auf ein externe Komponente zurück, nachdem ich sie
-        selber nicht gescheit implementieren konnte oder aber mit meiner eigenen Lösung nicht zufrieden war. Es gibt daher im Quellcode bestimmt Stellen, die 
-        unschön bzw. unvorteilhaft umgesetzt sind und die mit einer externen Komponente sinnvoller realisiert wären. Es war von Anfang an nicht mein Ziel mustergültigen
+        selber nicht wie erhofft implementieren konnte oder aber mit meiner Lösung nicht zufrieden war. Es gibt daher im Quellcode bestimmt Stellen, deren 
+        Umsetzung mit einer externen Komponente sinnvoller realisiert wären. Es war von Anfang an nicht mein Ziel mustergültigen
         Code zu produzieren. Vielmehr wollte ich React so viel wie möglich ausprobieren und damit experimentieren.
         \\n
         Weitere Informationen können auf der About-Page gefunden werden.`,

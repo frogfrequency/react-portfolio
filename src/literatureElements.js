@@ -59,7 +59,7 @@ export const literatureEnglish = [
         and testing, there are two chapters on cloud computing, a chapter on feature set design, a chapter on security and privacy, and a chapter on 
         DevOps. You will not find these in any other current software engineering book. This is a book from a professional for (aspiring) professionals.`,
         pages: 336,
-        currentPage: 84,
+        currentPage: 336,
         infoLink: 'https://www.orellfuessli.ch/shop/home/artikeldetails/A1058310090',
         infoSourceName: 'Orell Füssli',
     },
@@ -126,7 +126,7 @@ export const literatureGerman = [
         und Test gibt es zwei Kapitel über Cloud Computing, ein Kapitel über Feature-Set-Design, ein Kapitel über Sicherheit und Datenschutz und ein Kapitel über 
         DevOps. Diese werden Sie in keinem anderen aktuellen Software-Engineering-Buch finden. Ein Buch vom Profi für (angehende) Profis.`,
         pages: 336,
-        currentPage: 84,
+        currentPage: 336,
         infoLink: 'https://www.orellfuessli.ch/shop/home/artikeldetails/A1058310090',
         infoSourceName: 'Orell Füssli',
     },

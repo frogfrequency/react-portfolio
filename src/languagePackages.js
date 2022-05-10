@@ -36,7 +36,7 @@ export const languagePackages = {
             technologiesUsed: 'technologies used',
         },
         homePage: {
-            introText: `On this website you can view my coding projects and even try them out! It's not a "portfolio page" in
+            introText: `On this website you can view my coding projects and even try them out! It's not a portfolio page in
             the conventional sense. You won't find any personal data or a resume here. The site should enable you to quickly get
             an overview of my coding skills. For those who are interested, there is a description text to each coding project. However
             reading those sometimes verbose descriptions is not necessary.`,
@@ -110,8 +110,8 @@ export const languagePackages = {
             addScheme: 'neues Schema hinzufügen',
             adjustColorsFor: 'Farben ändern für:',
             backgroundColor: 'Hintergrundfarbe',
-            backgroundStylingColor: 'Hintergrund-stylingfarbe',
-            textStylingColor: 'Text-stylingfarbe',
+            backgroundStylingColor: 'Akzentfarbe für Hintergrund',
+            textStylingColor: 'Akzentfarbe für Text',
             textColor: 'Textfarbe',
             pickNew: 'wähle neue ',
             alertText: 'Das momentan aktive Farbschema kann nicht gelöscht werden!',
@@ -123,7 +123,7 @@ export const languagePackages = {
             technologiesUsed: 'verwendete Technologien',
         },
         homePage: {
-            introText: `Auf dieser Website kannst du meine Coding-Projekte ansehen und ausprobieren! Es ist keine "Portfolio-Website"
+            introText: `Auf dieser Website kannst du meine Coding-Projekte ansehen und ausprobieren! Es ist keine Portfolio-Website
             im herkömmlichen Sinne. Du findest hier keine persönlichen Angaben wie Personalien oder einen Lebenslauf. Die Seite soll dir 
             in möglichst kurzer Zeit einen Überblick über meine Coding-Fähigkeiten geben. Für Interessierte ist bei den Projekten
             ein Beschreibungstext verfügbar. Es ist aber nicht nötig, diese zum Teil langen Texte alle durchzulesen.`,

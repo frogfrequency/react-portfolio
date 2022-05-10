@@ -80,7 +80,7 @@ const Header = ({ colorScheme, nextColorScheme, selectorVisibility, handleSelect
                     onMouseEnter={() => handleLanguageMouseEnter('english')}
                     onMouseLeave={() => handleLanguageMouseLeave()}
                 >
-                    english
+                    English
                 </div>
             </div>
 
